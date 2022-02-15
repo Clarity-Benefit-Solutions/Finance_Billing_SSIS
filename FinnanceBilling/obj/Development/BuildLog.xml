@@ -2,43 +2,73 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>FinnanceBilling</Name>
-    <LastWriteTime>2022-01-27T16:24:33.5534598Z</LastWriteTime>
+    <LastWriteTime>2022-02-11T14:15:22.4558763Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>DebitCardImport.dtsx</Name>
-      <LastWriteTime>2022-01-27T14:12:56.6983393Z</LastWriteTime>
+      <Name>912_EB Extract.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:08:01.2499787Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>CobraLettersImport.dtsx</Name>
-      <LastWriteTime>2022-01-27T14:11:18.8959657Z</LastWriteTime>
+      <Name>911_EC Extract.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:07:19.9696951Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>BrokerClientList.dtsx</Name>
-      <LastWriteTime>2022-01-27T14:17:30.1313226Z</LastWriteTime>
+      <Name>2_BENEFL_Integrated_Prior_Import.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:05:25.8815173Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>NPM.dtsx</Name>
-      <LastWriteTime>2022-01-25T18:28:20.6265038Z</LastWriteTime>
+      <Name>1_BENEFL_Integrated_Current_Import.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:18:18.2347081Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>QBDetail.dtsx</Name>
-      <LastWriteTime>2022-01-27T14:17:30.1033199Z</LastWriteTime>
+      <Name>9_Bswift_BillingNumbers_Import.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:16:35.2519009Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>CobraClientList.dtsx</Name>
-      <LastWriteTime>2022-01-26T14:49:08.8528284Z</LastWriteTime>
+      <Name>910_ENBillingNumbers_Import.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:06:28.9379019Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>SPMBYACAREPORT.dtsx</Name>
-      <LastWriteTime>2022-01-27T16:24:33.490457Z</LastWriteTime>
+      <Name>913_SPMBYACAREPORT.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:13:49.4355415Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>5_QBdetail.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:13:49.4675425Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>4_NPM.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:04:39.519098Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>3_DebitCard_Import.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:12:21.1095636Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>8_Cobraletters.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:12:21.1515644Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>7_Clientlist.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:10:34.1825355Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>6_BrokerClientlist.dtsx</Name>
+      <LastWriteTime>2022-02-14T16:09:22.2945025Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

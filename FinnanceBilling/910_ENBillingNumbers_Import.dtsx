@@ -1,0 +1,938 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2022 10:05:35 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BE015"
+  DTS:CreatorName="V057\mkhan_BENEFLEX"
+  DTS:DTSID="{30FD76FA-A1A5-4BBA-8009-50DE124B96FB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{4972F081-60AF-4D3A-AD43-E7C1FA94A587}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D5DD69BF-A27D-4E15-9975-9981B6DFF2DC}"
+      DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADxXGEyJ1S+fq83MnFJxf91AAAAAASAAACgAAAAEAAAAGpP70NBxATCLnY372GrHP8YAAAAc071Z70chCtHL2+d/wgxKjbHzWBF1l8RFAAAAPEryGGMd/uZlsKI6gNpKouaNf2Z</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D4A8A328-6B7E-4B26-966D-14F0166D7B8F}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Finance_Billing\Starting_Files\910_ENBillingNumbers_Import.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{36F9B8EE-6D0D-4D34-A3D9-7A6777FC92AE}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{31BB5265-77AB-4007-9739-0F0A6CFE07F4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\910_ENBillingNumbers_Import"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="910_ENBillingNumbers_Import"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Company]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Company]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Company]"
+                      name="Company"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Total Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Total Employees]"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Total Employees]"
+                      name="Total Employees"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Active Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Active Employees]"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Active Employees]"
+                      name="Active Employees"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Eligible Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Eligible Employees]"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Eligible Employees]"
+                      name="Eligible Employees"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Enrolled Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Enrolled Employees]"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Enrolled Employees]"
+                      name="Enrolled Employees"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[COBRA Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[COBRA Employees]"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[COBRA Employees]"
+                      name="COBRA Employees"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Company]"
+                      dataType="wstr"
+                      length="255"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Total Employees]"
+                      dataType="r8"
+                      name="Total Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Active Employees]"
+                      dataType="r8"
+                      name="Active Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Eligible Employees]"
+                      dataType="r8"
+                      name="Eligible Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Enrolled Employees]"
+                      dataType="r8"
+                      name="Enrolled Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[COBRA Employees]"
+                      dataType="r8"
+                      name="COBRA Employees" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Company]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Company]"
+                      name="Company" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Total Employees]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Total Employees]"
+                      name="Total Employees" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Active Employees]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Active Employees]"
+                      name="Active Employees" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Eligible Employees]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Eligible Employees]"
+                      name="Eligible Employees" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Enrolled Employees]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Enrolled Employees]"
+                      name="Enrolled Employees" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[COBRA Employees]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[COBRA Employees]"
+                      name="COBRA Employees" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Company]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Company"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Company]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Total Employees]"
+                      cachedDataType="r8"
+                      cachedName="Total Employees"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Total Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Active Employees]"
+                      cachedDataType="r8"
+                      cachedName="Active Employees"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Active Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Eligible Employees]"
+                      cachedDataType="r8"
+                      cachedName="Eligible Employees"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Eligible Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Enrolled Employees]"
+                      cachedDataType="r8"
+                      cachedName="Enrolled Employees"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Enrolled Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[COBRA Employees]"
+                      cachedDataType="r8"
+                      cachedName="COBRA Employees"
+                      lineageId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[COBRA Employees]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]"
+                      name="Copy of Company"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Company]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]"
+                      name="Copy of Total Employees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Total Employees]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]"
+                      name="Copy of Active Employees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Active Employees]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]"
+                      name="Copy of Eligible Employees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Eligible Employees]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]"
+                      name="Copy of Enrolled Employees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[Enrolled Employees]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]"
+                      name="Copy of COBRA Employees"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output].Columns[COBRA Employees]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TBL_STAGING_EMPLOYEE_NAV_IMPORT"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TBL_STAGING_EMPLOYEE_NAV_IMPORT]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Company]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Copy of Company"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Total Employees]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Total Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Total Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Active Employees]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Active Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Active Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Eligible Employees]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Eligible Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Eligible Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Enrolled Employees]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Enrolled Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Enrolled Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of COBRA Employees]"
+                      cachedDataType="r8"
+                      cachedName="Copy of COBRA Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[COBRA Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      dataType="wstr"
+                      length="255"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Total Employees]"
+                      dataType="r8"
+                      name="Total Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Active Employees]"
+                      dataType="r8"
+                      name="Active Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Eligible Employees]"
+                      dataType="r8"
+                      name="Eligible Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Enrolled Employees]"
+                      dataType="r8"
+                      name="Enrolled Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[COBRA Employees]"
+                      dataType="r8"
+                      name="COBRA Employees" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[SSMA_TimeStamp]"
+                      dataType="bytes"
+                      length="8"
+                      name="SSMA_TimeStamp" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\910_ENBillingNumbers_Import.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{86FF7D8C-BA0F-4FFF-87A0-635331C1E180}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D5DD69BF-A27D-4E15-9975-9981B6DFF2DC}"
+          SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_EMPLOYEE_NAV_IMPORT]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FCEE0814-0E1B-4FE6-B476-61F591021FA8}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{DFB0AD20-17C8-4687-91A8-A64DF8F871D9}"
+      DTS:EventID="1845520640"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{5355B6C4-9AA0-4A58-B7E7-7D29B4ED8DC7}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{D4331A96-565D-44AF-B32F-17E8DFF85FA9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{D5DD69BF-A27D-4E15-9975-9981B6DFF2DC}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package1','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="263,126" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="206,20" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="291,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.5,64"
+              Start="0,0"
+              End="49.5,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28"
+                    Point2="0,32"
+                    Point3="4,32" />
+                  <mssgle:LineSegment
+                    End="45.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,32"
+                    Point2="49.5,32"
+                    Point3="49.5,36" />
+                  <mssgle:LineSegment
+                    End="49.5,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Data Flow Task\910_ENBillingNumbers_Import"
+          TopLeft="87,30" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="202,122" />
+        <NodeLayout
+          Size="299,42"
+          Id="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT"
+          TopLeft="271,262" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="202,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.5,50"
+              Start="0,0"
+              End="80.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
+                  <mssgle:LineSegment
+                    End="76.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.5,25"
+                    Point2="80.5,25"
+                    Point3="80.5,29" />
+                  <mssgle:LineSegment
+                    End="80.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="282.5,164">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138,98"
+              Start="0,0"
+              End="138,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="4,49" />
+                  <mssgle:LineSegment
+                    End="134,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="134,49"
+                    Point2="138,49"
+                    Point3="138,53" />
+                  <mssgle:LineSegment
+                    End="138,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\910_ENBillingNumbers_Import">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="257,32" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

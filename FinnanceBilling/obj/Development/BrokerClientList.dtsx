@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{5F45205C-4B4C-4C57-8F5B-B4816ECBAAB1}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{0211AEBF-A527-459D-A13A-0D93D636EF74}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAASYtE0Ns0/LrYaf8ERNJ34AAAAAASAAACgAAAAEAAAAMcI53ekRYRc5EFBp6MgVp0YAAAANkyZoFpnvHIpCZCKr0q9x2qaV+Us1athFAAAAORpxmgUplpBxiq8pNPuEWUbrQpi</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAeDVam2oWR0iZGOR27Mjr6AAAAAASAAACgAAAAEAAAAM+YpTkS28MFvrhcmX7kESoYAAAAYLjcEu0oDJmnpH6lgYRqVNjXLDtArKigFAAAADyJl1nzo76fbTZLt1qpecRWNuAy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -153,7 +153,48 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{2BF925DE-2482-482A-AA0F-0B585965D3DC}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{2BF925DE-2482-482A-AA0F-0B585965D3DC}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
@@ -165,6 +206,8 @@
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -262,11 +305,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerID]"
                       name="Copy of BrokerID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -283,11 +326,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerName]"
                       name="Copy of BrokerName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -304,11 +347,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientID]"
                       name="Copy of ClientID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -325,11 +368,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       name="Copy of ClientName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -346,11 +389,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientAlternate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientAlternate]"
                       name="Copy of ClientAlternate"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -367,11 +410,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
                       name="Copy of EIN"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -388,11 +431,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
                       name="Copy of BillingStartDate"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -409,11 +452,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
                       name="Copy of Active"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -430,11 +473,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
                       name="Copy of ClientDivisionID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -451,11 +494,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
                       name="Copy of ClientDivisionName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -472,11 +515,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       name="Copy of DivisionName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1088,268 +1131,8 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TBL_STAGING_BROKERCLIENTLIST_ERROR"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TBL_STAGING_BROKERCLIENTLIST_ERROR]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[BrokerID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="BrokerID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BrokerID]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[BrokerName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="BrokerName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BrokerName]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ClientID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ClientName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ClientAlternate]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientAlternate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[EIN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EIN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[EIN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[BillingStartDate]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="BillingStartDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[Active]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Active"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[Active]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ClientDivisionID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientDivisionID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ClientDivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientDivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[DivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[DivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BrokerID]"
-                      dataType="wstr"
-                      length="255"
-                      name="BrokerID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BrokerName]"
-                      dataType="wstr"
-                      length="255"
-                      name="BrokerName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientAlternate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
-                      dataType="wstr"
-                      length="255"
-                      name="EIN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
-                      dataType="wstr"
-                      length="255"
-                      name="BillingStartDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
-                      dataType="wstr"
-                      length="255"
-                      name="Active" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientDivisionID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientDivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="DivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input]"
@@ -1374,6 +1157,8 @@
       DTS:ObjectName="Execute SQL Task"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A5A7574E-B5E0-4786-BF04-8F033054EA6B}"
@@ -1452,11 +1237,7 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="315,42"
-          Id="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR"
-          TopLeft="499.5,284.5" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="208,42"
           Id="Package\Data Flow Task\Read CSV BrokerClientlist"
@@ -1525,58 +1306,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="346.5,203.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="310.5,81"
-              Start="0,0"
-              End="310.5,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.8782287822878" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.8782287822878"
-                    Point2="0,32.8782287822878"
-                    Point3="4,32.8782287822878" />
-                  <mssgle:LineSegment
-                    End="306.5,32.8782287822878" />
-                  <mssgle:CubicBezierSegment
-                    Point1="306.5,32.8782287822878"
-                    Point2="310.5,32.8782287822878"
-                    Point3="310.5,36.8782287822878" />
-                  <mssgle:LineSegment
-                    End="310.5,73.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="89.16361328125,37.8782287822878,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST_ERROR">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST">
     <Properties>

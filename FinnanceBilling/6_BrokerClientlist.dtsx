@@ -1,25 +1,25 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="1/26/2022 9:33:38 AM"
+  DTS:CreationDate="1/25/2022 10:53:54 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{DCAFF094-0DFB-42BF-8302-A92D7E6F7967}"
+  DTS:DTSID="{04CE5ED2-3656-400A-AD8F-22A742C790FD}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="CobraClientList"
+  DTS:ObjectName="6_BrokerClientlist"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{06B3228B-7BE4-49F1-B837-58823A25867C}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{E13468AF-6DF9-47BA-863A-1E9027E39A1F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{BA978FC8-E31D-4271-B1E4-840B5481097C}"
+      DTS:DTSID="{A5A7574E-B5E0-4786-BF04-8F033054EA6B}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -29,14 +29,14 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABSk6cfTLCxlS+TjJfzvrx+AAAAAASAAACgAAAAEAAAANuwj1LBb/6Kwq+nwbZgHvcYAAAAfTsx7Tu/zygpnqNJvs1M/lKHuDEHLukLFAAAAMew7OGQEfJO4BSZi0Ob713tstwp</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABwrJb1pU8qluTBsKaVgZMBAAAAAASAAACgAAAAEAAAAP+0nOoqcgaTndsD0ekO/c8YAAAANw6rW242FJpL8m/v7OCG/wKq++dHeQeXFAAAAG0M/Jw8mPW6AkDMKmsjPTUGSQob</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{51B34C0F-F4AA-44B9-B168-C898BB8457F7}"
+      DTS:DTSID="{76A2048B-E40D-49E5-8A10-DB6287671D57}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -47,7 +47,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\7_Clientlist.CSV">
+          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\6_BrokerClientlist.CSV">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,8 +55,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ClientGroupName"
-              DTS:DTSID="{D4D94A3B-DBFE-4AFC-9861-86475E1676B6}"
+              DTS:ObjectName="BrokerID"
+              DTS:DTSID="{F18BF330-4BF6-4346-A6EC-4A7EE1EB0AE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -64,35 +64,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ClientName"
-              DTS:DTSID="{F741F52E-CF78-41E8-89B2-6416A152A84C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="BillingStartDate"
-              DTS:DTSID="{6B3B9164-3BD9-484B-A4FB-A54C46853860}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EIN"
-              DTS:DTSID="{6823127D-AE25-4FE5-8C3D-3683DFC7D965}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ClientDivisionName"
-              DTS:DTSID="{1826AC6D-6273-40FB-828F-5B3DB108296B}"
+              DTS:ObjectName="BrokerName"
+              DTS:DTSID="{6C398215-393E-4BA9-BFFB-3AED66DE5A8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +74,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientID"
-              DTS:DTSID="{DF42A72F-3637-4A2D-ABC8-811C314232D9}"
+              DTS:DTSID="{3A2E87B5-2DD5-4D92-BCA6-A12C087D310A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -109,17 +82,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="ClientDivisionID"
-              DTS:DTSID="{3E48FBC7-280F-4D35-BE11-DCD28611E549}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Active"
-              DTS:DTSID="{00B61D52-8925-4C70-B9E7-A044C98C5EBD}"
+              DTS:ObjectName="ClientName"
+              DTS:DTSID="{9C1384A8-5F20-4708-BF1F-C61442B153B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +92,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientAlternate"
-              DTS:DTSID="{6AC58617-AEE8-4A3E-83E2-5BB36F9E3485}"
+              DTS:DTSID="{10F3DC5C-D414-4BB2-AF9B-A47EB165DBD6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -136,8 +100,44 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="DeactivationDate"
-              DTS:DTSID="{BC187A0F-E51D-4406-A77C-9B823202C4F1}"
+              DTS:ObjectName="EIN"
+              DTS:DTSID="{CB39A496-5A65-49EA-9741-E1CF03B794B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BillingStartDate"
+              DTS:DTSID="{554253A5-B973-48FC-82DA-A57185ABB040}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active"
+              DTS:DTSID="{40465378-4DEA-4904-8149-C88DFF315885}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ClientDivisionID"
+              DTS:DTSID="{6B470AB5-2351-4D48-B8EB-C73281EBBF98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ClientDivisionName"
+              DTS:DTSID="{7F8BD5D2-DC66-4D66-8020-73BEA3F69C54}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +146,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DivisionName"
-              DTS:DTSID="{591800CB-21D1-4007-B215-AE33E8DF9FAD}"
+              DTS:DTSID="{2F5A4394-47A1-4234-ABA4-4375B75573F4}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -158,7 +158,7 @@
       DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{075E6704-68CF-4324-BC45-0C0B78EFE4FD}"
+      DTS:DTSID="{2BF925DE-2482-482A-AA0F-0B585965D3DC}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -192,7 +192,7 @@
     </DTS:Property>
     <DTS:SelectedLogProviders>
       <DTS:SelectedLogProvider
-        DTS:InstanceID="{075E6704-68CF-4324-BC45-0C0B78EFE4FD}" />
+        DTS:InstanceID="{2BF925DE-2482-482A-AA0F-0B585965D3DC}" />
     </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
@@ -200,7 +200,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{BB986790-814A-4D43-AEF6-F5230D37054D}"
+      DTS:DTSID="{57CE131E-3F8A-484D-9F3A-E5B35F985017}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -225,71 +225,71 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientGroupName]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BrokerID]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ClientGroupName"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientGroupName]" />
+                      cachedName="BrokerID"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientName]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BrokerName]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ClientName"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BillingStartDate]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="BillingStartDate"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[EIN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EIN"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[EIN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientDivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientDivisionName"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]" />
+                      cachedName="BrokerName"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerName]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientID]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="ClientID"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientID]" />
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientDivisionID]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientName]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ClientDivisionID"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Active]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Active"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[Active]" />
+                      cachedName="ClientName"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientName]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientAlternate]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="ClientAlternate"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]" />
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[DeactivationDate]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[EIN]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="DeactivationDate"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DeactivationDate]" />
+                      cachedName="EIN"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[EIN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BillingStartDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BillingStartDate"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Active]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Active"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[Active]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientDivisionID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ClientDivisionID"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientDivisionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ClientDivisionName"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[DivisionName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="DivisionName"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DivisionName]" />
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[DivisionName]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -302,20 +302,20 @@
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientGroupName]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientGroupName]"
-                      name="Copy of ClientGroupName"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerID]"
+                      name="Copy of BrokerID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientGroupName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -323,83 +323,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
-                      name="Copy of ClientName"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BrokerName]"
+                      name="Copy of BrokerName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientName]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
-                      name="Copy of BillingStartDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
-                      name="Copy of EIN"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[EIN]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
-                      name="Copy of ClientDivisionName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerName]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -420,7 +357,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -428,41 +365,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
-                      name="Copy of ClientDivisionID"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
+                      name="Copy of ClientName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
-                      name="Copy of Active"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[Active]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientName]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -483,7 +399,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -491,20 +407,104 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DeactivationDate]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DeactivationDate]"
-                      name="Copy of DeactivationDate"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
+                      name="Copy of EIN"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DeactivationDate]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[EIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]"
+                      name="Copy of BillingStartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]"
+                      name="Copy of Active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[Active]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]"
+                      name="Copy of ClientDivisionID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]"
+                      name="Copy of ClientDivisionName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -525,7 +525,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DivisionName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[DivisionName]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -560,12 +560,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Read CSV Clientlist"
+              refId="Package\Data Flow Task\Read CSV BrokerClientlist"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Read CSV Clientlist"
+              name="Read CSV BrokerClientlist"
               usesDispositions="true"
               version="1">
               <properties>
@@ -580,25 +580,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Read CSV Clientlist.Connections[FlatFileConnection]"
+                  refId="Package\Data Flow Task\Read CSV BrokerClientlist.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output]"
+                  refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientGroupName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientGroupName]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BrokerID]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientGroupName]"
-                      name="ClientGroupName"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerID]"
+                      name="BrokerID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -612,14 +612,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BrokerName]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientName]"
-                      name="ClientName"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BrokerName]"
+                      name="BrokerName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -633,76 +633,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[BillingStartDate]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientID]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]"
-                      name="BillingStartDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[EIN]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[EIN]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[EIN]"
-                      name="EIN"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]"
-                      name="ClientDivisionName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientID]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientID]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientID]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientID]"
                       name="ClientID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -717,14 +654,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionID]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]"
-                      name="ClientDivisionID"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientName]"
+                      name="ClientName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -738,34 +675,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[Active]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[Active]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientAlternate]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[Active]"
-                      name="Active"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientAlternate]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientAlternate]"
                       name="ClientAlternate"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -780,14 +696,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DeactivationDate]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[EIN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[DeactivationDate]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[EIN]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DeactivationDate]"
-                      name="DeactivationDate"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[EIN]"
+                      name="EIN"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -801,13 +717,97 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DivisionName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BillingStartDate]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].Columns[DivisionName]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[BillingStartDate]"
+                      name="BillingStartDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[Active]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[Active]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[Active]"
+                      name="Active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionID]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionID]"
+                      name="ClientDivisionID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionName]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[ClientDivisionName]"
+                      name="ClientDivisionName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[DivisionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].Columns[DivisionName]"
                       name="DivisionName"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -825,84 +825,84 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientGroupName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BrokerID]"
                       dataType="wstr"
                       length="255"
-                      name="ClientGroupName" />
+                      name="BrokerID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BrokerName]"
                       dataType="wstr"
                       length="255"
-                      name="ClientName" />
+                      name="BrokerName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[BillingStartDate]"
-                      dataType="wstr"
-                      length="255"
-                      name="BillingStartDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[EIN]"
-                      dataType="wstr"
-                      length="255"
-                      name="EIN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientDivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientID]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientID]"
                       dataType="wstr"
                       length="255"
                       name="ClientID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionID]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
                       dataType="wstr"
                       length="255"
-                      name="ClientDivisionID" />
+                      name="ClientName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[Active]"
-                      dataType="wstr"
-                      length="255"
-                      name="Active" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[ClientAlternate]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientAlternate]"
                       dataType="wstr"
                       length="255"
                       name="ClientAlternate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[DeactivationDate]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[EIN]"
                       dataType="wstr"
                       length="255"
-                      name="DeactivationDate" />
+                      name="EIN" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[BillingStartDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="BillingStartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[Active]"
+                      dataType="wstr"
+                      length="255"
+                      name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionID]"
+                      dataType="wstr"
+                      length="255"
+                      name="ClientDivisionID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[ClientDivisionName]"
+                      dataType="wstr"
+                      length="255"
+                      name="ClientDivisionName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
                       dataType="wstr"
                       length="255"
                       name="DivisionName" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output]"
+                  refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -911,11 +911,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST"
+              refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="TBL_STAGING_COBRA_CLIENT_LIST"
+              name="TBL_STAGING_BROKERCLIENTLIST"
               usesDispositions="true"
               version="4">
               <properties>
@@ -926,7 +926,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[TBL_STAGING_COBRA_CLIENT_LIST]</property>
+                  name="OpenRowset">[dbo].[TBL_STAGING_BROKERCLIENTLIST]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -968,7 +968,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
                   connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -976,144 +976,130 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientGroupName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of ClientGroupName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientGroupName]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientGroupName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of BillingStartDate]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of BillingStartDate]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of BillingStartDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingStartDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of EIN]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of EIN]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of EIN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientDivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientDivisionName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of ClientDivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientID]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientID]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of ClientID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientDivisionID]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientDivisionID]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of ClientDivisionID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientDivisionID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of Active]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of Active]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of Active"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientAlternate]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of ClientAlternate]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of ClientAlternate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientAlternate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of DeactivationDate]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of DeactivationDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[DeactivationDate]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DeactivationDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].Columns[Copy of DivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].Columns[Copy of DivisionName]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Copy of DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientGroupName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientGroupName]"
                       dataType="wstr"
                       length="255"
                       name="ClientGroupName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
                       dataType="wstr"
                       length="255"
                       name="ClientName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[BillingStartDate]"
                       dataType="wstr"
                       length="255"
                       name="BillingStartDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
                       dataType="wstr"
                       length="255"
                       name="EIN" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionName]"
                       dataType="wstr"
                       length="255"
                       name="ClientDivisionName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientID]"
                       dataType="wstr"
                       length="255"
                       name="ClientID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientDivisionID]"
                       dataType="wstr"
                       length="255"
                       name="ClientDivisionID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
                       dataType="wstr"
                       length="255"
                       name="Active" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[ClientAlternate]"
                       dataType="wstr"
                       length="255"
                       name="ClientAlternate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[DeactivationDate]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[DeactivationDate]"
                       dataType="wstr"
                       length="255"
                       name="DeactivationDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
                       dataType="wstr"
                       length="255"
                       name="DivisionName" />
@@ -1122,22 +1108,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1149,14 +1135,14 @@
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Read CSV Clientlist.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\Read CSV BrokerClientlist.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1165,7 +1151,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{5EFE1ADD-67D0-493F-8DD8-F3513F61A8E3}"
+      DTS:DTSID="{60C31C63-2E08-44FF-A9AA-26188FFED5E6}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -1175,8 +1161,8 @@
         DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{BA978FC8-E31D-4271-B1E4-840B5481097C}"
-          SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_COBRA_CLIENT_LIST]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{A5A7574E-B5E0-4786-BF04-8F033054EA6B}"
+          SQLTask:SqlStatementSource="Truncate Table [TBL_STAGING_BROKERCLIENTLIST]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1184,12 +1170,54 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{40EDF7B9-A6EC-413F-8B5C-2DFAED2C52EB}"
+      DTS:DTSID="{FACB55BC-2679-418A-B034-13C870C8109A}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{F4AB58CC-972E-4DA7-A704-4DAE0685F33D}"
+      DTS:EventID="1845520640"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{1E582108-2E09-432B-900F-D6A4BE44BF88}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{2933ACE4-38FC-4D68-BF23-2B5553760AC1}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A5A7574E-B5E0-4786-BF04-8F033054EA6B}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','6_BrokerClientlist','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1205,37 +1233,37 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="233,175" />
+          TopLeft="199.5,127.5" />
         <NodeLayout
           Size="170,42"
           Id="Package\Execute SQL Task"
-          TopLeft="162,56" />
+          TopLeft="179.5,43.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="247,98">
+          TopLeft="264.5,85.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="63.5,77"
+              EndConnector="12.5,42"
               Start="0,0"
-              End="63.5,69.5">
+              End="12.5,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.5" />
+                    End="0,17" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
                   <mssgle:LineSegment
-                    End="59.5,38.5" />
+                    End="8.5,21" />
                   <mssgle:CubicBezierSegment
-                    Point1="59.5,38.5"
-                    Point2="63.5,38.5"
-                    Point3="63.5,42.5" />
+                    Point1="8.5,21"
+                    Point2="12.5,21"
+                    Point3="12.5,25" />
                   <mssgle:LineSegment
-                    End="63.5,69.5" />
+                    End="12.5,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1253,43 +1281,31 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Read CSV Clientlist"
-          TopLeft="118,33" />
+          Size="208,42"
+          Id="Package\Data Flow Task\Read CSV BrokerClientlist"
+          TopLeft="224.5,44.5" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="226,152" />
+          TopLeft="240.5,161.5" />
         <NodeLayout
-          Size="274,42"
-          Id="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST"
-          TopLeft="172,268" />
+          Size="270,42"
+          Id="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST"
+          TopLeft="81.5,280.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="281,194">
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="324.75,86.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28,74"
+              EndConnector="0,75"
               Start="0,0"
-              End="28,66.5">
+              End="0,67.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.0369003690037" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.0369003690037"
-                    Point2="0,30.0369003690037"
-                    Point3="4,30.0369003690037" />
-                  <mssgle:LineSegment
-                    End="24,30.0369003690037" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24,30.0369003690037"
-                    Point2="28,30.0369003690037"
-                    Point3="28,34.0369003690037" />
-                  <mssgle:LineSegment
-                    End="28,66.5" />
+                    End="0,67.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1299,31 +1315,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="206,75">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="295.5,203.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="100.5,77"
+              EndConnector="-79,77"
               Start="0,0"
-              End="100.5,69.5">
+              End="-79,69.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.5" />
+                    End="0,27.2546125461255" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
+                    Point1="0,27.2546125461255"
+                    Point2="0,31.2546125461255"
+                    Point3="-4,31.2546125461255" />
                   <mssgle:LineSegment
-                    End="96.5,38.5" />
+                    End="-75,31.2546125461255" />
                   <mssgle:CubicBezierSegment
-                    Point1="96.5,38.5"
-                    Point2="100.5,38.5"
-                    Point3="100.5,42.5" />
+                    Point1="-75,31.2546125461255"
+                    Point2="-79,31.2546125461255"
+                    Point3="-79,35.2546125461255" />
                   <mssgle:LineSegment
-                    End="100.5,69.5" />
+                    End="-79,69.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1336,7 +1352,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_COBRA_CLIENT_LIST">
+    design-time-name="Package\Data Flow Task\TBL_STAGING_BROKERCLIENTLIST">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1348,5 +1364,17 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="251,64" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

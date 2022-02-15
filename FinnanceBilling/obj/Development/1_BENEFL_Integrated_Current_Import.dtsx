@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="1/25/2022 1:11:05 PM"
+  DTS:CreationDate="2/8/2022 9:25:27 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{47FB6F28-4143-4928-9322-997F8EEAA58C}"
+  DTS:DTSID="{F5231621-9F98-4F0B-8ADB-2FDA9AABA61C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{BA120AD1-F246-40D5-A194-B0B1AE44EA8D}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{AF64F182-4E58-4FEB-A10D-6699BE96A48E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{ACABAA53-8703-4ED1-A65F-08C8B0B89906}"
+      DTS:DTSID="{F9B0A4E0-D0FF-499B-B2C0-991FFAEDEC88}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -29,124 +29,33 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA7oCO3CU4tiRLmzub6Ox2/AAAAAASAAACgAAAAEAAAAIDPbDTcU8ZtEhDTOdOsDfcYAAAAs3kqc0CvpM8N05pMOQBmsNwAujQAkUSfFAAAAN0oAhL8wayZx6csT1kUvNTV6atH</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADm26Il6me5+Ot+A1NMC0fiAAAAAASAAACgAAAAEAAAAO10dm1/C8DWbSNIpfK87skYAAAALqRi4rai67ybweUk3o7oXeY2vuVbxJYmFAAAANdFgLeiEBGtWGbO3LXylqXykgx8</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FFBF00F7-F41F-454D-8A58-CABD06566C01}"
+      DTS:DTSID="{2961C7DA-20CE-43A6-B01F-6D66E9FB82EC}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\4_NPM.CSV">
+          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\1_BENEFL_Integrated_Current_Import.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="ClientName"
-              DTS:DTSID="{CAF9E578-5D57-47E8-860E-5AAA86D58B5C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="DivisionName"
-              DTS:DTSID="{359C0EBC-F2EA-40A2-8CE0-C4B6168B8528}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="FullName"
-              DTS:DTSID="{1ECD2544-01E3-47DC-B217-D825E0DD5A3C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="SSN"
-              DTS:DTSID="{4D4EE958-04F1-4C76-8BAD-AFC826AFA5D5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CoverageLevel"
-              DTS:DTSID="{3E211D74-B3EE-4C7A-8BC8-C8AFB67777FC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Address"
-              DTS:DTSID="{EEB20813-F19D-4323-9C3F-088EDBA875EA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Address2"
-              DTS:DTSID="{7FA74B15-C871-4119-BA4F-139FC17AE501}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="City"
-              DTS:DTSID="{C8E2138E-C675-4A31-8740-2060B9B8CC47}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StateOrProvince"
-              DTS:DTSID="{FE72A062-B708-4930-9EF7-2B54F1230F10}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="PostalCode"
-              DTS:DTSID="{B3FE5941-7BB0-41A6-8484-71151DDFF257}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Country"
-              DTS:DTSID="{4E56EA2F-6250-4D94-9C71-E23BF8E77F84}"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{088C3BD2-8A9B-41A2-8D8E-B2B87081FE8A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -154,35 +63,107 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="PDFGeneratedDateTime"
-              DTS:DTSID="{72252447-3EF2-4391-B452-552AF2FB7586}"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{AD652F92-DED7-4580-A837-693319090B66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="IndividualIdentifier"
-              DTS:DTSID="{0282169A-2599-4618-88DF-CD790686AA9F}"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{960903DC-ADEC-43A3-9508-0582EFFF9730}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Type"
-              DTS:DTSID="{40037C8A-080C-4E7E-91A0-1D702D4E14D6}"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{FFDC9F3F-F209-4878-A2EB-90D398C12F50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{C01B42BC-3F18-4E13-B599-BEF482CCA0E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{59CE95C1-B8F9-40C5-970A-02EB1EE1452F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{9AD82FCC-0A32-4EB8-9687-BDD0806D6F4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{F83CA1BA-3E71-45EC-9F32-46D3FCB05120}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{FC64C0D5-276F-4A11-AD1B-3B80C4EF6160}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{3EC5BF5F-7DA7-49C6-A77F-868F59FEA2DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{E858FE0D-4533-4AF2-8B56-6E4CD6A4C0C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 11"
+              DTS:DTSID="{E25748BD-3BCB-4760-BA4E-5C029469A8FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="MemberID"
-              DTS:DTSID="{97F474C8-C010-4ECB-B452-1B09FF150FD2}"
+              DTS:ObjectName="Column 12"
+              DTS:DTSID="{E9403EB3-6A97-445B-96EA-145CBEDD0375}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -194,7 +175,7 @@
       DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{C7072945-607C-4C81-AABB-8797505277B9}"
+      DTS:DTSID="{E3653191-E976-4567-B94B-92C171F4DA4B}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -226,17 +207,13 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
-    <DTS:SelectedLogProviders>
-      <DTS:SelectedLogProvider
-        DTS:InstanceID="{C7072945-607C-4C81-AABB-8797505277B9}" />
-    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{9C4A5277-1CD0-475B-A305-A0A78E7A313E}"
+      DTS:DTSID="{5C88F520-EDC7-4EAA-AE29-CF0930DF2175}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -261,96 +238,96 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ClientName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientName"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[DivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="DivisionName"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[DivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[FullName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FullName"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[FullName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[SSN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="SSN"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[CoverageLevel]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CoverageLevel"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[CoverageLevel]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address2"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="City"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[StateOrProvince]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="StateOrProvince"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[StateOrProvince]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PostalCode"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PostalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Country"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PDFGeneratedDateTime]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 0]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PDFGeneratedDateTime"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PDFGeneratedDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[IndividualIdentifier]"
-                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="IndividualIdentifier"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[IndividualIdentifier]" />
+                      cachedName="Column 0"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Type]"
-                      cachedDataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="255"
-                      cachedName="Type"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Type]" />
+                      cachedName="Column 1"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[MemberID]"
-                      cachedDataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="255"
-                      cachedName="MemberID"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]" />
+                      cachedName="Column 2"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 3]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 3"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 4]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 4"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 5]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 5"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 6]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 6"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 7]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 7"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 8]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 8"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 9]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 9"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 10]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 10"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 11]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 11"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 12]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Column 12"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -363,20 +340,20 @@
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
-                      name="Copy of ClientName"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
+                      name="Copy of Column 0"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[ClientName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 0]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -384,20 +361,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
-                      name="Copy of DivisionName"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
+                      name="Copy of Column 1"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[DivisionName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 1]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -405,20 +382,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullName]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullName]"
-                      name="Copy of FullName"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
+                      name="Copy of Column 2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[FullName]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -426,20 +403,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
-                      name="Copy of SSN"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
+                      name="Copy of Column 3"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[SSN]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -447,20 +424,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevel]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevel]"
-                      name="Copy of CoverageLevel"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
+                      name="Copy of Column 4"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[CoverageLevel]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 4]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -468,20 +445,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
-                      name="Copy of Address"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
+                      name="Copy of Column 5"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 5]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -489,20 +466,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
-                      name="Copy of Address2"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
+                      name="Copy of Column 6"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address2]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -510,20 +487,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
-                      name="Copy of City"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
+                      name="Copy of Column 7"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[City]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 7]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -531,20 +508,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
-                      name="Copy of StateOrProvince"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
+                      name="Copy of Column 8"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[StateOrProvince]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 8]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -552,20 +529,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
-                      name="Copy of PostalCode"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
+                      name="Copy of Column 9"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PostalCode]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 9]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -573,20 +550,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
-                      name="Copy of Country"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
+                      name="Copy of Column 10"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Country]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 10]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -594,19 +571,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PDFGeneratedDateTime]"
-                      dataType="date"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PDFGeneratedDateTime]"
-                      name="Copy of PDFGeneratedDateTime"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
+                      name="Copy of Column 11"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PDFGeneratedDateTime]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 11]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -614,62 +592,20 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
-                      name="Copy of IndividualIdentifier"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
+                      name="Copy of Column 12"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[IndividualIdentifier]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Type]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Type]"
-                      name="Copy of Type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Type]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
-                      name="Copy of MemberID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 12]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -704,12 +640,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Read CSV NPM"
+              refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Read CSV NPM"
+              name="Read Csv 1_BENEFL_Integrated_Current_Import"
               usesDispositions="true"
               version="1">
               <properties>
@@ -724,257 +660,26 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Read CSV NPM.Connections[FlatFileConnection]"
+                  refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
                   connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output]"
+                  refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[ClientName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[ClientName]"
-                      name="ClientName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[DivisionName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[DivisionName]"
-                      name="DivisionName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[FullName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[FullName]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[FullName]"
-                      name="FullName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[SSN]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[SSN]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[SSN]"
-                      name="SSN"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[CoverageLevel]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[CoverageLevel]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[CoverageLevel]"
-                      name="CoverageLevel"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Address]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address]"
-                      name="Address"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address2]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Address2]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address2]"
-                      name="Address2"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[City]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[City]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[City]"
-                      name="City"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[StateOrProvince]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[StateOrProvince]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[StateOrProvince]"
-                      name="StateOrProvince"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PostalCode]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PostalCode]"
-                      name="PostalCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Country]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Country]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Country]"
-                      name="Country"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PDFGeneratedDateTime]"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 0]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[PDFGeneratedDateTime]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PDFGeneratedDateTime]"
-                      name="PDFGeneratedDateTime"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 0]"
+                      name="Column 0"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -988,14 +693,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[IndividualIdentifier]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[IndividualIdentifier]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[IndividualIdentifier]"
-                      name="IndividualIdentifier"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 1]"
+                      name="Column 1"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1009,14 +715,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Type]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Type]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Type]"
-                      name="Type"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]"
+                      name="Column 2"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1030,14 +737,213 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[MemberID]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]"
-                      name="MemberID"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]"
+                      name="Column 3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 4]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 4]"
+                      name="Column 4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 5]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 5]"
+                      name="Column 5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]"
+                      name="Column 6"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 7]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 7]"
+                      name="Column 7"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 8]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 8]"
+                      name="Column 8"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 9]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 9]"
+                      name="Column 9"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 10]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 10]"
+                      name="Column 10"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 11]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 11]"
+                      name="Column 11"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 12]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                      length="255"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 12]"
+                      name="Column 12"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1054,105 +960,107 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[ClientName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[DivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="DivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[FullName]"
-                      dataType="wstr"
-                      length="255"
-                      name="FullName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[SSN]"
-                      dataType="wstr"
-                      length="255"
-                      name="SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[CoverageLevel]"
-                      dataType="wstr"
-                      length="255"
-                      name="CoverageLevel" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Address]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Address2]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[City]"
-                      dataType="wstr"
-                      length="255"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[StateOrProvince]"
-                      dataType="wstr"
-                      length="255"
-                      name="StateOrProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="255"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Country]"
-                      dataType="wstr"
-                      length="255"
-                      name="Country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[PDFGeneratedDateTime]"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="PDFGeneratedDateTime" />
+                      name="Column 0" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[IndividualIdentifier]"
-                      dataType="wstr"
-                      length="255"
-                      name="IndividualIdentifier" />
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[Type]"
-                      dataType="wstr"
-                      length="255"
-                      name="Type" />
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[MemberID]"
-                      dataType="wstr"
-                      length="255"
-                      name="MemberID" />
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 6" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 9" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 11" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 12" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output]"
+                  refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1161,11 +1069,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\TBL_STAGING_NPM"
+              refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="TBL_STAGING_NPM"
+              name="TBL_STAGING_EDI_5_PLAN_DOC_REPORT"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1176,7 +1084,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[TBL_STAGING_NPM]</property>
+                  name="OpenRowset">[dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1218,7 +1126,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
                   connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1226,230 +1134,219 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of ClientName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 0]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]" />
+                      cachedName="Copy of Column 0"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of DivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]" />
+                      cachedName="Copy of Column 1"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of FullName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 2]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of FullName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullName]" />
+                      cachedName="Copy of Column 2"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of SSN]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 3]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of SSN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]" />
+                      cachedName="Copy of Column 3"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of CoverageLevel]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 4]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of CoverageLevel"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevel]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevel]" />
+                      cachedName="Copy of Column 4"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of Address]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 5]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Address"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]" />
+                      cachedName="Copy of Column 5"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of Address2]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 6]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Address2"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]" />
+                      cachedName="Copy of Column 6"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of City]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 7]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of City"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                      cachedName="Copy of Column 7"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of StateOrProvince]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 8]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of StateOrProvince"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]" />
+                      cachedName="Copy of Column 8"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of PostalCode]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 9]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]" />
+                      cachedName="Copy of Column 9"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of Country]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 10]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Country"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]" />
+                      cachedName="Copy of Column 10"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of PDFGeneratedDateTime]"
-                      cachedDataType="date"
-                      cachedName="Copy of PDFGeneratedDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[PDFGeneratedDateTime]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PDFGeneratedDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of IndividualIdentifier]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 11]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of IndividualIdentifier"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]" />
+                      cachedName="Copy of Column 11"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of Type]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 12]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Type"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Type]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].Columns[Copy of MemberID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of MemberID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]" />
+                      cachedName="Copy of Column 12"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
                       dataType="wstr"
                       length="255"
-                      name="ClientName" />
+                      name="Line type" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[include]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
                       dataType="wstr"
                       length="255"
-                      name="include" />
+                      name="TPA Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
                       dataType="wstr"
                       length="255"
-                      name="DivisionName" />
+                      name="Bencode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
                       dataType="wstr"
                       length="255"
-                      name="FullName" />
+                      name="Employer Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
                       dataType="wstr"
                       length="255"
-                      name="SSN" />
+                      name="Account Type Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevel]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
                       dataType="wstr"
                       length="255"
-                      name="CoverageLevel" />
+                      name="Plan ID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
                       dataType="wstr"
                       length="255"
-                      name="Address" />
+                      name="PY Start Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
                       dataType="wstr"
                       length="255"
-                      name="Address2" />
+                      name="Plan End Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
                       dataType="wstr"
                       length="255"
-                      name="City" />
+                      name="Grace_Roll" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
                       dataType="wstr"
                       length="255"
-                      name="StateOrProvince" />
+                      name="Runout Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
                       dataType="wstr"
                       length="255"
-                      name="PostalCode" />
+                      name="Term Runout Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
                       dataType="wstr"
                       length="255"
-                      name="Country" />
+                      name="Plan Min" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[PDFGeneratedDateTime]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan Max" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date dt]"
                       dataType="dbTimeStamp2"
-                      name="PDFGeneratedDateTime"
-                      scale="7" />
+                      name="Runout Date dt" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Billable Runout]"
                       dataType="wstr"
                       length="255"
-                      name="IndividualIdentifier" />
+                      name="Billable Runout" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[AccountUniqueKey]"
                       dataType="wstr"
                       length="255"
-                      name="Type" />
+                      name="AccountUniqueKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date Number]"
                       dataType="wstr"
                       length="255"
-                      name="MemberID" />
+                      name="Term Runout Date Number" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Is Paylocity]"
-                      dataType="wstr"
-                      length="255"
-                      name="Is Paylocity" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date dt]"
+                      dataType="dbTimeStamp2"
+                      name="Plan End Date dt" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input].ExternalColumns[Alternate ER ID]"
-                      dataType="wstr"
-                      length="255"
-                      name="Alternate ER ID" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date Number]"
+                      dataType="i4"
+                      name="Runout Date Number" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_NPM.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_NPM.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1461,14 +1358,14 @@
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1477,7 +1374,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{18F3B027-CBB2-494D-86CF-FCA230B1AB31}"
+      DTS:DTSID="{A9444883-D42E-45FA-AA1D-D6B1C8B444D7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -1487,8 +1384,8 @@
         DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{ACABAA53-8703-4ED1-A65F-08C8B0B89906}"
-          SQLTask:SqlStatementSource="Truncate Table [TBL_STAGING_NPM]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{F9B0A4E0-D0FF-499B-B2C0-991FFAEDEC88}"
+          SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1496,12 +1393,54 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{ACC18F25-4E0F-4A34-8663-D4766F81D662}"
+      DTS:DTSID="{19F49152-5A2F-47FC-9E12-153FE5488E2C}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{84887661-5C8C-4B51-BAA9-34A241C98FE4}"
+      DTS:EventID="1845520640"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{1B30B528-41AB-4B93-9BEA-89FA4671CB13}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{434FD6CA-13DD-4371-BB02-93ADF7E8DD91}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{F9B0A4E0-D0FF-499B-B2C0-991FFAEDEC88}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package1','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1517,37 +1456,37 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="387,201" />
+          TopLeft="371,223" />
         <NodeLayout
           Size="170,42"
           Id="Package\Execute SQL Task"
-          TopLeft="281.5,50.5" />
+          TopLeft="284,98" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="366.5,92.5">
+          TopLeft="369,140">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98,108.5"
+              EndConnector="79.5,83"
               Start="0,0"
-              End="98,101">
+              End="79.5,75.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.25" />
+                    End="0,37.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,50.25"
-                    Point2="0,54.25"
-                    Point3="4,54.25" />
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="4,41.5" />
                   <mssgle:LineSegment
-                    End="94,54.25" />
+                    End="75.5,41.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="94,54.25"
-                    Point2="98,54.25"
-                    Point3="98,58.25" />
+                    Point1="75.5,41.5"
+                    Point2="79.5,41.5"
+                    Point3="79.5,45.5" />
                   <mssgle:LineSegment
-                    End="98,101" />
+                    End="79.5,75.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1559,49 +1498,61 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="288,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Read CSV NPM"
-          TopLeft="357.5,22.5" />
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Data Flow Task\TBL_STAGING_NPM"
-          TopLeft="240.5,262.5" />
+          Size="321,42"
+          Id="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import"
+          TopLeft="133,78" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="367.5,119.5" />
+          TopLeft="274,149" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT"
+          TopLeft="338,271" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="436.5,64.5">
+          TopLeft="293.5,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.5,55"
+              EndConnector="61,29"
               Start="0,0"
-              End="11.5,47.5">
+              End="61,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,10.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="4,27.5" />
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
                   <mssgle:LineSegment
-                    End="7.5,27.5" />
+                    End="57,14.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="7.5,27.5"
-                    Point2="11.5,27.5"
-                    Point3="11.5,31.5" />
+                    Point1="57,14.5"
+                    Point2="61,14.5"
+                    Point3="61,18.5" />
                   <mssgle:LineSegment
-                    End="11.5,47.5" />
+                    End="61,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1612,30 +1563,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="422.5,161.5">
+          TopLeft="354.5,191">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-89.5,101"
+              EndConnector="138,80"
               Start="0,0"
-              End="-89.5,93.5">
+              End="138,72.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.9963099630996" />
+                    End="0,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36.9963099630996"
-                    Point2="0,40.9963099630996"
-                    Point3="-4,40.9963099630996" />
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="4,40" />
                   <mssgle:LineSegment
-                    End="-85.5,40.9963099630996" />
+                    End="134,40" />
                   <mssgle:CubicBezierSegment
-                    Point1="-85.5,40.9963099630996"
-                    Point2="-89.5,40.9963099630996"
-                    Point3="-89.5,44.9963099630996" />
+                    Point1="134,40"
+                    Point2="138,40"
+                    Point3="138,44" />
                   <mssgle:LineSegment
-                    End="-89.5,93.5" />
+                    End="138,72.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1648,7 +1599,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_NPM">
+    design-time-name="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
