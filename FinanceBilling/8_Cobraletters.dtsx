@@ -5,38 +5,36 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{F7BB6870-4F3B-4F95-ADA8-8ECECD84CD0D}"
+  DTS:DTSID="{AD52936F-13B8-4DB7-AE1F-E8113D231B5F}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
-  DTS:ObjectName="CobraLettersImport"
+  DTS:ObjectName="8_Cobraletters"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{D308CC0E-BFEA-456A-B3AB-8E656568D4D1}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{D6D1EF9F-E051-4047-9448-B19EB3FA001C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{92DB1C93-8897-4FD2-AFEB-35247CB77376}"
+      DTS:DTSID="{5EEC4BE5-1FBF-48BF-A4D1-21E221AAC0E5}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAGn7gO6pPHgsEXZWF5aekEAAAAAASAAACgAAAAEAAAAHGVUkcsh8nXG9knqJQlJXwYAAAAbMisiaCzWpLjHkeXckMq3BEoABKhOlX8FAAAAKv2Da8/y8Is4nVsf60GnFPj0vCR</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABpp+SO15l93f0wwD2G/A4IAAAAAASAAACgAAAAEAAAAJNQ2ifCRw2NMHiX8ugDfnYYAAAAqLbp76mYL9+n0AFn4p5d30gmN9g+iQoxFAAAABufD3efSHoEPe+bqj4FauCQOQc6</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{09606D30-FB42-4F8E-9801-1BD113EE99F3}"
+      DTS:DTSID="{F2EF605C-DDEA-44ED-A0BA-0AA9A597BFA4}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -56,7 +54,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientName"
-              DTS:DTSID="{5EAA0214-42CE-4566-981E-F6838546A18E}"
+              DTS:DTSID="{93FC2F81-7091-4DC8-A969-EE1C7A56F039}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +63,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DivisionName"
-              DTS:DTSID="{E37C9897-9E91-4D3D-804F-94F8443584F0}"
+              DTS:DTSID="{074BB910-88D7-4295-9FB2-35DC6E1ED557}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +72,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ModeOrder"
-              DTS:DTSID="{8918C69D-D0B9-4097-A792-02B740B0CF48}"
+              DTS:DTSID="{A33C2322-D5CC-4277-B1F6-2658D1A862D9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +81,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ModeName"
-              DTS:DTSID="{B1E61065-C2A1-4202-808E-DFDB6725E612}"
+              DTS:DTSID="{1F712C7E-C6CD-46B8-B554-17E02C3330F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +90,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{FC63AE57-6DDE-4B4A-A2F2-63FF1CE0D8A3}"
+              DTS:DTSID="{55D1235D-2386-43CD-BA65-5A50FCD12062}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -100,25 +98,68 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Qty"
-              DTS:DTSID="{C211D4FA-0EDC-4268-860F-F7344F418A85}"
+              DTS:DTSID="{80F80444-B63C-4C63-BF73-4DF549213E4B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{A018330B-6ADC-48BF-AF7B-AA4E826F01E7}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{A018330B-6ADC-48BF-AF7B-AA4E826F01E7}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{5B262F9C-3400-42EC-AD17-5D2260C83254}"
+      DTS:DTSID="{86D334C4-4D26-483A-ACD8-18ED7907BB68}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -185,11 +226,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       name="Copy of ClientName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -206,11 +247,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       name="Copy of DivisionName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -227,11 +268,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ModeOrder]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ModeOrder]"
                       name="Copy of ModeOrder"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -248,11 +289,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ModeName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ModeName]"
                       name="Copy of ModeName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -269,11 +310,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Description]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Description]"
                       name="Copy of Description"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -290,10 +331,10 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Qty]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Qty]"
                       name="Copy of Qty"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -577,7 +618,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -725,206 +766,8 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TBL_STAGING_COBRA_LETTERS_ERRORS"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TBL_STAGING_COBRA_LETTERS_ERRORS]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[ClientName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[DivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[DivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[ModeOrder]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ModeOrder"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ModeOrder]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[ModeOrder]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[ModeName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ModeName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ModeName]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[ModeName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[Description]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Description"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[Description]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[Qty]"
-                      cachedDataType="i8"
-                      cachedName="Qty"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[Qty]"
-                      lineageId="Package\Data Flow Task\Read CSV_Cobraletters.Outputs[Flat File Source Output].Columns[Qty]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="DivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ModeOrder]"
-                      dataType="wstr"
-                      length="255"
-                      name="ModeOrder" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ModeName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ModeName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
-                      dataType="wstr"
-                      length="255"
-                      name="Description" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[Qty]"
-                      dataType="i8"
-                      name="Qty" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS.Inputs[OLE DB Destination Input]"
@@ -943,16 +786,18 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{3DA38AE9-D1F2-4886-BE9B-2C53D2DB71D7}"
+      DTS:DTSID="{85CD8F2F-ABF6-4AD8-BBF3-08EAA47516D7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{92DB1C93-8897-4FD2-AFEB-35247CB77376}"
+          SQLTask:Connection="{5EEC4BE5-1FBF-48BF-A4D1-21E221AAC0E5}"
           SQLTask:SqlStatementSource="Truncate table[TBL_STAGING_COBRA_LETTERS]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -961,12 +806,54 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{E33D3B50-31AE-4967-A224-4D2816286729}"
+      DTS:DTSID="{DE2C2BDA-6AB2-4871-8571-572801DFAF80}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{147E4590-37C7-4628-AA68-2DCC8FDB4DD5}"
+      DTS:EventID="1845520640"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{8A3DC1D2-33FC-4714-9FE5-61B0198C7F3F}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{BB6E4574-2CCC-468A-AC4D-E8BDDA31B865}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5EEC4BE5-1FBF-48BF-A4D1-21E221AAC0E5}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','8_Cobraletters','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1024,11 +911,23 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="366,78" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="234,42"
           Id="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS"
@@ -1037,10 +936,6 @@
           Size="188,42"
           Id="Package\Data Flow Task\Read CSV_Cobraletters"
           TopLeft="274,32" />
-        <NodeLayout
-          Size="279,42"
-          Id="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS"
-          TopLeft="532,279" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
@@ -1113,60 +1008,11 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="429,185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="242.5,94"
-              Start="0,0"
-              End="242.5,86.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.1549815498155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.1549815498155"
-                    Point2="0,38.1549815498155"
-                    Point3="4,38.1549815498155" />
-                  <mssgle:LineSegment
-                    End="238.5,38.1549815498155" />
-                  <mssgle:CubicBezierSegment
-                    Point1="238.5,38.1549815498155"
-                    Point2="242.5,38.1549815498155"
-                    Point3="242.5,42.1549815498155" />
-                  <mssgle:LineSegment
-                    End="242.5,86.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="55.16361328125,43.1549815498155,132.1727734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS_ERRORS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

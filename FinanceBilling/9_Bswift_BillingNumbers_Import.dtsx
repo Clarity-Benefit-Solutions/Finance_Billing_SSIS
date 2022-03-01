@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/8/2022 9:53:52 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BE015"
+  DTS:CreatorName="V057\mkhan_BENEFLEX"
+  DTS:DTSID="{777D13B6-04D1-4679-84CA-7CB9AA736C5D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{387F2164-D51D-495A-B7E2-9B71D38303E0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
+      DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAgJUr+VEWOOEMTAomhot0nAAAAAASAAACgAAAAEAAAAAYhUHxp7vFz4tugHLttSE0YAAAAqgXiurOio5v0/IZVn38oADCSlCmUzxaOFAAAAIeAQlzj4xaxnnGEedrIXIRbIsF6</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F9525670-494B-400E-8341-1813450A1252}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Finance_Billing\Starting_Files\9_Bswift_BillingNumbers_Import.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{75661BF6-96DC-4FFF-9D2E-DDC399423B38}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EE361742-0748-4116-8339-383CF289FA37}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\Finance_Billing\Starting_Files</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FE1B2984-3CEB-49B8-A2FB-E2A07458FC5C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageStatus">
+      <DTS:VariableValue
+        DTS:DataType="8">Package ran successfully</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{75661BF6-96DC-4FFF-9D2E-DDC399423B38}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Pkg_Success_TBL_SSIS_PKG_INFO"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9B58EC43-65AE-4DD4-B5E4-27131E7AF4A5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pkg_Success_TBL_SSIS_PKG_INFO"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"Insert into TBL_SSIS_PKG_INFO values('"+@[System::PackageName]+"','"+@[User::PackageStatus]+"','"+@[User::FilePath]+"',GETDATE())"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
+          SQLTask:SqlStatementSource="Insert into TBL_SSIS_PKG_INFO values('Package1','Package ran successfully','E:\Finance_Billing\Starting_Files',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{A33166DF-FDC2-4B09-9B9E-4AC6875692FC}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\DFT_Load_Data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{0A782C9C-3412-49EA-B64C-EDF4BA450754}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_Load_Data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="9_Bswift_BillingNumbers_Import"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Master$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Group Number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Group Number]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Group Number]"
+                          name="Group Number"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Client Name]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Name]"
+                          name="Client Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Effective Date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Client Effective Date]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Effective Date]"
+                          name="Client Effective Date"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Division]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Division]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Division]"
+                          name="Division"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Location]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Location]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Location]"
+                          name="Location"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Employee ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Employee ID]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Employee ID]"
+                          name="Employee ID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Last Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Last Name]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Last Name]"
+                          name="Last Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[First Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[First Name]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[First Name]"
+                          name="First Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Benefit Class Name]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Name]"
+                          name="Benefit Class Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Benefit Eligible]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Benefit Class Benefit Eligible]"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Benefit Eligible]"
+                          name="Benefit Class Benefit Eligible"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Group Number]"
+                          dataType="wstr"
+                          length="255"
+                          name="Group Number" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Client Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Client Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Client Effective Date]"
+                          dataType="date"
+                          name="Client Effective Date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Division]"
+                          dataType="wstr"
+                          length="255"
+                          name="Division" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Employee ID]"
+                          dataType="wstr"
+                          length="255"
+                          name="Employee ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Last Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Last Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[First Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="First Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Benefit Class Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Benefit Class Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].ExternalColumns[Benefit Class Benefit Eligible]"
+                          dataType="wstr"
+                          length="255"
+                          name="Benefit Class Benefit Eligible" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Group Number]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Group Number]"
+                          name="Group Number" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Client Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Client Name]"
+                          name="Client Name" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Client Effective Date]"
+                          dataType="date"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Client Effective Date]"
+                          name="Client Effective Date" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Division]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Division]"
+                          name="Division" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Location]"
+                          name="Location" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Employee ID]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Employee ID]"
+                          name="Employee ID" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Last Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Last Name]"
+                          name="Last Name" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[First Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[First Name]"
+                          name="First Name" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Benefit Class Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Benefit Class Name]"
+                          name="Benefit Class Name" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Benefit Class Benefit Eligible]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[Benefit Class Benefit Eligible]"
+                          name="Benefit Class Benefit Eligible" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\DFT_Load_Data\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Group Number]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Group Number"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Group Number]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Client Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Client Name"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Client Effective Date]"
+                          cachedDataType="date"
+                          cachedName="Client Effective Date"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Effective Date]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Division]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Division"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Division]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Location]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Location"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Location]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Employee ID]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Employee ID"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Employee ID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Last Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Last Name"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Last Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[First Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="First Name"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[First Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Benefit Class Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Benefit Class Name"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Benefit Class Benefit Eligible]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Benefit Class Benefit Eligible"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Benefit Eligible]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]"
+                          name="Copy of Group Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Group Number]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]"
+                          name="Copy of Client Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]"
+                          name="Copy of Client Effective Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Client Effective Date]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]"
+                          name="Copy of Division"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Division]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]"
+                          name="Copy of Location"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Location]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
+                          name="Copy of Employee ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Employee ID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]"
+                          name="Copy of Last Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Last Name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]"
+                          name="Copy of First Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[First Name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]"
+                          name="Copy of Benefit Class Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]"
+                          name="Copy of Benefit Class Benefit Eligible"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output].Columns[Benefit Class Benefit Eligible]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                      connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Group Number]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Group Number"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Group Number]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Client Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Client Name"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Name]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Client Effective Date]"
+                          cachedDataType="date"
+                          cachedName="Copy of Client Effective Date"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Effective Date]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Division]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Division"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Location]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Location"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Employee ID]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Employee ID"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Last Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Last Name"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of First Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of First Name"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Benefit Class Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Benefit Class Name"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Name]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Benefit Class Benefit Eligible]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of Benefit Class Benefit Eligible"
+                          externalMetadataColumnId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Benefit Eligible]"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Group Number]"
+                          dataType="wstr"
+                          length="255"
+                          name="Group Number" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Client Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Effective Date]"
+                          dataType="dbTimeStamp2"
+                          name="Client Effective Date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
+                          dataType="wstr"
+                          length="255"
+                          name="Division" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                          dataType="wstr"
+                          length="255"
+                          name="Employee ID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Last Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="First Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Benefit Class Name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Benefit Eligible]"
+                          dataType="wstr"
+                          length="255"
+                          name="Benefit Class Benefit Eligible" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[ParticipantUniqueKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="ParticipantUniqueKey" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\DFT_Load_Data.Paths[Data Conversion Output]"
+                  endId="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Sequence Container\DFT_Load_Data.Paths[Excel Source Output]"
+                  endId="Package\Sequence Container\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Excel Source Output"
+                  startId="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import.Outputs[Excel Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8D9E1891-AEBD-4311-9A49-C770EBE8A9F6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
+              SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{18717DBC-5481-4D94-A95E-C3D3F66DF1FE}"
+          DTS:From="Package\Sequence Container\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\DFT_Load_Data" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CC7417D6-FEEB-400C-A2C4-818CD1569D26}"
+      DTS:From="Package\Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Pkg_Success_TBL_SSIS_PKG_INFO" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{0F386F40-FE3E-4200-92F2-BCB07E714121}"
+      DTS:EventID="1919203820"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{9ACA2C28-4AD0-435F-B2A9-23D21565B5CF}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3CAB3EE9-AF08-4AC3-B1C4-A9DFDF3A70BA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package1','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="265,42"
+          Id="Package\Pkg_Success_TBL_SSIS_PKG_INFO"
+          TopLeft="541,137" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Sequence Container\DFT_Load_Data"
+          TopLeft="89.5,110.5" />
+        <NodeLayout
+          Size="371,42"
+          Id="Package\Sequence Container\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="191,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.5,63"
+              Start="0,0"
+              End="-21.5,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-17.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.5,31.5"
+                    Point2="-21.5,31.5"
+                    Point3="-21.5,35.5" />
+                  <mssgle:LineSegment
+                    End="-21.5,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="382,207"
+          Size="382,250"
+          Id="Package\Sequence Container"
+          TopLeft="77,19" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="459,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82,14"
+              Start="0,0"
+              End="74.5,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,0"
+                    Point2="41,0"
+                    Point3="41,4" />
+                  <mssgle:LineSegment
+                    End="41,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,10"
+                    Point2="41,14"
+                    Point3="45,14" />
+                  <mssgle:LineSegment
+                    End="74.5,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="202,55" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Sequence Container\DFT_Load_Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Sequence Container\DFT_Load_Data\Data Conversion"
+          TopLeft="202,153" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import"
+          TopLeft="137,43" />
+        <NodeLayout
+          Size="325,42"
+          Id="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+          TopLeft="299,270" />
+        <EdgeLayout
+          Id="Package\Sequence Container\DFT_Load_Data.Paths[Excel Source Output]"
+          TopLeft="256,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26.5,68"
+              Start="0,0"
+              End="26.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="22.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,34"
+                    Point2="26.5,34"
+                    Point3="26.5,38" />
+                  <mssgle:LineSegment
+                    End="26.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\DFT_Load_Data.Paths[Data Conversion Output]"
+          TopLeft="282.5,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179,75"
+              Start="0,0"
+              End="179,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
+                  <mssgle:LineSegment
+                    End="175,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="175,37.5"
+                    Point2="179,37.5"
+                    Point3="179,41.5" />
+                  <mssgle:LineSegment
+                    End="179,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\DFT_Load_Data\9_Bswift_BillingNumbers_Import">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

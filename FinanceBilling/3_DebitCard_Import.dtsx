@@ -1,42 +1,40 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/24/2022 8:24:44 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{DBCB245F-BE74-438B-B17E-F18D62326142}"
+  DTS:DTSID="{955D2700-B0FE-43A5-A36B-46FEE51F6803}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DebitCardImport"
+  DTS:ObjectName="3_DebitCard_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{3962B070-328A-4F2D-9F48-940FEFB2C53C}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{1E427787-B4A6-4BB6-AEAA-99F30C5A2693}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{FD078A81-A965-4599-9D2D-0C6AA2EB9A72}"
+      DTS:DTSID="{6A2DFA9E-B9A0-4805-8FC8-3B0445BD0A1C}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACG25HkgzKFx5uN36RiB+lcAAAAAASAAACgAAAAEAAAAO0YjGTVnUV61G9UPFyFVDAYAAAAW4pO0HNlaDvzvuoy6a5RKjGGb74y+E43FAAAAIUiZbLh1PsreIGVJmyM96c67x0k</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADrd6uSbkpOfcAvDdwj7aSUAAAAAASAAACgAAAAEAAAAEnXd+0vD9/M3VCN3S3v5psYAAAApcy4lfF22mWx3XXdqHaO4vRXqJletV3BFAAAAMwxQlGldp1iXi/s9sraDxWF32LI</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{DCEFCBAD-0563-4B11-9493-AC7FC1EE4019}"
+      DTS:DTSID="{AEE8064C-051B-46C3-9221-8735AE914038}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -56,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Id"
-              DTS:DTSID="{6C963C47-8C08-433A-8C08-B70580030468}"
+              DTS:DTSID="{2144616F-94E7-4866-B5A6-C837815015BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 1"
-              DTS:DTSID="{85B6FAF4-F93C-4623-B471-DE44499B5F5E}"
+              DTS:DTSID="{CBDC2C16-FDED-4393-8106-C2251B385AC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Name"
-              DTS:DTSID="{F23154DD-CC70-482E-858E-BE491FDD33A5}"
+              DTS:DTSID="{3D4FC2E6-B8E9-446A-9AC4-8EEAC71F1613}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 3"
-              DTS:DTSID="{A3716929-69F8-471C-8882-330CEF9FF9E0}"
+              DTS:DTSID="{DAB3BF6D-F066-4A1D-8FE4-79C458807316}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer Id"
-              DTS:DTSID="{36670A65-1639-41D2-8097-42BAB29995AE}"
+              DTS:DTSID="{38C00A59-1FA9-4BDF-B940-F3FBB17E87FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +99,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 5"
-              DTS:DTSID="{017D56C2-D9E4-4FC3-9764-343CB2903D16}"
+              DTS:DTSID="{BA29E1A8-79BA-4758-A67E-747907DA3727}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +108,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer"
-              DTS:DTSID="{8C725ECD-59EC-48F9-984C-91777204AFFA}"
+              DTS:DTSID="{5191DD5F-3DD3-41CD-8E83-A6EF18CC129D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +117,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 7"
-              DTS:DTSID="{05DE0379-DB5C-4F08-B67D-9BFE8684E998}"
+              DTS:DTSID="{7A35B939-3CC9-4C24-8CF4-20A273350A7C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 8"
-              DTS:DTSID="{04A9A4F0-1D73-4756-BFCC-D79FC0D5FABC}"
+              DTS:DTSID="{2BEF4792-4C24-4AD6-B2A2-E499B4169624}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New Cards"
-              DTS:DTSID="{B078729A-3F9E-4765-8B1C-D1873A22E0B4}"
+              DTS:DTSID="{A67F2D21-DFAA-4CA6-AC6B-880423D74661}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 10"
-              DTS:DTSID="{9B6BD539-59A0-427F-B45A-3A74F6C547EB}"
+              DTS:DTSID="{9923068B-900A-4272-823C-7BE9872E54D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 11"
-              DTS:DTSID="{A8CCFD0C-49E8-4C20-AAED-F5FFF3756BBA}"
+              DTS:DTSID="{6D64BEF3-0897-42BF-83F5-83D2589C25B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Replacement Cards"
-              DTS:DTSID="{AAD9136C-F676-47CE-9270-481F4B328407}"
+              DTS:DTSID="{DB65F4DC-CBA8-4C6D-865D-504F5D75F90C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +171,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{85CF1D61-5942-48E3-8EF9-EE55073403AC}"
+              DTS:DTSID="{0DD0B728-4271-4A40-A349-2C202D596411}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +180,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 14"
-              DTS:DTSID="{66AC50D3-FCAA-487B-AA34-E8C2F373CFE4}"
+              DTS:DTSID="{2734EF55-2B5C-4572-AB23-B820AD25C3AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +189,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Cards"
-              DTS:DTSID="{BB99051D-A0A2-4DCA-9582-CA5496A0C8D2}"
+              DTS:DTSID="{F6D094AD-7201-4406-A983-449222329F98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +198,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 16"
-              DTS:DTSID="{07F79973-E098-419C-A897-EB9FF11E6BD1}"
+              DTS:DTSID="{0674F3AA-D0D0-4D3A-8C81-2F742C1D8655}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -209,7 +207,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{E9730511-1BEF-403C-8A3A-8DF2964F89B3}"
+      DTS:DTSID="{8D3AB7B4-D4D6-4092-B799-C1A7AC0FEA31}"
       DTS:ObjectName="Flat File Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -229,7 +227,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Id"
-              DTS:DTSID="{89EF0546-3812-49D2-B432-458A19C0F440}"
+              DTS:DTSID="{BEA9E459-0A22-4D87-BACF-06D86FE9E5D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -238,7 +236,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 1"
-              DTS:DTSID="{437C2559-E84D-43DC-B867-FB13A1E3E424}"
+              DTS:DTSID="{23537B3C-C9E4-4EB0-BE8C-A172688ED062}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -247,7 +245,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Name"
-              DTS:DTSID="{FC3B1467-70B0-482B-B578-DE1DE4AC8CA4}"
+              DTS:DTSID="{97759088-4089-46C8-8693-38F473EB2EE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -256,7 +254,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 3"
-              DTS:DTSID="{7DC63B2C-87FF-4020-ABEC-DED39943A5DB}"
+              DTS:DTSID="{2D80F6FA-F4C8-4EF0-AA9E-C1C526876FB8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -265,7 +263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer Id"
-              DTS:DTSID="{A8014071-7BB5-47BC-8BFD-C7AF9D57E0E6}"
+              DTS:DTSID="{831AD863-DE38-4E85-A7CE-0E33C9C952DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -274,7 +272,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 5"
-              DTS:DTSID="{F97ED3B1-4A43-4A55-B65A-AD85CA917B16}"
+              DTS:DTSID="{976B4339-EF18-45E6-A73E-484AF6616856}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -283,7 +281,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer"
-              DTS:DTSID="{EE4CEBDB-CEDF-4761-9B8D-2D75EFD9EEF5}"
+              DTS:DTSID="{0F5F7347-5FCA-49D3-BF71-445E6D07C102}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -292,7 +290,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 7"
-              DTS:DTSID="{091AACB4-503B-404E-BDD6-4BE4662195C6}"
+              DTS:DTSID="{0E2251E3-CBE5-4D6B-9C75-2D7075039C1E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -301,7 +299,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 8"
-              DTS:DTSID="{FA731EDF-104F-49F1-A281-9B01517D9E79}"
+              DTS:DTSID="{8523CC02-33AE-40B0-88FB-16480E29FB98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -310,7 +308,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New Cards"
-              DTS:DTSID="{C4658A31-9076-40D8-A1A5-5E22E24A744F}"
+              DTS:DTSID="{83EBB391-8F8F-49A5-A45E-55765681AF40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -319,7 +317,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 10"
-              DTS:DTSID="{DFF9CB8B-F441-42A3-872F-9F0DB5120426}"
+              DTS:DTSID="{595FDCD8-25A3-455B-8BD9-90B07DA35CE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -328,7 +326,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 11"
-              DTS:DTSID="{76146E9E-0B56-497A-A470-954234CEECE0}"
+              DTS:DTSID="{A88700CB-439B-4864-8D1B-81145D7AC9A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -337,7 +335,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Replacement Cards"
-              DTS:DTSID="{EB844FCB-9A01-4785-9578-9B11F77FD067}"
+              DTS:DTSID="{3A66595D-C1D5-4B9C-BB8B-576B787F8B3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -346,7 +344,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{24B8DDE6-FC03-4300-BF19-0F40D871FE40}"
+              DTS:DTSID="{17586DEC-FE91-4814-9B4A-F2BABC6AAAB1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -355,7 +353,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 14"
-              DTS:DTSID="{7DB96786-1715-4F92-83A7-E5C5C882C5DC}"
+              DTS:DTSID="{13D4FCDF-0A4D-4277-BFB2-8AE2142D84A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -364,7 +362,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Cards"
-              DTS:DTSID="{246B2FBB-7157-4E2F-B3B3-C38EC0002158}"
+              DTS:DTSID="{F8983CAF-9F77-4A5D-9843-D70C5E1A2D66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -373,7 +371,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 16"
-              DTS:DTSID="{C9066C47-AFE7-4627-A5FE-CA58366BF8F1}"
+              DTS:DTSID="{868EC3F2-FC4F-4FB6-BE22-9F383A0FECD1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -382,7 +380,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{29A84A03-1C41-463C-9C72-0EBB27372FA3}"
+      DTS:DTSID="{0CD72D3E-D9B8-4091-9E13-49BACBB20B14}"
       DTS:ObjectName="Flat File Connection Manager 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -402,7 +400,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Id"
-              DTS:DTSID="{9D4AED95-0E7A-43F4-B5D6-D71AE1FF669F}"
+              DTS:DTSID="{24725CC3-6170-4D10-B6A0-DA5BCCD8D7C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -411,7 +409,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 1"
-              DTS:DTSID="{9670AB39-A86C-4A82-9834-9F2AB629658F}"
+              DTS:DTSID="{86C96836-35E1-45F8-BFE1-2B539EB060DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -420,7 +418,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Administrator Name"
-              DTS:DTSID="{1CA25CC9-BD61-484F-9F0E-8A613EDC089A}"
+              DTS:DTSID="{A3D79D3A-7028-4253-8948-984D882DE7FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -429,7 +427,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 3"
-              DTS:DTSID="{532CB14A-79DB-4412-B049-0F26C1B4DD06}"
+              DTS:DTSID="{1D8047C7-AB53-486A-8FFF-535F458B3084}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -438,7 +436,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer Id"
-              DTS:DTSID="{A27D4702-681A-4903-BE57-3514F4341E17}"
+              DTS:DTSID="{1365BA10-E131-4CBA-B34B-EF24ECF59513}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -447,7 +445,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 5"
-              DTS:DTSID="{E774DEB8-B819-498B-9DDE-F6345E989506}"
+              DTS:DTSID="{34F8A410-5BCD-4CA3-9448-6D463F668F70}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -456,7 +454,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Employer"
-              DTS:DTSID="{6DAEA218-F87D-433F-8A38-006AE9282B96}"
+              DTS:DTSID="{0917E83D-EABD-440A-A19E-3BF2B2FEBDF5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -465,7 +463,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 7"
-              DTS:DTSID="{E75A5F99-4332-4026-92E5-67F4092A058F}"
+              DTS:DTSID="{3ACB8897-8BE6-4E16-BF24-9ABFB0C9DB6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -474,7 +472,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 8"
-              DTS:DTSID="{2C8B6C5E-BB6F-41FC-AE52-CE72CEAE205A}"
+              DTS:DTSID="{2B0616E5-9407-45A3-8265-ACE36155EDC5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -483,7 +481,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New Cards"
-              DTS:DTSID="{112CACC2-85D5-473A-91A0-C2606552A009}"
+              DTS:DTSID="{E0B6B0A2-87E7-4A4E-84DF-A94C6FC85B37}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -492,7 +490,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 10"
-              DTS:DTSID="{D7CCD8EF-4E5D-464B-8723-CB91D77188EB}"
+              DTS:DTSID="{1691F105-127A-4C2B-BB7E-08AEA0CCBB0A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -501,7 +499,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 11"
-              DTS:DTSID="{160B4521-526C-4BAF-88AD-65477EF8B5F0}"
+              DTS:DTSID="{153D771D-AABD-4426-8FF4-3CFDD8E02264}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -510,7 +508,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Replacement Cards"
-              DTS:DTSID="{BDB44573-288E-4D5C-9400-37DF34CFE45B}"
+              DTS:DTSID="{A4D06055-6E50-438C-BD1F-3DA3E479DBE7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -519,7 +517,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 13"
-              DTS:DTSID="{88C3D877-CF41-4169-A83A-4C3424492565}"
+              DTS:DTSID="{DDAE1ACE-E317-45D3-805F-E53FDFADDDDD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -528,7 +526,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 14"
-              DTS:DTSID="{718FD207-AFDD-4F3E-8A3C-B858264DAEBA}"
+              DTS:DTSID="{74C968DD-1C28-4C00-8D88-9DF4A6205530}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -537,7 +535,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Cards"
-              DTS:DTSID="{C2DDDE13-477D-414F-A419-EFCFA009BE7C}"
+              DTS:DTSID="{B5D69A26-440F-462F-B422-9BF43712CDE9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -546,25 +544,68 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 16"
-              DTS:DTSID="{B6E4BBEB-523C-4CB0-81A8-546F8814281E}"
+              DTS:DTSID="{1CB57BD3-9F1D-47AA-871E-D1FFE0CFF00D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{8AF3E3D9-5811-433D-90D0-90444B45F4F6}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{8AF3E3D9-5811-433D-90D0-90444B45F4F6}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{0CF4B155-5D1A-4F36-B513-5B72A9DFD926}"
+      DTS:DTSID="{223D20C2-7439-4A17-8CC5-F60540D13E22}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -641,11 +682,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Administrator Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Administrator Id]"
                       name="Copy of Administrator Id"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -662,11 +703,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Administrator Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Administrator Name]"
                       name="Copy of Administrator Name"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -683,10 +724,10 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of New Cards]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of New Cards]"
                       name="Copy of New Cards"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -703,10 +744,10 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Replacement Cards]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Replacement Cards]"
                       name="Copy of Replacement Cards"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -723,10 +764,10 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Cards]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Cards]"
                       name="Copy of Total Cards"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -743,11 +784,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Id]"
                       name="Copy of Employer Id"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -764,11 +805,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer]"
                       name="Copy of Employer"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1360,7 +1401,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1624,276 +1665,8 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Administrator Id]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Administrator Id"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Administrator Id]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Administrator Id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Administrator Name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Administrator Name"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Administrator Name]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Administrator Name]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[New Cards]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="New Cards"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[New Cards]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[New Cards]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Replacement Cards]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Replacement Cards"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Replacement Cards]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Replacement Cards]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Id]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Employer Id"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Id]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Employer Id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Employer]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Employer"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Employer]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[Total Cards]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Total Cards"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Total Cards]"
-                      lineageId="Package\Data Flow Task\Read CSV _DebitCard_Import.Outputs[Flat File Source Output].Columns[Total Cards]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Administrator Id]"
-                      dataType="wstr"
-                      length="50"
-                      name="Administrator Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Administrator Name]"
-                      dataType="wstr"
-                      length="50"
-                      name="Administrator Name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Id]"
-                      dataType="wstr"
-                      length="50"
-                      name="Employer Id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer]"
-                      dataType="wstr"
-                      length="50"
-                      name="Employer" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[New Cards]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="New Cards" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Replacement Cards]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Replacement Cards" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Total Cards]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Total Cards" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 1]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 1" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 3]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 5]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 5" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 7]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 7" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 8]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 8" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 10]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 11]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 11" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 13]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 13" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 14]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 14" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Column 16]"
-                      dataType="wstr"
-                      length="50"
-                      name="Column 16" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY.Inputs[OLE DB Destination Input]"
@@ -1912,16 +1685,18 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0A4792EB-54F2-43BE-A3DD-66D0AF617369}"
+      DTS:DTSID="{AC484EF2-2DBD-4A41-A226-2464AC4BA5B2}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{FD078A81-A965-4599-9D2D-0C6AA2EB9A72}"
+          SQLTask:Connection="{6A2DFA9E-B9A0-4805-8FC8-3B0445BD0A1C}"
           SQLTask:SqlStatementSource="Truncate table[TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1930,12 +1705,54 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{24097D6B-C8C3-4158-B2B7-C7B1F751B566}"
+      DTS:DTSID="{10FBC103-2681-4E36-BB67-C2F57E79A463}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{30089F78-CEF5-4B3C-A670-2FC6FCEC3E40}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{6F17B8EC-102A-4022-B6F0-6E64CF529E72}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C36FF5A2-160F-4087-A8F3-3633691BCC61}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{6A2DFA9E-B9A0-4805-8FC8-3B0445BD0A1C}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','3_DebitCard_Import','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1981,19 +1798,23 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="223,50" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="218,42"
-          Id="Package\Data Flow Task\Read CSV _DebitCard_Import"
-          TopLeft="268,8" />
-        <NodeLayout
-          Size="343,42"
-          Id="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR"
-          TopLeft="437.5,238.5" />
         <NodeLayout
           Size="304,42"
           Id="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY"
@@ -2002,6 +1823,10 @@
           Size="156,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="307,121" />
+        <NodeLayout
+          Size="218,42"
+          Id="Package\Data Flow Task\Read CSV _DebitCard_Import"
+          TopLeft="268,8" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="377,50">
@@ -2033,7 +1858,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2067,61 +1894,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="409.666666666667,163">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="199.333333333333,75.5"
-              Start="0,0"
-              End="199.333333333333,68">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.6598984771574" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.6598984771574"
-                    Point2="0,30.6598984771574"
-                    Point3="4,30.6598984771574" />
-                  <mssgle:LineSegment
-                    End="195.333333333333,30.6598984771574" />
-                  <mssgle:CubicBezierSegment
-                    Point1="195.333333333333,30.6598984771574"
-                    Point2="199.333333333333,30.6598984771574"
-                    Point3="199.333333333333,34.6598984771574" />
-                  <mssgle:LineSegment
-                    End="199.333333333333,68" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="33.5802799479165,35.6598984771574,132.1727734375,11.43359375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY_ERROR">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_EDI_4_DEBIT_CARD_SUMMARY">
     <Properties>

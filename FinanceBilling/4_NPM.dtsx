@@ -1,42 +1,40 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/25/2022 1:11:05 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{47FB6F28-4143-4928-9322-997F8EEAA58C}"
+  DTS:DTSID="{BA59733B-95F2-4DD4-B98F-55F8C85C91B3}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="4_NPM"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{EF60C989-BE3E-4405-8A03-86158B16EED7}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{D77DAC50-9050-4967-BAAE-C61CE4CED3CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{ACABAA53-8703-4ED1-A65F-08C8B0B89906}"
+      DTS:DTSID="{853BE530-A035-4D59-A386-E076266CA372}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADOg+4o/BzOfrCQA0wZaElQAAAAAASAAACgAAAAEAAAAAygo8rLMRpDBpFlgl9mISEYAAAAHFOOjlDSMKwJmZBOWUMKN5eBspl1x0U3FAAAAMEYBd0HkFhxobS1mCXOqwz0jcQ/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADgv4yW8YfB84nSLSVFnYtxAAAAAASAAACgAAAAEAAAAJgGe4DFXtH8NFsKekZlqG0YAAAACN/M30UwGeq7eWzfTQUglGzJ5MjJ4Mm4FAAAAIfU2lys5QBIUVoKA221zr1vMy5y</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FFBF00F7-F41F-454D-8A58-CABD06566C01}"
+      DTS:DTSID="{BEF72834-AE76-4F23-A892-0AE29FF20084}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -56,7 +54,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientName"
-              DTS:DTSID="{CAF9E578-5D57-47E8-860E-5AAA86D58B5C}"
+              DTS:DTSID="{53C1D781-A22C-486A-9690-9CF0BDF704F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +63,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DivisionName"
-              DTS:DTSID="{359C0EBC-F2EA-40A2-8CE0-C4B6168B8528}"
+              DTS:DTSID="{14F43FCC-BBA5-4E87-A46B-5137DB0C850D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +72,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FullName"
-              DTS:DTSID="{1ECD2544-01E3-47DC-B217-D825E0DD5A3C}"
+              DTS:DTSID="{3E466160-5664-4FCA-8048-5EC9F9D5FBC2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +81,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SSN"
-              DTS:DTSID="{4D4EE958-04F1-4C76-8BAD-AFC826AFA5D5}"
+              DTS:DTSID="{183D6908-00AE-4075-AC10-F91FFD690C76}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +90,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CoverageLevel"
-              DTS:DTSID="{3E211D74-B3EE-4C7A-8BC8-C8AFB67777FC}"
+              DTS:DTSID="{77F00B38-5124-4E67-A500-C06FB583484E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +99,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address"
-              DTS:DTSID="{EEB20813-F19D-4323-9C3F-088EDBA875EA}"
+              DTS:DTSID="{900AECC0-BE31-47A4-BF10-3D6018D2D311}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +108,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address2"
-              DTS:DTSID="{7FA74B15-C871-4119-BA4F-139FC17AE501}"
+              DTS:DTSID="{2D0658CA-FF6B-4CE8-B061-A47E0EB1CDF7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +117,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{C8E2138E-C675-4A31-8740-2060B9B8CC47}"
+              DTS:DTSID="{6A022B94-35BB-4848-977E-6670DA0912E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +126,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="StateOrProvince"
-              DTS:DTSID="{FE72A062-B708-4930-9EF7-2B54F1230F10}"
+              DTS:DTSID="{F263477D-6DFF-4054-B6CA-7BFA8F4DE6F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +135,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{B3FE5941-7BB0-41A6-8484-71151DDFF257}"
+              DTS:DTSID="{C8A273A3-EA26-42B2-B51C-1E6E887E58B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +144,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{4E56EA2F-6250-4D94-9C71-E23BF8E77F84}"
+              DTS:DTSID="{BC709D82-1D81-4C64-8334-7CE1922AD030}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PDFGeneratedDateTime"
-              DTS:DTSID="{72252447-3EF2-4391-B452-552AF2FB7586}"
+              DTS:DTSID="{31065B43-0BCA-482E-88E4-693D1574EFA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +162,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IndividualIdentifier"
-              DTS:DTSID="{0282169A-2599-4618-88DF-CD790686AA9F}"
+              DTS:DTSID="{D9F26C21-776A-4A75-93C3-FD34DE76A8D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +171,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Type"
-              DTS:DTSID="{40037C8A-080C-4E7E-91A0-1D702D4E14D6}"
+              DTS:DTSID="{EBCEE6E8-7B21-4A72-996B-261BD193FF03}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,25 +180,68 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MemberID"
-              DTS:DTSID="{97F474C8-C010-4ECB-B452-1B09FF150FD2}"
+              DTS:DTSID="{F430B8E1-1997-4453-AEC7-CADF02CD9EB3}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{BA78A9EC-5FD1-452F-B0C4-0AB1F4CB20EB}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{BA78A9EC-5FD1-452F-B0C4-0AB1F4CB20EB}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{9C4A5277-1CD0-475B-A305-A0A78E7A313E}"
+      DTS:DTSID="{C063A4A1-D221-44C5-970F-3A7EB009F63A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -323,11 +364,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       name="Copy of ClientName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -344,11 +385,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       name="Copy of DivisionName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -365,11 +406,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FullName]"
                       name="Copy of FullName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -386,11 +427,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
                       name="Copy of SSN"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -407,11 +448,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevel]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevel]"
                       name="Copy of CoverageLevel"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -428,11 +469,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
                       name="Copy of Address"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -449,11 +490,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
                       name="Copy of Address2"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -470,11 +511,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                       name="Copy of City"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -491,11 +532,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
                       name="Copy of StateOrProvince"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -512,11 +553,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                       name="Copy of PostalCode"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -533,11 +574,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
                       name="Copy of Country"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -554,10 +595,10 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PDFGeneratedDateTime]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PDFGeneratedDateTime]"
                       name="Copy of PDFGeneratedDateTime"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -574,11 +615,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
                       name="Copy of IndividualIdentifier"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -595,11 +636,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Type]"
                       name="Copy of Type"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -616,11 +657,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
                       name="Copy of MemberID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1142,7 +1183,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1414,318 +1455,8 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TBL_STAGING_NPM_ERROR"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TBL_STAGING_NPM_ERROR]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[ClientName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[DivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[DivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[FullName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FullName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[FullName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[SSN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[CoverageLevel]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CoverageLevel"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevel]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[CoverageLevel]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address2"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Address2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[StateOrProvince]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="StateOrProvince"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[StateOrProvince]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PostalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Country"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[PDFGeneratedDateTime]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PDFGeneratedDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PDFGeneratedDateTime]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[PDFGeneratedDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[IndividualIdentifier]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="IndividualIdentifier"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[IndividualIdentifier]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[Type]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Type"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[Type]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[MemberID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="MemberID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
-                      lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="DivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
-                      dataType="wstr"
-                      length="255"
-                      name="FullName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
-                      dataType="wstr"
-                      length="255"
-                      name="SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevel]"
-                      dataType="wstr"
-                      length="255"
-                      name="CoverageLevel" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      dataType="wstr"
-                      length="255"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
-                      dataType="wstr"
-                      length="255"
-                      name="StateOrProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="255"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      dataType="wstr"
-                      length="255"
-                      name="Country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PDFGeneratedDateTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="PDFGeneratedDateTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
-                      dataType="wstr"
-                      length="255"
-                      name="IndividualIdentifier" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
-                      dataType="wstr"
-                      length="255"
-                      name="Type" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
-                      dataType="wstr"
-                      length="255"
-                      name="MemberID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\Data Flow Task\TBL_STAGING_NPM.Inputs[OLE DB Destination Input]"
@@ -1744,15 +1475,17 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{18F3B027-CBB2-494D-86CF-FCA230B1AB31}"
+      DTS:DTSID="{BABAA623-63E7-4427-9043-D98C511FAE5F}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{ACABAA53-8703-4ED1-A65F-08C8B0B89906}"
+          SQLTask:Connection="{853BE530-A035-4D59-A386-E076266CA372}"
           SQLTask:SqlStatementSource="Truncate Table [TBL_STAGING_NPM]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1761,12 +1494,54 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{ACC18F25-4E0F-4A34-8663-D4766F81D662}"
+      DTS:DTSID="{79130A93-1D5D-4581-8330-CF916BFBFE5C}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{3CC5F701-BAB1-46CA-BF48-80C0C1F193DC}"
+      DTS:EventID="858666798"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{BBB837C1-9947-45C6-A499-85CFE8F26FA3}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5A2C23A4-E8B1-4157-B013-35E4CA980072}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{853BE530-A035-4D59-A386-E076266CA372}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','4_NPM','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1780,13 +1555,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="281.5,50.5" />
-        <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="387,201" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="281.5,50.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="366.5,92.5">
@@ -1824,6 +1599,18 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="247,71" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
@@ -1833,6 +1620,10 @@
           Size="158,42"
           Id="Package\Data Flow Task\Read CSV NPM"
           TopLeft="357.5,22.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Data Flow Task\TBL_STAGING_NPM"
+          TopLeft="240.5,262.5" />
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
@@ -1868,17 +1659,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Data Flow Task\TBL_STAGING_NPM"
-          TopLeft="240.5,262.5" />
-        <NodeLayout
-          Size="231,42"
-          Id="Package\Data Flow Task\TBL_STAGING_NPM_ERROR"
-          TopLeft="554.5,249.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
           TopLeft="422.5,161.5">
@@ -1910,42 +1695,8 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="473.5,161.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="196.5,88"
-              Start="0,0"
-              End="196.5,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.719557195572" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.719557195572"
-                    Point2="0,35.719557195572"
-                    Point3="4,35.719557195572" />
-                  <mssgle:LineSegment
-                    End="192.5,35.719557195572" />
-                  <mssgle:CubicBezierSegment
-                    Point1="192.5,35.719557195572"
-                    Point2="196.5,35.719557195572"
-                    Point3="196.5,39.719557195572" />
-                  <mssgle:LineSegment
-                    End="196.5,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="32.16361328125,40.719557195572,132.1727734375,11.43359375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1954,19 +1705,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_NPM">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_NPM_ERROR">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
