@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="3_DebitCard_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{A6FA6ED6-DE7B-4331-9B66-BC257A43F96B}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{6A2DD657-FEB8-45AA-8C69-FFECFB115024}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB3PsIFVCNC9J1lzZMUuFH4AAAAAASAAACgAAAAEAAAAEbvifhoB0whtPMkeNgGVVcYAAAAHQ/Fjae+qX+YIS/LsI0wC8OFIE14CB79FAAAACp4zCnpE7/mmK6an9C1TcPsj2Ph</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABwgqJ777xc1RWUfGI7Rjj5AAAAAASAAACgAAAAEAAAAPKDD05xouy191nG28+j5QcYAAAAdKMU8xCxyzbxNDQ/RLi0R2XmqN/auhR5FAAAAOMCekzNLINGEFP2a61HjL3pEUsP</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -585,7 +585,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 3_DebitCard_Import','',
-'0','','3/3/2022 5:26:54 AM','0')</DTS:VariableValue>
+'0','','3/3/2022 5:32:27 AM','0')</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions

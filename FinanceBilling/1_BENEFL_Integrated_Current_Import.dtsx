@@ -9,10 +9,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="1_BENEFL_Integrated_Current_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{7D97622D-6CB5-409F-B053-E3A500663EC4}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{290CB59E-98A1-489E-90A2-BB69C6DC035C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAZV5B2ezvJZzRuQVLwPYxjAAAAAASAAACgAAAAEAAAAHFnO3KKRNonJdHM3eK5CLEYAAAAxgeliVPrgpS+3NJzZKuDYsmaFy3oZ28wFAAAAFN1IkHw2JADtkM5TV6/fxXEhyjR</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB23iATzGn6BX2voqbFluONAAAAAASAAACgAAAAEAAAALGxI7bkDhDHmx3yNaO5VcsYAAAAwG7SBgLtn/D3w80GCmHBHCvmVGVDJlUNFAAAAMioimRU3t7GGMudOI6Hy07HF7mk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -202,7 +202,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','Package1','',
-'0','','3/3/2022 5:25:53 AM','0')</DTS:VariableValue>
+'0','','3/3/2022 6:12:24 AM','0')</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -2072,7 +2072,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{7185C841-C504-4438-9482-0FA5931C270A}"
               SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package1','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','1_BENEFL_Integrated_Current_Import','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
