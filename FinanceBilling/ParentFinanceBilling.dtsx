@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="139"
-  DTS:VersionGUID="{18EDDE19-3E82-411A-90C6-F45C97DC447C}">
+  DTS:VersionBuild="140"
+  DTS:VersionGUID="{6336480D-6127-4963-9948-AF7009364A02}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACq3Wb4QX1DclTJ5xcyirvNAAAAAASAAACgAAAAEAAAAG2VpNVbA+xSp34HsSpatgIYAAAAGHEuGJumkYB/an/JKDs6nGaC+O7eN16EFAAAADNifKPzJrHCe9fn75rrzEAMyiFL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACbxzS4FqCrDahMHVoVvkJnAAAAAASAAACgAAAAEAAAABhN8OThxMhgOnVV0pLvUB8YAAAAmOIkHWIKtq7A4QKtAswBaDeR/DcxvfV0FAAAAIf1J6evb2X3BE2vwpV4gJ8vVb4J</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -65,18 +65,20 @@
       DTS:Namespace="User"
       DTS:ObjectName="DestinationPath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_03_05_25_06</DTS:VariableValue>
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_03_07_23_03</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{3AF99D3D-AD39-427B-A843-20AC03F08BED}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId]"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId] +&#xA;&#xA;&quot;; &#xA;&#xA;EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="EndTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/3/2022 5:25:06 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/3/2022 7:23:04 AM' Where Id=0; 
+
+EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -88,7 +90,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',
-'0','','3/3/2022 5:25:06 AM','0');
+'0','','3/3/2022 7:23:04 AM','0');
 EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -100,7 +102,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="FailedTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/3/2022 5:25:06 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/3/2022 7:23:04 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -149,7 +151,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="StartTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\MJaswal_Beneflex','BE015','3/3/2022 5:25:06 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\MJaswal_Beneflex','BE015','3/3/2022 7:23:04 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
