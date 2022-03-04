@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="127"
-  DTS:VersionGUID="{387E6CFB-71D7-4103-A540-31B26BC6A3CA}">
+  DTS:VersionBuild="145"
+  DTS:VersionGUID="{682F0DD8-C369-4E7B-825B-330384F16E40}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABTk3QuiJV/gceL2cgcvHfJAAAAAASAAACgAAAAEAAAAM67Rln++LGT7IN3t2NUQEsYAAAACJZQPoqYpVRqyu34gWHxxuc9FUq2KI4mFAAAADnA8aHKu8ha5AG46lLiatOb9R2I</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABc7sYKESMmYMlJrVblJd8EAAAAAASAAACgAAAAEAAAAGixxg+AQ2FoXNsQFNxJfB4YAAAA2KgeQFMmR6ORfiHPCuI0eycPIDfQpK8AFAAAAM1oZYt61KLPpAPHwTaYf4S63YOe</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -65,18 +65,38 @@
       DTS:Namespace="User"
       DTS:ObjectName="DestinationPath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_02_04_58_24</DTS:VariableValue>
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_03_10_01_25</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{3AF99D3D-AD39-427B-A843-20AC03F08BED}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId]"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId] +&#xA;&#xA;&quot;; &#xA;&#xA;EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;&#xA;EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;&#xA;EXEC PSP_UPDATE_TBL_STAGING_QBDETAIL_ALTERNATE_ER_ID;&#xA;EXEC PSP_UPDATE_STAGING_NPM_ALTERNATE_ER_ID;&#xA;EXEC PSP_UPDATE_STAGING_NPM_PAYLOCITY;&#xA;EXEC PSP_UPDATE_EDI_BILLING_GROUP_COUNT_BROKERCLIENTLIST;&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="EndTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/2/2022 4:58:25 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/3/2022 10:01:25 AM' Where Id=0; 
+
+EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;
+EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;
+EXEC PSP_UPDATE_TBL_STAGING_QBDETAIL_ALTERNATE_ER_ID;
+EXEC PSP_UPDATE_STAGING_NPM_ALTERNATE_ER_ID;
+EXEC PSP_UPDATE_STAGING_NPM_PAYLOCITY;
+EXEC PSP_UPDATE_EDI_BILLING_GROUP_COUNT_BROKERCLIENTLIST;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{16810E28-F5CD-4C4A-A017-6A95FCE81A21}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',&#xA;'0','','&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()+&quot;','&quot;+ (DT_WSTR, 10000) @[User::GlobalStartPackageLogId] +&quot;');&#xA;EXEC [dbo].[PSP_TRUNCATE_TABLE_2];&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorVariable">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',
+'0','','3/3/2022 10:01:25 AM','0');
+EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -87,7 +107,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FailedTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/2/2022 4:58:25 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/3/2022 10:01:25 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -136,7 +156,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="StartTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/2/2022 4:58:25 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\MJaswal_Beneflex','BE015','3/3/2022 10:01:25 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -555,7 +575,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{09FDA9FD-A8CD-4849-A744-0EFAAF350204}"
+      DTS:DTSID="{E24D7640-4B28-46FA-9802-5F6BBA77F02F}"
       DTS:From="Package\Start Package"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -618,7 +638,8 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',&#xA;'0','',GETDATE());&#xA;EXEC [dbo].[PSP_TRUNCATE_TABLE_2];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::ErrorVariable" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -666,11 +687,11 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         <NodeLayout
           Size="179,42"
           Id="Package\End Package"
-          TopLeft="758.5,918.5" />
+          TopLeft="784.5,924.5" />
         <NodeLayout
           Size="163,42"
           Id="Package\File System Task"
-          TopLeft="400,703.571428571429" />
+          TopLeft="400,711.571428571429" />
         <NodeLayout
           Size="163,42"
           Id="Package\Foreach Loop Container\File System Task"
@@ -681,7 +702,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
           PanelSize="291,199"
           Size="291,242"
           Id="Package\Foreach Loop Container"
-          TopLeft="343,822.857142857143" />
+          TopLeft="343,830.857142857143" />
         <NodeLayout
           Size="270,42"
           Id="Package\Sequence Container\1_BENEFL_Integrated_Current_Import"
@@ -796,14 +817,14 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
           PanelSize="1391,392"
           Size="1391,435"
           Id="Package\Sequence Container"
-          TopLeft="14.3333333333335,184.666666666667" />
+          TopLeft="14.3333333333335,192.666666666667" />
         <NodeLayout
           Size="148,42"
           Id="Package\Start Package"
-          TopLeft="641,66" />
+          TopLeft="545,89" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="480.416666666667,619.666666666667">
+          TopLeft="480.416666666667,627.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -825,18 +846,30 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="712.416666666667,108">
+          TopLeft="619,131">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76.666666666667"
+              EndConnector="90.8333333333335,61.666666666667"
               Start="0,0"
-              End="0,69.166666666667">
+              End="90.8333333333335,54.166666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.166666666667" />
+                    End="0,26.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8333333333335"
+                    Point2="0,30.8333333333335"
+                    Point3="4,30.8333333333335" />
+                  <mssgle:LineSegment
+                    End="86.8333333333335,30.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.8333333333335,30.8333333333335"
+                    Point2="90.8333333333335,30.8333333333335"
+                    Point3="90.8333333333335,34.8333333333335" />
+                  <mssgle:LineSegment
+                    End="90.8333333333335,54.166666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -847,7 +880,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="634,941.678571428572">
+          TopLeft="634,948.678571428572">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -869,7 +902,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="485,745.571428571429">
+          TopLeft="485,753.571428571429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
