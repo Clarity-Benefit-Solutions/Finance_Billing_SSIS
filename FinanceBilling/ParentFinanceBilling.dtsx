@@ -7,12 +7,12 @@
   DTS:CreatorName="V057\SSingh_Beneflex"
   DTS:DTSID="{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3002.113"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="125"
-  DTS:VersionGUID="{D7202120-37C2-49EF-9190-EC83FDDF6CE9}">
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{387E6CFB-71D7-4103-A540-31B26BC6A3CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,11 +23,13 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADOEvAV9wUwl2J8+a4kKYUJAAAAAASAAACgAAAAEAAAAHdyHMuNTpz3SrBRc8zmAewYAAAABTXeCvee9Dxo4BBb5L7SKdJ3UlYhsegAFAAAAGM1NomJxRq97LAxTZjfXMML3+2/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABTk3QuiJV/gceL2cgcvHfJAAAAAASAAACgAAAAEAAAAM67Rln++LGT7IN3t2NUQEsYAAAACJZQPoqYpVRqyu34gWHxxuc9FUq2KI4mFAAAADnA8aHKu8ha5AG46lLiatOb9R2I</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +65,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="DestinationPath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_01_11_01_54</DTS:VariableValue>
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_02_04_58_24</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -74,7 +76,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="EndTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/1/2022 11:01:55 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/2/2022 4:58:25 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -85,7 +87,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="FailedTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/1/2022 11:01:55 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/2/2022 4:58:25 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -134,7 +136,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="StartTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/1/2022 11:01:55 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/2/2022 4:58:25 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -524,6 +526,22 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Helper &amp; Process Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E705A301-F65F-45DE-97BB-DDDAF19C94DD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Helper &amp; Process Tables"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+          SQLTask:SqlStatementSource="EXEC PROCEDURE [dbo].[SPS_TRUNCATE_HELPERPROCESSTABLES]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -558,6 +576,14 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{FECD805B-4199-494D-9663-BB948DFD14A4}"
+      DTS:From="Package\End Package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Truncate Helper &amp; Process Tables" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -640,7 +666,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         <NodeLayout
           Size="179,42"
           Id="Package\End Package"
-          TopLeft="784.5,916.5" />
+          TopLeft="758.5,918.5" />
         <NodeLayout
           Size="163,42"
           Id="Package\File System Task"
@@ -821,18 +847,18 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="634,940.678571428572">
+          TopLeft="634,941.678571428572">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="150.5,0"
+              EndConnector="124.5,0"
               Start="0,0"
-              End="143,0">
+              End="117,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="143,0" />
+                    End="117,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -855,6 +881,32 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,69.785714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Truncate Helper &amp; Process Tables"
+          TopLeft="1056,919" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="937.5,939.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="118.5,0"
+              Start="0,0"
+              End="111,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="111,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
