@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="1_BENEFL_Integrated_Current_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{290CB59E-98A1-489E-90A2-BB69C6DC035C}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{DBD51E83-3FA9-4874-BAEE-3068B5AEC8EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAd/9lcmwuWUa9xGpn14arCQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB23iATzGn6BX2voqbFluONAAAAAASAAACgAAAAEAAAALGxI7bkDhDHmx3yNaO5VcsYAAAAwG7SBgLtn/D3w80GCmHBHCvmVGVDJlUNFAAAAMioimRU3t7GGMudOI6Hy07HF7mk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD8WcEaeJ/pWDByFGUDwOpwAAAAAASAAACgAAAAEAAAAOF+ePzePRB55S7SWfdJ7qkYAAAAP1yLWI6SEZ/tm1NSmqNJWgmPA85K6VCSFAAAACTABnZXFLNqmUB0hzXhRYHd4cW7</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -202,7 +202,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','Package1','',
-'0','','3/3/2022 6:12:24 AM','0')</DTS:VariableValue>
+'0','','3/7/2022 4:31:52 AM','0')</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -1429,14 +1429,35 @@
           ReadOnlyVariables="GlobalStartPackageLogId"
           ReadWriteVariables="ChildParameter">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1807,35 +1828,14 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------

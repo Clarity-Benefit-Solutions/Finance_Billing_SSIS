@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="911_EC Extract"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{1BC4D275-C74F-4B82-8DE3-8C4BC9BE3AAC}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{FE0805C0-AD7D-46FC-9F33-71BD04C21BC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB7n6Yo6b8b41j4PMj54sITAAAAAASAAACgAAAAEAAAAAOMw/PQKkDRLb502u++09QYAAAAs/Lxit3aKVTlpS4qeRBE4q9s0suPDP4ZFAAAAAnWLNHVdqbqPmIzzoshL5e761YB</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -477,7 +482,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 911_EC Extract','',
-'0','','3/3/2022 6:02:11 AM','0')</DTS:VariableValue>
+'0','','3/7/2022 6:16:28 AM','0')</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -3814,6 +3819,36 @@
           ReadOnlyVariables="GlobalStartPackageLogId"
           ReadWriteVariables="ChildParameter">
           <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -3932,15 +3967,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -4109,35 +4135,14 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4400,6 +4405,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="170,42"
           Id="Package\Execute SQL Task"
           TopLeft="148,113" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Get  Global Id"
+          TopLeft="100,26" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="233,155">
@@ -4434,10 +4443,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Get  Global Id"
-          TopLeft="100,26" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="179.5,68">

@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="2/8/2022 9:53:52 AM"
+  DTS:CreationDate="3/7/2022 3:54:46 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
-  DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{777D13B6-04D1-4679-84CA-7CB9AA736C5D}"
+  DTS:CreatorName="V057\SSingh_Beneflex"
+  DTS:DTSID="{20EC7058-E2A9-4EF6-8FCA-88245FE520EC}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{205B05A0-5FCA-4105-81A5-2D3996886AEE}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{98FDB664-8AF1-42DE-9A1B-D67872E6D8A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+      DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing2]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
-      DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
+      DTS:DTSID="{79078AA0-EA0E-4884-B43F-A97D3B30D42F}"
+      DTS:ObjectName="BE015.Finance_Billing.Finance_Billing2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -29,15 +29,15 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACN7ey/cHQ1ahbWA9oN9sFNAAAAAASAAACgAAAAEAAAAJRI8f1U2/EonzDS+Z3zemcYAAAAk2TKw83atEKT2uaGfZDJkfMerZJvZzt6FAAAAMSMNFiGED0lcW/6ZsSGwg6T1g1B</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABO5KhtoNoATgLCV+0aB/JxAAAAAASAAACgAAAAEAAAAFw9T2z660jPail0411qK8kYAAAA4+APdNUlFj0o34swdMG/M8leomnHRobOFAAAAEi9oxKdqIVuwGoAUeL0OJOwNNLd</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{12672A6B-039D-4FF2-A6EA-022C8240ACA9}"
-      DTS:ObjectName="Flat File Connection Manager 1">
+      DTS:DTSID="{78B2BB9B-3B93-40C7-A9BE-626FE23A63B0}"
+      DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -47,7 +47,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\9_Bswift_BillingNumbers_Import.csv">
+          DTS:ConnectionString="E:\Finance_Billing\Starting_Files\910_ENBillingNumbers_Import.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -55,110 +55,63 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Group Number"
-              DTS:DTSID="{C844AA82-3DF9-4FC1-A502-58455067D705}"
+              DTS:ObjectName="Company"
+              DTS:DTSID="{1FAE5ACA-879A-4827-AC4C-0FF9C1E5DAFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Client Name"
-              DTS:DTSID="{62ADC92C-8150-41AA-953C-0557139F8F80}"
+              DTS:ObjectName="Total Employees"
+              DTS:DTSID="{C1FA6710-87DB-479C-9180-6CB8BB1E8CCC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="7"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Client Effective Date"
-              DTS:DTSID="{37876120-1482-42A6-B966-CA69A1B40095}"
+              DTS:ObjectName="Active Employees"
+              DTS:DTSID="{10D8B871-D1B0-4CE8-A18F-3F0617E5B36B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Division"
-              DTS:DTSID="{8B9528D9-0AD3-4A88-BF25-0D5154E8E046}"
+              DTS:ObjectName="Eligible Employees"
+              DTS:DTSID="{5BC91311-0A7D-457B-90BA-EFEFD45CC081}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Location"
-              DTS:DTSID="{47FE7D9A-1F69-4370-947A-6E0A979BE37A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Employee ID"
-              DTS:DTSID="{5D4C9A90-9EB0-4180-A034-F36D83744136}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Last Name"
-              DTS:DTSID="{30DD72CE-1C47-44EE-9B76-99AF7A22220D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="First Name"
-              DTS:DTSID="{E95AB272-B2C1-451F-9C3C-32BBFBB2B427}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Benefit Class Name"
-              DTS:DTSID="{5865786F-989F-46A2-AD68-9ADA2A31194F}"
+              DTS:ObjectName="Enrolled Employees"
+              DTS:DTSID="{6128F66B-65E3-4B53-80BC-F224E3A9D3FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="255"
-              DTS:DataType="130"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Benefit Class Benefit Eligible"
-              DTS:DTSID="{65294E6D-9DEF-4448-BE9E-5F6781882C0E}"
+              DTS:ObjectName="COBRA Employees"
+              DTS:DTSID="{D6D89201-59E9-439E-A40F-AA91226A0333}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:LogProviders>
-    <DTS:LogProvider
-      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
-      DTS:CreationName="Microsoft.LogProviderSQLServer"
-      DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{75661BF6-96DC-4FFF-9D2E-DDC399423B38}"
-      DTS:ObjectName="SSIS log provider for SQL Server">
-      <DTS:ObjectData>
-        <InnerObject />
-      </DTS:ObjectData>
-    </DTS:LogProvider>
-  </DTS:LogProviders>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{3B08FD1B-C0A7-40FD-A3DB-F7DBFA482960}"
+      DTS:DTSID="{F35AC389-F51E-4C0A-AAD2-8DE71990E2CD}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="ChildParameter">
@@ -167,7 +120,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7EA21243-C89F-4014-B107-445A323DBEA7}"
+      DTS:DTSID="{73BA2A72-2A7D-4AA7-ADFE-239FC9E3491C}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;Insert into TBL_ERROR_LOGS values('BE015',' &quot;+@[System::PackageName] +&quot;','',&#xA;'0','','&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()+&quot;','&quot;+ (DT_WSTR, 10000) @[User::ChildParameter]+&quot;')&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -175,75 +128,26 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' Package1','',
-'0','','3/8/2022 8:28:28 AM','0')</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{EE361742-0748-4116-8339-383CF289FA37}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="FilePath">
-      <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Starting_Files</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{FE1B2984-3CEB-49B8-A2FB-E2A07458FC5C}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="PackageStatus">
-      <DTS:VariableValue
-        DTS:DataType="8">Package ran successfully</DTS:VariableValue>
+'0','','3/7/2022 6:15:49 AM','0')</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
-  <DTS:LoggingOptions
-    DTS:FilterKind="0"
-    DTS:LoggingMode="1">
-    <DTS:Property
-      DTS:DataType="8"
-      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
-    <DTS:Property
-      DTS:EventName="OnError"
-      DTS:Name="ColumnFilter">
-      <DTS:Property
-        DTS:Name="Computer">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="Operator">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="SourceName">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="SourceID">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="ExecutionID">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="MessageText">-1</DTS:Property>
-      <DTS:Property
-        DTS:Name="DataBytes">-1</DTS:Property>
-    </DTS:Property>
-    <DTS:SelectedLogProviders>
-      <DTS:SelectedLogProvider
-        DTS:InstanceID="{75661BF6-96DC-4FFF-9D2E-DDC399423B38}" />
-    </DTS:SelectedLogProviders>
-  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\DFT_Load_Data"
+      DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{0A782C9C-3412-49EA-B64C-EDF4BA450754}"
+      DTS:DTSID="{22084B06-45C6-4820-A07C-9A32F251E2A7}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="DFT_Load_Data"
+      DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
-      <DTS:LoggingOptions
-        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
           <components>
             <component
-              refId="Package\DFT_Load_Data\Data Conversion"
+              refId="Package\Data Flow Task\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -251,94 +155,76 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Group Number]"
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Company]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Group Number"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Group Number]" />
+                      cachedName="Company"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Company]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Client Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Client Name"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]" />
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Total Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total Employees"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Total Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Client Effective Date]"
-                      cachedDataType="date"
-                      cachedName="Client Effective Date"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Effective Date]" />
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Active Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active Employees"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Active Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Division]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Division"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Division]" />
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Eligible Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Eligible Employees"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Eligible Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Location]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Location"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]" />
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Enrolled Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Enrolled Employees"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Enrolled Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Employee ID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Employee ID"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Employee ID]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Last Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Last Name"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[First Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="First Name"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Benefit Class Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Benefit Class Name"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input].Columns[Benefit Class Benefit Eligible]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Benefit Class Benefit Eligible"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Benefit Eligible]" />
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[COBRA Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="COBRA Employees"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[COBRA Employees]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]"
-                      name="Copy of Group Number"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]"
+                      name="Copy of Company"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Group Number]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Company]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -346,20 +232,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]"
-                      name="Copy of Client Name"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]"
+                      name="Copy of Total Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Total Employees]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -367,19 +254,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]"
-                      dataType="date"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]"
-                      name="Copy of Client Effective Date"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]"
+                      name="Copy of Active Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Effective Date]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Active Employees]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -387,20 +276,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]"
-                      name="Copy of Division"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]"
+                      name="Copy of Eligible Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Division]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Eligible Employees]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -408,20 +298,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]"
-                      name="Copy of Location"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]"
+                      name="Copy of Enrolled Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Enrolled Employees]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -429,104 +320,21 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
-                      name="Copy of Employee ID"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]"
+                      name="Copy of COBRA Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Employee ID]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]"
-                      name="Copy of Last Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]"
-                      name="Copy of First Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]"
-                      name="Copy of Benefit Class Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Name]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]"
-                      name="Copy of Benefit Class Benefit Eligible"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Benefit Eligible]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[COBRA Employees]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -537,22 +345,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -561,12 +369,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT_Load_Data\Flat File Source"
+              refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="Read CSV ENBillingNumbers_Import"
               usesDispositions="true"
               version="1">
               <properties>
@@ -581,25 +389,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT_Load_Data\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Group Number]"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Company]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Group Number]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Company]"
                       length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Group Number]"
-                      name="Group Number"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Company]"
+                      name="Company"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -613,14 +421,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Total Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Name]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]"
-                      name="Client Name"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Total Employees]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Total Employees]"
+                      name="Total Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -634,13 +443,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Effective Date]"
-                      dataType="date"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Active Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Effective Date]"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Client Effective Date]"
-                      name="Client Effective Date"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Active Employees]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Active Employees]"
+                      name="Active Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -654,14 +465,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Division]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Eligible Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Division]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Division]"
-                      name="Division"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Eligible Employees]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Eligible Employees]"
+                      name="Eligible Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -675,14 +487,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Enrolled Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
-                      name="Location"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Enrolled Employees]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[Enrolled Employees]"
+                      name="Enrolled Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -696,98 +509,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Employee ID]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[COBRA Employees]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Employee ID]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Employee ID]"
-                      name="Employee ID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Name]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]"
-                      name="Last Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Name]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]"
-                      name="First Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Benefit Class Name]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Name]"
-                      name="Benefit Class Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Benefit Eligible]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Benefit Class Benefit Eligible]"
-                      length="255"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].Columns[Benefit Class Benefit Eligible]"
-                      name="Benefit Class Benefit Eligible"
+                      externalMetadataColumnId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[COBRA Employees]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].Columns[COBRA Employees]"
+                      name="COBRA Employees"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -804,78 +534,64 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Group Number]"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Company]"
                       dataType="wstr"
                       length="255"
-                      name="Group Number" />
+                      name="Company" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Client Name" />
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Total Employees]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Effective Date]"
-                      dataType="date"
-                      name="Client Effective Date" />
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Active Employees]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Active Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Division]"
-                      dataType="wstr"
-                      length="255"
-                      name="Division" />
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Eligible Employees]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Eligible Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
-                      dataType="wstr"
-                      length="255"
-                      name="Location" />
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[Enrolled Employees]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Enrolled Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Employee ID]"
-                      dataType="wstr"
-                      length="255"
-                      name="Employee ID" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Last Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="First Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Benefit Class Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Benefit Class Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Benefit Class Benefit Eligible]"
-                      dataType="wstr"
-                      length="255"
-                      name="Benefit Class Benefit Eligible" />
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output].ExternalColumns[COBRA Employees]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COBRA Employees" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -884,11 +600,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+              refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+              name="TBL_STAGING_EMPLOYEE_NAV_IMPORT"
               usesDispositions="true"
               version="4">
               <properties>
@@ -899,7 +615,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT]</property>
+                  name="OpenRowset">[dbo].[TBL_STAGING_EMPLOYEE_NAV_IMPORT]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -941,167 +657,121 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing2]"
+                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Group Number]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Company]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Group Number"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Group Number]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Group Number]" />
+                      cachedName="Copy of Company"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Company]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Client Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Client Name"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Name]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Name]" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Total Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Total Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Total Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Total Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Client Effective Date]"
-                      cachedDataType="date"
-                      cachedName="Copy of Client Effective Date"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Effective Date]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Client Effective Date]" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Active Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Active Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Active Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Active Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Division]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Division"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Division]" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Eligible Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Eligible Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Eligible Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Eligible Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Location]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Location"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Location]" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Enrolled Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Enrolled Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Enrolled Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Enrolled Employees]" />
                     <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Employee ID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Employee ID"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Last Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Last Name"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Last Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of First Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of First Name"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of First Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Benefit Class Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Benefit Class Name"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Name]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Name]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of Benefit Class Benefit Eligible]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Benefit Class Benefit Eligible"
-                      externalMetadataColumnId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Benefit Eligible]"
-                      lineageId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Benefit Class Benefit Eligible]" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].Columns[Copy of COBRA Employees]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of COBRA Employees"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[COBRA Employees]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of COBRA Employees]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Group Number]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
                       dataType="wstr"
                       length="255"
-                      name="Group Number" />
+                      name="Company" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Client Name" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Total Employees]"
+                      dataType="r8"
+                      name="Total Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Client Effective Date]"
-                      dataType="dbTimeStamp2"
-                      name="Client Effective Date" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Active Employees]"
+                      dataType="r8"
+                      name="Active Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Division]"
-                      dataType="wstr"
-                      length="255"
-                      name="Division" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Eligible Employees]"
+                      dataType="r8"
+                      name="Eligible Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
-                      dataType="wstr"
-                      length="255"
-                      name="Location" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Enrolled Employees]"
+                      dataType="r8"
+                      name="Enrolled Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
-                      dataType="wstr"
-                      length="255"
-                      name="Employee ID" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[COBRA Employees]"
+                      dataType="r8"
+                      name="COBRA Employees" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Last Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="First Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Benefit Class Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[Benefit Class Benefit Eligible]"
-                      dataType="wstr"
-                      length="255"
-                      name="Benefit Class Benefit Eligible" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[ParticipantUniqueKey]"
-                      dataType="wstr"
-                      length="255"
-                      name="ParticipantUniqueKey" />
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input].ExternalColumns[SSMA_TimeStamp]"
+                      dataType="bytes"
+                      length="8"
+                      name="SSMA_TimeStamp" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1112,24 +782,40 @@
           </components>
           <paths>
             <path
-              refId="Package\DFT_Load_Data.Paths[Data Conversion Output]"
-              endId="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\DFT_Load_Data\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT_Load_Data.Paths[Flat File Source Output]"
-              endId="Package\DFT_Load_Data\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\DFT_Load_Data\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\Read CSV ENBillingNumbers_Import.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{625FB21B-FD7E-45AC-819A-EF08AE4BB130}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{79078AA0-EA0E-4884-B43F-A97D3B30D42F}"
+          SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_EMPLOYEE_NAV_IMPORT];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Get  Global Id"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
-      DTS:DTSID="{59f674da-9401-490a-b33f-1e2d3db60cbf}"
+      DTS:DTSID="{3b31710d-2532-4fb0-9fd2-d3da7bb3be80}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get  Global Id"
@@ -1137,15 +823,15 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
-          Name="ST_78feec2f5527439fb84e8a9f8c193f26"
+          Name="ST_08060b61a2a44a1c917e355c0c0b70b4"
           VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp"
           ReadOnlyVariables="GlobalStartPackageLogId"
           ReadWriteVariables="ChildParameter">
           <ProjectItem
-            Name="ST_78feec2f5527439fb84e8a9f8c193f26.csproj"
-            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{fbd7cd96-bb37-4714-9033-44f2d2e28ce1}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_68cf7524642e4a1892bdf261139c9df1</RootNamespace><AssemblyName>ST_78feec2f5527439fb84e8a9f8c193f26</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+            Name="ST_08060b61a2a44a1c917e355c0c0b70b4.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{fbd7cd96-bb37-4714-9033-44f2d2e28ce1}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_68cf7524642e4a1892bdf261139c9df1</RootNamespace><AssemblyName>ST_08060b61a2a44a1c917e355c0c0b70b4</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1266,14 +952,34 @@
   </resheader>
 </root>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1400,7 +1106,7 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
     <msb:ProjectId>{222D016A-614A-4F7A-975E-07F225CAE276}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
-    <msb:Project Include="ST_78feec2f5527439fb84e8a9f8c193f26.csproj" />
+    <msb:Project Include="ST_08060b61a2a44a1c917e355c0c0b70b4.csproj" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
@@ -1409,35 +1115,6 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
     <msb:File Include="ScriptMain.cs" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
-    "ings")]
-
-namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
@@ -1468,6 +1145,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1648,56 +1334,38 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{8D9E1891-AEBD-4311-9A49-C770EBE8A9F6}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:LoggingOptions
-        DTS:FilterKind="0" />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
-          SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{569CB205-3AAE-4B39-B32C-E78686C5E5C3}"
-      DTS:From="Package\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
+      DTS:DTSID="{71E7EDF3-E6AF-4794-BC9E-91567ECB6CFA}"
+      DTS:From="Package\Get  Global Id"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\DFT_Load_Data" />
+      DTS:To="Package\Execute SQL Task" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{0BAA33C5-BB87-408C-989F-4AC9E0C18D3E}"
-      DTS:From="Package\Get  Global Id"
+      DTS:DTSID="{26D4F261-6576-4076-A2EB-283C4E59405E}"
+      DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT" />
+      DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
       DTS:refId="Package.EventHandlers[OnError]"
       DTS:CreationName="OnError"
-      DTS:DTSID="{0F386F40-FE3E-4200-92F2-BCB07E714121}"
-      DTS:EventID="1919203820"
+      DTS:DTSID="{40B35F0F-7967-4538-ACBA-A7E3549EA5E2}"
+      DTS:EventID="0"
       DTS:EventName="OnError"
       DTS:LocaleID="-1">
       <DTS:Variables>
         <DTS:Variable
           DTS:CreationName=""
           DTS:Description="The propagate property of the event"
-          DTS:DTSID="{9ACA2C28-4AD0-435F-B2A9-23D21565B5CF}"
+          DTS:DTSID="{0FF0DBFB-A6A4-4F22-943D-8513033155C0}"
           DTS:IncludeInDebugDump="6789"
           DTS:Namespace="System"
           DTS:ObjectName="Propagate">
@@ -1710,19 +1378,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{3CAB3EE9-AF08-4AC3-B1C4-A9DFDF3A70BA}"
+          DTS:DTSID="{DFDCEE11-B1A5-4E0F-890F-991D8659F219}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Execute SQL Task">
           <DTS:Variables />
-          <DTS:PropertyExpression
-            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
-'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{6E69E4C4-FB05-4AAC-A7D2-9B737EC5187C}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package1','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:Connection="{79078AA0-EA0E-4884-B43F-A97D3B30D42F}"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','910_ENBillingNumberst','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -1743,37 +1407,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="159,42"
           Id="Package\Get  Global Id"
-          TopLeft="25,12" />
+          TopLeft="134,63" />
         <NodeLayout
-          Size="371,42"
-          Id="Package\Truncate TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
-          TopLeft="139.5,90.5" />
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="246,150" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="104.5,54">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="213.5,105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="220.5,36.5"
+              EndConnector="117.5,45"
               Start="0,0"
-              End="220.5,29">
+              End="117.5,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.25" />
+                    End="0,18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.25"
-                    Point2="0,18.25"
-                    Point3="4,18.25" />
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
                   <mssgle:LineSegment
-                    End="216.5,18.25" />
+                    End="113.5,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="216.5,18.25"
-                    Point2="220.5,18.25"
-                    Point3="220.5,22.25" />
+                    Point1="113.5,22.5"
+                    Point2="117.5,22.5"
+                    Point3="117.5,26.5" />
                   <mssgle:LineSegment
-                    End="220.5,29" />
+                    End="117.5,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1783,35 +1447,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="160,42"
-          Id="Package\DFT_Load_Data"
-          TopLeft="375.5,196.5" />
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="397,254" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="325,132.5">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="331,192">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.5,64"
+              EndConnector="143.5,62"
               Start="0,0"
-              End="130.5,56.5">
+              End="143.5,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28" />
+                    End="0,27" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28"
-                    Point2="0,32"
-                    Point3="4,32" />
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
                   <mssgle:LineSegment
-                    End="126.5,32" />
+                    End="139.5,31" />
                   <mssgle:CubicBezierSegment
-                    Point1="126.5,32"
-                    Point2="130.5,32"
-                    Point3="130.5,36" />
+                    Point1="139.5,31"
+                    Point2="143.5,31"
+                    Point3="143.5,35" />
                   <mssgle:LineSegment
-                    End="130.5,56.5" />
+                    End="143.5,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1823,57 +1487,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="170,42"
-          Id="Package.EventHandlers[OnError]\Execute SQL Task"
-          TopLeft="202,55" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <TaskHost
-    design-time-name="Package\DFT_Load_Data">
+    design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="161,42"
-          Id="Package\DFT_Load_Data\Data Conversion"
-          TopLeft="202,153" />
+          Size="260,42"
+          Id="Package\Data Flow Task\Read CSV ENBillingNumbers_Import"
+          TopLeft="323,51" />
         <NodeLayout
-          Size="325,42"
-          Id="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT"
-          TopLeft="299,270" />
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="451,158" />
         <EdgeLayout
-          Id="Package\DFT_Load_Data.Paths[Data Conversion Output]"
-          TopLeft="282.5,195">
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="453,93">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="179,75"
+              EndConnector="78.5,65"
               Start="0,0"
-              End="179,67.5">
+              End="78.5,57.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5" />
+                    End="0,28.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.5"
-                    Point2="0,37.5"
-                    Point3="4,37.5" />
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
                   <mssgle:LineSegment
-                    End="175,37.5" />
+                    End="74.5,32.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="175,37.5"
-                    Point2="179,37.5"
-                    Point3="179,41.5" />
+                    Point1="74.5,32.5"
+                    Point2="78.5,32.5"
+                    Point3="78.5,36.5" />
                   <mssgle:LineSegment
-                    End="179,67.5" />
+                    End="78.5,57.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1883,35 +1535,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Load_Data\Flat File Source"
-          TopLeft="134,41" />
+          Size="299,42"
+          Id="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT"
+          TopLeft="332,299" />
         <EdgeLayout
-          Id="Package\DFT_Load_Data.Paths[Flat File Source Output]"
-          TopLeft="212,83">
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="531.5,200">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.5,70"
+              EndConnector="-50,99"
               Start="0,0"
-              End="70.5,62.5">
+              End="-50,91.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31" />
+                    End="0,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31"
-                    Point2="0,35"
-                    Point3="4,35" />
+                    Point1="0,45.5"
+                    Point2="0,49.5"
+                    Point3="-4,49.5" />
                   <mssgle:LineSegment
-                    End="66.5,35" />
+                    End="-46,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="66.5,35"
-                    Point2="70.5,35"
-                    Point3="70.5,39" />
+                    Point1="-46,49.5"
+                    Point2="-50,49.5"
+                    Point3="-50,53.5" />
                   <mssgle:LineSegment
-                    End="70.5,62.5" />
+                    End="-50,91.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1924,7 +1576,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_Data\TBL_STAGING_BSWIFT_BILLINGNUM_IMPORT">
+    design-time-name="Package\Data Flow Task\TBL_STAGING_EMPLOYEE_NAV_IMPORT">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1936,5 +1588,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="390,90" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
