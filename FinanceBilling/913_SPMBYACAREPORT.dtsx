@@ -5,38 +5,38 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BE015"
   DTS:CreatorName="V057\mkhan_BENEFLEX"
-  DTS:DTSID="{2346E375-9356-4FE9-BB36-F18A9C6681CE}"
+  DTS:DTSID="{71F94F8A-D2A0-481F-8A83-63D69D1A5899}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="913_SPMBYACAREPORT"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{BE105FD3-3823-4142-BD11-22BF10973D77}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{344EDD89-8BCE-4C03-86A1-E4CC93F7C742}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{862EB6CC-7E93-4391-A9C6-654BECBD3CBF}"
+      DTS:DTSID="{E487AAEF-DB89-4E07-AEFC-1538FE2DB8F3}"
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAotGcv+fz3E640gTLD72X9wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADNRF8u2MgPbxd4oNO0B2BKAAAAAASAAACgAAAAEAAAAGftWhPy6E/0i6rALIrWsZEYAAAAz3QPc541Nd+Ii5VOa93yr7A+en55c1RpFAAAAPrhd/FBf6Xme3fAtDTJ+7MKU9Pk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC5qwzl9mVz7pXXAOjyG0HSAAAAAASAAACgAAAAEAAAAOJmzbmD2SWe2PJYPai6MvIYAAAAqyV8qiwg4nK6CDELZCv9PSLnUI4uHAgLFAAAAGOdlUyB7OxODHtQOkzJuPrvIuht</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{FEF68797-47FC-4FFC-B9E3-1A1983076C81}"
+      DTS:DTSID="{A8450FDB-68BC-48E0-8BD0-143B3F5A07EC}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -56,7 +56,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MemberID"
-              DTS:DTSID="{F218D15B-6284-421B-A4F4-A3FCCF05E7A8}"
+              DTS:DTSID="{C17EFD05-11DD-4309-9495-DED6C7879DDF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientName"
-              DTS:DTSID="{7D13F151-893F-4454-84D9-70FCFF1D3F47}"
+              DTS:DTSID="{C5F83C36-6999-4371-825B-DA20385E7DA1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DivisionName"
-              DTS:DTSID="{F753431E-2AAD-4C35-BCE4-AF843EDBF26C}"
+              DTS:DTSID="{EE771818-9174-4B59-B905-5E8A4B900B65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FirstName"
-              DTS:DTSID="{D9A92245-C99B-42B9-9D33-B6B0C8445EA1}"
+              DTS:DTSID="{6B9C8049-61F5-4CDE-B323-687361AA8CEF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LastName"
-              DTS:DTSID="{84CE93C8-BEE5-473A-9C0B-8B3D43A10E71}"
+              DTS:DTSID="{4BB04781-2D89-4BB1-BCDA-3F7D0BFE1C76}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MiddleInitial"
-              DTS:DTSID="{E9651584-6F7C-4903-91BB-9420CD3A09CD}"
+              DTS:DTSID="{BADEA079-59AA-4395-9EA2-A52C3283759A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DOB"
-              DTS:DTSID="{9828E3C9-A82A-4EE7-8E30-FDDF5A18AD52}"
+              DTS:DTSID="{E99C56AD-91A8-4DA0-B2C2-DA5A18D598EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +119,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SSN"
-              DTS:DTSID="{4E16CA6B-D739-4EB4-BEFC-0B9BEC6E5B42}"
+              DTS:DTSID="{33718CAA-48F1-4AED-8A15-08C9290F61A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +128,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IndividualIdentifier"
-              DTS:DTSID="{45E64CFB-1C56-475D-AF63-A1360ECA724A}"
+              DTS:DTSID="{BD44239F-F522-4F8F-88AD-68A6F34D1932}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +137,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Gender"
-              DTS:DTSID="{AFD39BFD-8FBF-4386-AF89-E93380C693A2}"
+              DTS:DTSID="{0659AFA2-7668-4C8F-B8C9-236A69EA2C9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,7 +146,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address"
-              DTS:DTSID="{E4DC80E5-90F6-4984-A752-AF2D4624B036}"
+              DTS:DTSID="{0EED5BE1-F565-4A0C-AE53-D4B46AECD361}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +155,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address2"
-              DTS:DTSID="{5F54D770-385D-4822-9C33-C9AF4D815A03}"
+              DTS:DTSID="{8D2E2141-16E4-4944-93FB-189DB0A3ADD5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +164,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{2D9517A4-1BE1-4D31-B215-9142528D7BA4}"
+              DTS:DTSID="{0A5B73E2-DD81-412D-A90C-A6F820713AA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{1C29C43D-A70C-4360-B6FD-19510660B759}"
+              DTS:DTSID="{69D723A7-1FC9-48F9-9746-3EE7ED5BCA6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +182,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{DEC2FDCF-4DCE-433C-929D-B999255E2B51}"
+              DTS:DTSID="{3084EE8F-5E33-4CF4-9624-8C6065801080}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="StateOrProvince"
-              DTS:DTSID="{5A3811A7-426B-4C9A-8BB1-EC02FB116EAD}"
+              DTS:DTSID="{0DC212EE-5BF0-412D-BC1C-610353438546}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +200,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="EIN"
-              DTS:DTSID="{A4506523-BBF4-4381-A3FA-B700A884E0DB}"
+              DTS:DTSID="{4073AE5F-E5F8-4FF6-BEDF-30E8FB0C0634}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +209,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PlanName"
-              DTS:DTSID="{6CD9DE49-46A4-4ACE-838F-E8335CA2CC99}"
+              DTS:DTSID="{4EADB773-DC35-4A43-ABEA-D314D730B460}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PlanStartDate"
-              DTS:DTSID="{888115D7-26BD-4662-A52C-5CFECBE04BC4}"
+              DTS:DTSID="{B34BB01F-343B-48DF-B6CB-1308AEBD580A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -227,7 +227,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="PlanEndDate"
-              DTS:DTSID="{30599B80-F7A4-44DF-A194-43B2A77F3052}"
+              DTS:DTSID="{9ECBC2A3-65DF-46B7-8B1D-424299C9A6A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -236,7 +236,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="TobaccoUse"
-              DTS:DTSID="{582244AE-9427-4B7F-9CC2-CFF5F8E0C419}"
+              DTS:DTSID="{217E304F-AAE8-47A2-8AD1-A88414DE77B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -245,7 +245,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CarrierName"
-              DTS:DTSID="{B71939A8-D286-425B-B4EF-B854C235F452}"
+              DTS:DTSID="{3D1715A6-C61B-4EE4-A104-E92B61C21E41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -254,7 +254,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="InsuranceType"
-              DTS:DTSID="{B7701FB0-32B2-4B8D-A0E8-E250ACA00D58}"
+              DTS:DTSID="{C72A35F4-E9C6-48AA-88D2-C7638266A195}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -263,7 +263,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CoverageLevelType"
-              DTS:DTSID="{BF94342C-B8CD-42F1-A048-D45904861C0E}"
+              DTS:DTSID="{E3321A0D-FBAA-44FD-B854-92D3A0161096}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -272,7 +272,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="EmployeeType"
-              DTS:DTSID="{2F4E17A4-CF2B-4DC8-95BD-A70E6E75ED7D}"
+              DTS:DTSID="{2C7269A6-68F6-4FA4-92C0-F4B9A4B43930}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -281,7 +281,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="RelationShipName"
-              DTS:DTSID="{906586A0-C5CA-42F2-A3BF-2806C2EA2F76}"
+              DTS:DTSID="{24D28244-61AC-46F9-A365-EE024BA02490}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -290,7 +290,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SPMInsuranceTypePlanID"
-              DTS:DTSID="{AFD1A2ED-14D7-4F91-9C19-62CA9084B269}"
+              DTS:DTSID="{E2442291-1172-4496-9A78-5B65712D5AD7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -299,7 +299,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IsDependent"
-              DTS:DTSID="{5AE188AF-7A1D-4272-B6CA-62A51DB50571}"
+              DTS:DTSID="{BEA78261-1C28-497F-AAF8-81E704A448FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -308,7 +308,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="BillingTypeName"
-              DTS:DTSID="{3E1405D3-AC68-4A2F-9F2F-D49E5D00CE37}"
+              DTS:DTSID="{C30C71D9-7070-40C1-B1B2-36BDC6AFCFD4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -317,7 +317,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Status"
-              DTS:DTSID="{6B59FE14-9CA7-493C-B278-B1226BCD2D1C}"
+              DTS:DTSID="{E3D055EF-9C34-4281-BC5C-38CB3E321EFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -326,7 +326,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="FirstDayOfCoverage"
-              DTS:DTSID="{500810C7-0024-48AC-9F18-6BF8E19B4212}"
+              DTS:DTSID="{F6677F4C-24A6-4EA6-A8AE-0FD5DF10C484}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -335,7 +335,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LastDayOfCoverage"
-              DTS:DTSID="{BE1C2255-A015-414F-BB83-30ECCB71EECE}"
+              DTS:DTSID="{FCD7245F-EB1E-4E8A-BE01-1CE0B34C684D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -344,25 +344,86 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="TermDate"
-              DTS:DTSID="{4DBBD971-C4C6-45B6-885C-C93360B2AC7B}"
+              DTS:DTSID="{7A9C9FDF-62FF-4A3D-A8DE-1605B3DB1FFE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BE015.Finance_Billing.Finance_Billing"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{D0F6834D-704A-49F5-B18D-54B2ECCBC0DA}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{94665EA8-9459-45CD-A137-6274C7BFEB33}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ChildParameter">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F64EC32-5E49-48A1-8998-F5B994EFB1A7}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert into TBL_ERROR_LOGS values('BE015',' &quot;+@[System::PackageName] +&quot;','',&#xA;'0','','&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()+&quot;','&quot;+ (DT_WSTR, 10000) @[User::ChildParameter]+&quot;')&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorVariable">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 913_SPMBYACAREPORT','',
+'0','','3/7/2022 4:41:40 AM','0')</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">1,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{15CDE94D-F5C6-4163-BF3C-EBD271D7ED1F}"
+      DTS:DTSID="{8D78F9AD-BA1D-4CFE-A2ED-AB88301115A5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -598,11 +659,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MemberID]"
                       name="Copy of MemberID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -619,11 +680,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ClientName]"
                       name="Copy of ClientName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -640,11 +701,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DivisionName]"
                       name="Copy of DivisionName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -661,11 +722,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FirstName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FirstName]"
                       name="Copy of FirstName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -682,11 +743,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastName]"
                       name="Copy of LastName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -703,11 +764,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MiddleInitial]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MiddleInitial]"
                       name="Copy of MiddleInitial"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -725,11 +786,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DOB]"
                       name="Copy of DOB"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -746,11 +807,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
                       name="Copy of SSN"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -767,11 +828,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IndividualIdentifier]"
                       name="Copy of IndividualIdentifier"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -788,11 +849,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
                       name="Copy of Gender"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -809,11 +870,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address]"
                       name="Copy of Address"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -830,11 +891,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Address2]"
                       name="Copy of Address2"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -851,11 +912,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]"
                       name="Copy of City"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -872,11 +933,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Country]"
                       name="Copy of Country"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -893,11 +954,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PostalCode]"
                       name="Copy of PostalCode"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -914,11 +975,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of StateOrProvince]"
                       name="Copy of StateOrProvince"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -935,11 +996,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EIN]"
                       name="Copy of EIN"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -956,11 +1017,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PlanName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PlanName]"
                       name="Copy of PlanName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -978,11 +1039,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PlanStartDate]"
                       name="Copy of PlanStartDate"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1000,11 +1061,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PlanEndDate]"
                       name="Copy of PlanEndDate"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1021,11 +1082,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TobaccoUse]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TobaccoUse]"
                       name="Copy of TobaccoUse"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1042,11 +1103,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CarrierName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CarrierName]"
                       name="Copy of CarrierName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1063,11 +1124,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InsuranceType]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InsuranceType]"
                       name="Copy of InsuranceType"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1084,11 +1145,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevelType]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CoverageLevelType]"
                       name="Copy of CoverageLevelType"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1105,11 +1166,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EmployeeType]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EmployeeType]"
                       name="Copy of EmployeeType"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1126,11 +1187,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RelationShipName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RelationShipName]"
                       name="Copy of RelationShipName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1147,11 +1208,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SPMInsuranceTypePlanID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SPMInsuranceTypePlanID]"
                       name="Copy of SPMInsuranceTypePlanID"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1168,11 +1229,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IsDependent]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IsDependent]"
                       name="Copy of IsDependent"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1189,11 +1250,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingTypeName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of BillingTypeName]"
                       name="Copy of BillingTypeName"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1210,11 +1271,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Status]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Status]"
                       name="Copy of Status"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1232,11 +1293,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FirstDayOfCoverage]"
                       name="Copy of FirstDayOfCoverage"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1254,11 +1315,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LastDayOfCoverage]"
                       name="Copy of LastDayOfCoverage"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -1276,11 +1337,11 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       length="50"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TermDate]"
                       name="Copy of TermDate"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
@@ -2775,544 +2836,8 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="TBL_STAGING_SPMBYACAREPORT_ERROR"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TBL_STAGING_SPMBYACAREPORT_ERROR]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[MemberID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="MemberID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[MemberID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[ClientName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ClientName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[ClientName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[DivisionName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="DivisionName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[DivisionName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[FirstName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FirstName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[FirstName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[LastName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="LastName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[LastName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[MiddleInitial]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="MiddleInitial"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[MiddleInitial]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[DOB]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="DOB"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DOB]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[DOB]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[SSN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[IndividualIdentifier]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="IndividualIdentifier"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[IndividualIdentifier]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Gender"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[Address]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[Address]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[Address2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Address2"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[Address2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[Country]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Country"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[Country]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[PostalCode]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PostalCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[PostalCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[StateOrProvince]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="StateOrProvince"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[StateOrProvince]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[EIN]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EIN"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[EIN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[PlanName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PlanName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[PlanName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[PlanStartDate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PlanStartDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanStartDate]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[PlanStartDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[PlanEndDate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PlanEndDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanEndDate]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[PlanEndDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[TobaccoUse]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="TobaccoUse"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TobaccoUse]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[TobaccoUse]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[CarrierName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CarrierName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CarrierName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[CarrierName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[InsuranceType]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="InsuranceType"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceType]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[InsuranceType]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[CoverageLevelType]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CoverageLevelType"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevelType]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[CoverageLevelType]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[EmployeeType]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="EmployeeType"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeType]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[EmployeeType]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[RelationShipName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="RelationShipName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[RelationShipName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[RelationShipName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[SPMInsuranceTypePlanID]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="SPMInsuranceTypePlanID"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SPMInsuranceTypePlanID]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[SPMInsuranceTypePlanID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[IsDependent]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="IsDependent"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IsDependent]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[IsDependent]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[BillingTypeName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="BillingTypeName"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BillingTypeName]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[BillingTypeName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[Status]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Status"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[Status]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[FirstDayOfCoverage]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="FirstDayOfCoverage"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FirstDayOfCoverage]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[FirstDayOfCoverage]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[LastDayOfCoverage]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="LastDayOfCoverage"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[LastDayOfCoverage]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[LastDayOfCoverage]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[TermDate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="TermDate"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TermDate]"
-                      lineageId="Package\Data Flow Task\Read CSV SPMBYACAREPORT.Outputs[Flat File Source Output].Columns[TermDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
-                      dataType="wstr"
-                      length="255"
-                      name="MemberID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ClientName]"
-                      dataType="wstr"
-                      length="255"
-                      name="ClientName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DivisionName]"
-                      dataType="wstr"
-                      length="255"
-                      name="DivisionName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
-                      dataType="wstr"
-                      length="255"
-                      name="FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
-                      dataType="wstr"
-                      length="255"
-                      name="LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MiddleInitial]"
-                      dataType="wstr"
-                      length="255"
-                      name="MiddleInitial" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[DOB]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="DOB" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
-                      dataType="wstr"
-                      length="255"
-                      name="SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IndividualIdentifier]"
-                      dataType="wstr"
-                      length="255"
-                      name="IndividualIdentifier" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      dataType="wstr"
-                      length="255"
-                      name="Gender" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Address2]"
-                      dataType="wstr"
-                      length="255"
-                      name="Address2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[City]"
-                      dataType="wstr"
-                      length="255"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      dataType="wstr"
-                      length="255"
-                      name="Country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
-                      dataType="wstr"
-                      length="255"
-                      name="PostalCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[StateOrProvince]"
-                      dataType="wstr"
-                      length="255"
-                      name="StateOrProvince" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EIN]"
-                      dataType="wstr"
-                      length="255"
-                      name="EIN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanName]"
-                      dataType="wstr"
-                      length="255"
-                      name="PlanName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanStartDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="PlanStartDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PlanEndDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="PlanEndDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TobaccoUse]"
-                      dataType="wstr"
-                      length="255"
-                      name="TobaccoUse" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CarrierName]"
-                      dataType="wstr"
-                      length="255"
-                      name="CarrierName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceType]"
-                      dataType="wstr"
-                      length="255"
-                      name="InsuranceType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[CoverageLevelType]"
-                      dataType="wstr"
-                      length="255"
-                      name="CoverageLevelType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeType]"
-                      dataType="wstr"
-                      length="255"
-                      name="EmployeeType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[RelationShipName]"
-                      dataType="wstr"
-                      length="255"
-                      name="RelationShipName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[SPMInsuranceTypePlanID]"
-                      dataType="wstr"
-                      length="255"
-                      name="SPMInsuranceTypePlanID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[IsDependent]"
-                      dataType="wstr"
-                      length="255"
-                      name="IsDependent" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[BillingTypeName]"
-                      dataType="wstr"
-                      length="255"
-                      name="BillingTypeName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
-                      dataType="wstr"
-                      length="255"
-                      name="Status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[FirstDayOfCoverage]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="FirstDayOfCoverage" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[LastDayOfCoverage]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="LastDayOfCoverage" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TermDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="TermDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
               endId="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT.Inputs[OLE DB Destination Input]"
@@ -3331,16 +2856,541 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{751DB563-7FF9-483D-BB78-9DB5EA529130}"
+      DTS:DTSID="{99411E57-FF35-4843-8200-4D9C9D38E491}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{862EB6CC-7E93-4391-A9C6-654BECBD3CBF}"
+          SQLTask:Connection="{E487AAEF-DB89-4E07-AEFC-1538FE2DB8F3}"
           SQLTask:SqlStatementSource="Truncate Table [dbo].[TBL_STAGING_SPMBYACAREPORT]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get  Global Id"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Script Task"
+      DTS:DTSID="{dd6974e4-94a3-40b0-bd8d-35bdd6b9dff5}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get  Global Id"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_b27e1007bf3447bd8765edbd8d7861a4"
+          VSTAMajorVersion="15"
+          VSTAMinorVersion="0"
+          Language="CSharp"
+          ReadOnlyVariables="GlobalStartPackageLogId"
+          ReadWriteVariables="ChildParameter">
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+#endregion
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+    public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+    {
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+        /// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+        public void Main()
+        {
+            // TODO: Add your code here
+            Dts.Variables["ChildParameter"].Value = Dts.Variables["GlobalStartPackageLogId"].Value;
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ST_b27e1007bf3447bd8765edbd8d7861a4.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{fbd7cd96-bb37-4714-9033-44f2d2e28ce1}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_68cf7524642e4a1892bdf261139c9df1</RootNamespace><AssemblyName>ST_b27e1007bf3447bd8765edbd8d7861a4</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST140</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_4e39fec6ccc0460f9412b553966b8770</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_4e39fec6ccc0460f9412b553966b8770</msb:DisplayName>
+    <msb:ProjectId>{222D016A-614A-4F7A-975E-07F225CAE276}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_b27e1007bf3447bd8765edbd8d7861a4.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_68cf7524642e4a1892bdf261139c9df1.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_4e39fec6ccc0460f9412b553966b8770.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDADBSHmIAAAAAAAAAAOAAIiALATAAAA4AAAAIAAAAAAAA5i0A
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAJQtAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA7A0AAAAgAAAADgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAQAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAFgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADI
+LQAAAAAAAEgAAAACAAUABCEAANgLAAABAAAAAAAAANwsAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAwBBAAAAAAAAAAIoEAAACm8RAAAKcgEAAHBvEgAACgIo
+EAAACm8RAAAKch8AAHBvEgAACm8TAAAKbxQAAAoCKBAAAAoWbxUAAAoqHgIoFgAACioeAigXAAAK
+Kq5+AQAABC0eck8AAHDQAwAAAigYAAAKbxkAAApzGgAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIA
+AAQqGn4DAAAEKh4CKBsAAAoqLnMIAAAGgAMAAAQqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
+AAAAAAUAbAAAALgDAAAjfgAAJAQAAIAFAAAjU3RyaW5ncwAAAACkCQAAxAAAACNVUwBoCgAAEAAA
+ACNHVUlEAAAAeAoAAGABAAAjQmxvYgAAAAAAAAACAAABVx2gAQkDAAAA+gEzABYAAAEAAAAdAAAA
+BQAAAAYAAAAJAAAAAQAAABsAAAACAAAAEAAAAAIAAAADAAAABAAAAAEAAAAEAAAAAQAAAAEAAAAA
+AJoDAQAAAAAABgBJAmoEBgDYAmoEBgCVAVcEDwDeBAAABgDCARgEBgAsAhgEBgANAhgEBgC/AhgE
+BgBpAhgEBgCCAhgEBgDZARgEBgD0ARADCgCdAkkDCgAUAUkDBgDSA8sDBgB4AVcEBgBRBcsDBgA6
+BIoEBgAqBAMEDgBIAYQDDgCpAYQDDgAwAe4DBgBdAWoECgByA0kDEgAgBb8AEgCSAL8ABgDfAMsD
+BgCbAMsDBgB3BRgEAAAAAEkAAAAAAAEAAQABABAA4wMlADkAAQABAAAAEACRBO0ERQABAAMAAAEQ
+ACoF7QRZAAMABwADAQAAQwUAAD0ABAAKABEA1wNjABEABAFnABEAggBrAAYGcQBvAFaAMwVyAFaA
+5AByAFAgAAAAAIYA6QMGAAEAnSAAAAAAhhhKBAYAAQClIAAAAACDGEoEBgABAK0gAAAAAJMINgR2
+AAEA2SAAAAAAkwjsAHsAAQDgIAAAAACTCPgAgAABAOggAAAAAJYIWAWGAAIA7yAAAAAAhhhKBAYA
+AgD3IAAAAACRGFAEiwACAAAAAQAKAwkASgQBABEASgQGABkASgQKACkASgQQADEASgQQADkASgQQ
+AEEASgQQAEkASgQQAFEASgQQAFkASgQQAGEASgQQAGkASgQGAIEASgQGAKkASgQVALkASgQGAHEA
+OwUbAMEAHAUgAMkAwgMlANEA9gIrANEAAAMvAMEAZAUBAHEASgQGAIkASgQGANkArQA0ANkAcwU7
+AJEASgRAALEASgQGAAgAFABZAAgAGABeACkAcwDGAC4ACwCeAC4AEwCnAC4AGwDGAC4AIwDPAC4A
+KwD4AC4AMwD4AC4AOwD4AC4AQwDPAC4ASwD+AC4AUwD4AC4AWwAVAUMAYwBeAEkAcwDGAGEAewBe
+AGMAawBeAAMAAQAEAAMAAAA6BI8AAAAMAZQAAABcBZkAAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcA
+BIAAAAEAAACfH/BUAAAAAAAAAQAAAAQAAAAAAAAAAAAAAEcAeQAAAAAADgAAAAAAAAAAAAAAUAAq
+AwAAAAAEAAAAAAAAAAAAAABHAMsDAAAAAA4AAAAAAAAAAAAAAFAAUgAAAAAAAAAAAAEAAACbBAAA
+BQACAAAAAAAAU1RfNGUzOWZlYzZjY2MwNDYwZjk0MTJiNTUzOTY2Yjg3NzAAU1RfNjhjZjc1MjQ2
+NDJlNGExODkyYmRmMjYxMTM5YzlkZjEAPE1vZHVsZT4ATWljcm9zb2Z0LlNxbFNlcnZlci5NYW5h
+Z2VkRFRTAHZhbHVlX18AbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAFZhcmlhYmxlAFJ1bnRpbWVU
+eXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRp
+bWUAVHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBW
+U1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9y
+QnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2Vy
+Q29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0
+ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdl
+dEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1i
+bHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFz
+c2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2Ny
+aXB0VGFza0VudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRp
+bWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAGdldF9WYWx1ZQBzZXRfVmFsdWUAdmFsdWUAU3lzdGVt
+LlJ1bnRpbWUuVmVyc2lvbmluZwBNaWNyb3NvZnQuU3FsU2VydmVyLlNjcmlwdFRhc2sATWljcm9z
+b2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBTY3JpcHRPYmplY3RNb2RlbABTeXN0
+ZW0uQ29tcG9uZW50TW9kZWwAU1RfNGUzOWZlYzZjY2MwNDYwZjk0MTJiNTUzOTY2Yjg3NzAuZGxs
+AGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZp
+Z3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24AQ3VsdHVyZUlu
+Zm8AZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5
+c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTVF82OGNmNzUy
+NDY0MmU0YTE4OTJiZGYyNjExMzljOWRmMS5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMA
+RGVidWdnaW5nTW9kZXMAU1RfNjhjZjc1MjQ2NDJlNGExODkyYmRmMjYxMTM5YzlkZjEuUHJvcGVy
+dGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRz
+AE9iamVjdABnZXRfRGVmYXVsdABzZXRfVGFza1Jlc3VsdABnZXRfQXNzZW1ibHkAAB1DAGgAaQBs
+AGQAUABhAHIAYQBtAGUAdABlAHIAAC9HAGwAbwBiAGEAbABTAHQAYQByAHQAUABhAGMAawBhAGcA
+ZQBMAG8AZwBJAGQAAHFTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBi
+AGQAZgAyADYAMQAxADMAOQBjADkAZABmADEALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMA
+bwB1AHIAYwBlAHMAAAAAAK/lw9vet+hCshf2fouQyMsABCABAQgDIAABBSABARERBCABAQ4FIAEB
+EVEEIAASYQQgABJlBSABEmkcAyAAHAQgAQEcBgABEm0RcQQgABJ1BiACAQ4SdQi3elxWGTTgiQiJ
+hF3NgIDMkQQAAAAABAEAAAADBhJJAwYSTQMGEhACBggDBhEUBAAAEkkEAAASTQUAAQESTQQAABIQ
+AwAAAQQIABJJBAgAEk0ECAASEAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93
+cwEIAQACAAAAAAAoAQAjU1RfNjhjZjc1MjQ2NDJlNGExODkyYmRmMjYxMTM5YzlkZjEAAAUBAAAA
+ABYBABFDb3B5cmlnaHQgQCAgMjAyMgAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBU
+DhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUAtAAAAM7K774BAAAAkQAA
+AGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAu
+MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lz
+dGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAALwt
+AAAAAAAAAAAAANYtAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADILQAAAAAAAAAAAAAAAF9Db3JE
+bGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAA
+AAAASAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYA
+TwAAAAAAvQTv/gAAAQAAAAEA8FSfHwAAAQDwVJ8fPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA
+AEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkA
+bwBuAAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAw
+ADAAMAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAA
+YQBuAHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBu
+AAAAAABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYA
+MQAxADMAOQBjADkAZABmADEAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAw
+AC4AOAAwADkANQAuADIAMQA3ADQANAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUA
+AABTAFQAXwA0AGUAMwA5AGYAZQBjADYAYwBjAGMAMAA0ADYAMABmADkANAAxADIAYgA1ADUAMwA5
+ADYANgBiADgANwA3ADAALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgA
+dAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMgAAACoAAQABAEwAZQBnAGEAbABU
+AHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUA
+bgBhAG0AZQAAAFMAVABfADQAZQAzADkAZgBlAGMANgBjAGMAYwAwADQANgAwAGYAOQA0ADEAMgBi
+ADUANQAzADkANgA2AGIAOAA3ADcAMAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEA
+bQBlAAAAAABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAy
+ADYAMQAxADMAOQBjADkAZABmADEAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4A
+AAAxAC4AMAAuADgAMAA5ADUALgAyADEANwA0ADQAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAg
+AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADgAMAA5ADUALgAyADEANwA0ADQAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAA6D0A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+        </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -3348,12 +3398,64 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{0A0BFA17-5F4D-4C7B-B9A4-715D96ECF625}"
+      DTS:DTSID="{1AACD19F-45A1-42D5-9124-8B6746CAFFC0}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A3F09FBA-D81B-48D1-A255-F43780694986}"
+      DTS:From="Package\Get  Global Id"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task" />
   </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{420A9C82-602F-4961-975F-45AC6EF8CAAC}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{767D0699-4496-4D8A-98E0-B42C2C278262}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{B89C86F1-0191-417A-A760-357EDCCD355C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E487AAEF-DB89-4E07-AEFC-1538FE2DB8F3}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','913_SPMBYACAREPORT','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -3365,41 +3467,79 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="220,24" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="308,149" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="228,72" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Get  Global Id"
+          TopLeft="110,3" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="305,66">
+          TopLeft="313,114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80.5,83"
+              EndConnector="72.5,35"
               Start="0,0"
-              End="80.5,75.5">
+              End="72.5,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.5"
-                    Point2="0,41.5"
-                    Point3="4,41.5" />
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
                   <mssgle:LineSegment
-                    End="76.5,41.5" />
+                    End="68.5,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="76.5,41.5"
-                    Point2="80.5,41.5"
-                    Point3="80.5,45.5" />
+                    Point1="68.5,17.5"
+                    Point2="72.5,17.5"
+                    Point3="72.5,21.5" />
                   <mssgle:LineSegment
-                    End="80.5,75.5" />
+                    End="72.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="189.5,45">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.5,27"
+              Start="0,0"
+              End="123.5,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.5"
+                    Point2="0,13.5"
+                    Point3="4,13.5" />
+                  <mssgle:LineSegment
+                    End="119.5,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.5,13.5"
+                    Point2="123.5,13.5"
+                    Point3="123.5,17.5" />
+                  <mssgle:LineSegment
+                    End="123.5,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3411,19 +3551,35 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="290,47" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="241,42"
-          Id="Package\Data Flow Task\Read CSV SPMBYACAREPORT"
-          TopLeft="162,35" />
-        <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="289,151" />
+        <NodeLayout
+          Size="268,42"
+          Id="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT"
+          TopLeft="207,287" />
+        <NodeLayout
+          Size="241,42"
+          Id="Package\Data Flow Task\Read CSV SPMBYACAREPORT"
+          TopLeft="162,35" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="282.5,77">
@@ -3455,13 +3611,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="268,42"
-          Id="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT"
-          TopLeft="207,287" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
           TopLeft="342.5,193">
@@ -3481,46 +3635,8 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="314,42"
-          Id="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR"
-          TopLeft="526,281" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="395,193">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="288,88"
-              Start="0,0"
-              End="288,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.719557195572" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.719557195572"
-                    Point2="0,35.719557195572"
-                    Point3="4,35.719557195572" />
-                  <mssgle:LineSegment
-                    End="284,35.719557195572" />
-                  <mssgle:CubicBezierSegment
-                    Point1="284,35.719557195572"
-                    Point2="288,35.719557195572"
-                    Point3="288,39.719557195572" />
-                  <mssgle:LineSegment
-                    End="288,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="77.91361328125,40.719557195572,132.1727734375,11.43359375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3529,19 +3645,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\TBL_STAGING_SPMBYACAREPORT_ERROR">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -1,0 +1,930 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/15/2022 10:04:07 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BE015"
+  DTS:CreatorName="V057\SSingh_Beneflex"
+  DTS:DTSID="{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ParentFinanceBilling"
+  DTS:PackageType="5"
+  DTS:VersionBuild="156"
+  DTS:VersionGUID="{D8D7487B-3331-49CC-A3EB-4A9BCBB364F3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+      DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACK1b20vgQrnsnK1UdUSFTvAAAAAASAAACgAAAAEAAAAHiNgb80E59hJUSIb9lhALAYAAAAHmvPt5z/qnTvHTFbE/xY1aEgxDt3etI9FAAAALhIAKEgC/QBms28GO+NYyam7tDD</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B3BE678C-8ABB-4CB0-B2AA-6889B892BB4F}"
+      DTS:ObjectName="Parameter">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9EFDB5D5-5624-4A5D-A908-5D382B685B51}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Destination">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{13BECCE3-46DE-489B-B92B-8D8D83E394FF}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::Destination]+ &quot;\\FileProcessed_&quot;+REPLACE(REPLACE(REPLACE(SUBSTRING((DT_STR,50,1252)GETDATE(),1,19),&quot;-&quot;,&quot;_&quot;),&quot;:&quot;,&quot;_&quot;),&quot; &quot;,&quot;_&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DestinationPath">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_09_08_25_21</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3AF99D3D-AD39-427B-A843-20AC03F08BED}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId] +&#xA;&#xA;&quot;; &#xA;&#xA;EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;&#xA;EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;&#xA;EXEC PSP_UPDATE_TBL_STAGING_QBDETAIL_ALTERNATE_ER_ID;&#xA;EXEC PSP_UPDATE_STAGING_NPM_ALTERNATE_ER_ID;&#xA;EXEC PSP_UPDATE_STAGING_NPM_PAYLOCITY;&#xA;EXEC PSP_UPDATE_EDI_BILLING_GROUP_COUNT_BROKERCLIENTLIST;&#xA;EXEC PSP_UPDATE_SPMBYACAREPORT_CLIENTALTID_FROM_CLIENTLIST; EXEC SPS_TRUNCATE_HELPERPROCESSTABLES;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EndTaskInformation">
+      <DTS:VariableValue
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/9/2022 8:25:21 AM' Where Id=0; 
+
+EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;
+EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;
+EXEC PSP_UPDATE_TBL_STAGING_QBDETAIL_ALTERNATE_ER_ID;
+EXEC PSP_UPDATE_STAGING_NPM_ALTERNATE_ER_ID;
+EXEC PSP_UPDATE_STAGING_NPM_PAYLOCITY;
+EXEC PSP_UPDATE_EDI_BILLING_GROUP_COUNT_BROKERCLIENTLIST;
+EXEC PSP_UPDATE_SPMBYACAREPORT_CLIENTALTID_FROM_CLIENTLIST; EXEC SPS_TRUNCATE_HELPERPROCESSTABLES;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{16810E28-F5CD-4C4A-A017-6A95FCE81A21}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',&#xA;'0','','&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()+&quot;','&quot;+ (DT_WSTR, 10000) @[User::GlobalStartPackageLogId] +&quot;');&#xA;EXEC [dbo].[PSP_TRUNCATE_TABLE_2];&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorVariable">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',
+'0','','3/9/2022 8:25:21 AM','0');
+EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{864A32BF-093C-41AF-92F8-6880040AEF5F}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE()  +&quot;' Where Id=&quot;+ (DT_WSTR, 1000) @[User::GlobalStartPackageLogId]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FailedTaskInformation">
+      <DTS:VariableValue
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/9/2022 8:25:21 AM' Where Id=0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5C5D07B9-B310-4416-B9D9-B94CD5BF142C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="GlobalStartPackageLogId">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F06724A3-AE4C-49E7-BEDF-2A9C9B5C8971}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="InputUserGUID"
+      DTS:RaiseChangedEvent="True">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CDEF1542-E1D8-43D8-A7F7-DA0BA1E84457}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NoRecordInserted">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7BCD7059-2B5C-4ADD-8B38-EF80C9FCC705}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourcePath">
+      <DTS:VariableValue
+        DTS:DataType="8">E:\Finance_Billing\Starting_Files</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BFAE123E-5E0B-4676-90ED-38C050053123}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+ @[$Package::Parameter]  +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="StartTaskInformation">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/9/2022 8:25:21 AM'); 
+SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7171DE4D-3506-4926-B9EC-560E47F19327}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalRecord">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\End Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AD37F436-68A0-46D8-9171-E67825FB2926}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="End Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::EndTaskInformation" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\File System Task"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{55C73425-A25E-4475-A6A1-CCB68B172317}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File System Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="CreateDirectory"
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="User::DestinationPath"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::DestinationPath"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{1630B3F0-3BD5-4246-B4D5-6000C5CA083A}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{8A7992E5-785E-491B-8586-5AE624116131}"
+        DTS:ObjectName="{8A7992E5-785E-491B-8586-5AE624116131}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="E:\Finance_Billing\Starting_Files" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\File System Task"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{AB184906-457D-45EE-AAFD-60806687DF14}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="File System Task"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::SourcePath"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::DestinationPath"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{E2015C8B-AF99-40E1-8441-06B44ABD7A95}"
+          DTS:ObjectName="{E2015C8B-AF99-40E1-8441-06B44ABD7A95}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::SourcePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{9056B260-14D2-432E-AE82-8437095D7357}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container"
+      DTS:TransactionOption="0">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\1_BENEFL_Integrated_Current_Import"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F8C41052-A960-4C07-8293-1E8316BE0436}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="1_BENEFL_Integrated_Current_Import"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="PackageID">@[$Package::Parameter]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>1_BENEFL_Integrated_Current_Import.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\2_BENEFL_Integrated_Prior_Import"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{FE3613B6-5C13-49D9-B290-05BDEA5D2393}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="2_BENEFL_Integrated_Prior_Import"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>2_BENEFL_Integrated_Prior_Import.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\3_DebitCard_Import"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{1DF80D67-1E42-4571-925E-6B55D4F66686}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="3_DebitCard_Import"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>3_DebitCard_Import.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\4_NPM"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{6B6B425F-FD0C-4C7C-89BE-93D2E6EFCA7E}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="4_NPM"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>4_NPM.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\5_QBdetail"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{F986913F-D4D7-4350-9642-004D3707F170}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="5_QBdetail"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>5_QBdetail.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\6_BrokerClientlist"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{299AE046-67E1-4CB9-997B-01099236E7F6}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="6_BrokerClientlist"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>6_BrokerClientlist.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\7_Clientlist"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B9D05066-13CA-4710-A864-9CF70EB67598}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="7_Clientlist"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>7_Clientlist.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\8_Cobraletters"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{070590A0-E403-4A4A-9D2B-DF4BB2B7E1D5}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="8_Cobraletters"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>8_Cobraletters.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\910_ENBillingNumbers_Import"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{9422D677-0A38-4ECF-8DC5-3D412FF07856}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="910_ENBillingNumbers_Import"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>910_ENBillingNumbers_ImportCSV.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\911_EC Extract"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{E8B69060-766D-44BB-8168-096A796A3CAE}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="911_EC Extract"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>911_EC Extract.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\912_EB Extract"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{627FEEEC-0054-44D1-A5DD-650D23D44027}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="912_EB Extract"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>912_EB Extract.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\913_SPMBYACAREPORT"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{D3F29504-5F1B-4079-934F-937E4357BA29}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="913_SPMBYACAREPORT"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>913_SPMBYACAREPORT.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\9_Bswift_BillingNumbers_Import"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{04808B29-ED61-4CE3-A030-621333E9C7CA}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="9_Bswift_BillingNumbers_Import"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>9_Bswift_BillingNumbers_Import.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C20540ED-3C0F-4128-8A4F-0AD3421488EC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::StartTaskInformation" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::GlobalStartPackageLogId"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Helper &amp; Process Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{E705A301-F65F-45DE-97BB-DDDAF19C94DD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Helper &amp; Process Tables"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+          SQLTask:SqlStatementSource="EXEC [dbo].[SPS_TRUNCATE_HELPERPROCESSTABLES];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1419E65D-D9DA-4C9E-8111-767AD4FBA6E7}"
+      DTS:From="Package\Sequence Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\File System Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E24D7640-4B28-46FA-9802-5F6BBA77F02F}"
+      DTS:From="Package\Start Package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Sequence Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{BA169F5D-8A0E-43FE-819A-4E2532DB4D18}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\End Package" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D6796F77-27B3-4DE4-B717-D96789486B90}"
+      DTS:From="Package\File System Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{FECD805B-4199-494D-9663-BB948DFD14A4}"
+      DTS:From="Package\End Package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Truncate Helper &amp; Process Tables" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{FC1CB994-A609-4865-9863-2D516D89E6B4}"
+      DTS:EventID="3"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{5AC09E44-35DE-4D56-8978-1F49A6CE00B0}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{EEDECC24-4C54-4518-B8A9-9E1AC29359C8}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::ErrorVariable" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Log Update"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A08D37C8-31FB-4331-8B37-B45FEAC120B2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Log Update"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::FailedTaskInformation" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{59F53DBC-011A-407E-A5A5-328D7B510F75}"
+          DTS:From="Package.EventHandlers[OnError]\Execute SQL Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnError]\Log Update" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\End Package"
+          TopLeft="784.5,924.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\File System Task"
+          TopLeft="400,711.571428571429" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\File System Task"
+          TopLeft="30.5714285714286,65.8571428571429" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="291,199"
+          Size="291,242"
+          Id="Package\Foreach Loop Container"
+          TopLeft="343,830.857142857143" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Sequence Container\1_BENEFL_Integrated_Current_Import"
+          TopLeft="12.5714285714284,9" />
+        <NodeLayout
+          Size="280,42"
+          Id="Package\Sequence Container\2_BENEFL_Integrated_Prior_Import"
+          TopLeft="323,8.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Sequence Container\3_DebitCard_Import"
+          TopLeft="677,8" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\Sequence Container\4_NPM"
+          TopLeft="1018,7.5" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Sequence Container\5_QBdetail"
+          TopLeft="7,98.5" />
+        <NodeLayout
+          Size="276,42"
+          Id="Package\Sequence Container\6_BrokerClientlist"
+          TopLeft="322,93.5" />
+        <NodeLayout
+          Size="263,42"
+          Id="Package\Sequence Container\7_Clientlist"
+          TopLeft="683,95" />
+        <NodeLayout
+          Size="286,42"
+          Id="Package\Sequence Container\8_Cobraletters"
+          TopLeft="1022,99" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Sequence Container\9_Bswift_BillingNumbers_Import"
+          TopLeft="8,186" />
+        <NodeLayout
+          Size="276,42"
+          Id="Package\Sequence Container\910_ENBillingNumbers_Import"
+          TopLeft="318,190" />
+        <NodeLayout
+          Size="269,42"
+          Id="Package\Sequence Container\911_EC Extract"
+          TopLeft="678,191" />
+        <NodeLayout
+          Size="283,42"
+          Id="Package\Sequence Container\912_EB Extract"
+          TopLeft="1000,198.857142857143" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Sequence Container\913_SPMBYACAREPORT"
+          TopLeft="14,263" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1391,392"
+          Size="1391,435"
+          Id="Package\Sequence Container"
+          TopLeft="14.3333333333335,192.666666666667" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Start Package"
+          TopLeft="545,89" />
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Truncate Helper &amp; Process Tables"
+          TopLeft="1056,919" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="480.416666666667,627.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83.904761904762"
+              Start="0,0"
+              End="0,76.404761904762">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.404761904762" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="619,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.8333333333335,61.666666666667"
+              Start="0,0"
+              End="90.8333333333335,54.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8333333333335"
+                    Point2="0,30.8333333333335"
+                    Point3="4,30.8333333333335" />
+                  <mssgle:LineSegment
+                    End="86.8333333333335,30.8333333333335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="86.8333333333335,30.8333333333335"
+                    Point2="90.8333333333335,30.8333333333335"
+                    Point3="90.8333333333335,34.8333333333335" />
+                  <mssgle:LineSegment
+                    End="90.8333333333335,54.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="634,948.678571428572">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.5,0"
+              Start="0,0"
+              End="117,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="117,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="485,753.571428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,77.285714285714"
+              Start="0,0"
+              End="0,69.785714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.785714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="937.5,939.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="118.5,0"
+              Start="0,0"
+              End="111,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="111,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package.EventHandlers[OnError]\Execute SQL Task"
+          TopLeft="412,123" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package.EventHandlers[OnError]\Log Update"
+          TopLeft="472,223" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnError].PrecedenceConstraints[Constraint]"
+          TopLeft="497,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,58"
+              Start="0,0"
+              End="61,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
+                  <mssgle:LineSegment
+                    End="57,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57,29"
+                    Point2="61,29"
+                    Point3="61,33" />
+                  <mssgle:LineSegment
+                    End="61,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

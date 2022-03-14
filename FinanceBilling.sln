@@ -1,22 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.1758
+VisualStudioVersion = 15.0.28307.1778
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "FinnanceBilling", "FinnanceBilling\FinnanceBilling.dtproj", "{CC604BA1-B236-429F-91DB-AEEADDD0A7CB}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "FinanceBilling", "FinanceBilling\FinanceBilling.dtproj", "{867B4C40-C277-4FB9-9FAD-8064DC372AE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC604BA1-B236-429F-91DB-AEEADDD0A7CB}.Development|Default.ActiveCfg = Development
-		{CC604BA1-B236-429F-91DB-AEEADDD0A7CB}.Development|Default.Build.0 = Development
+		{867B4C40-C277-4FB9-9FAD-8064DC372AE1}.Development|Default.ActiveCfg = Development
+		{867B4C40-C277-4FB9-9FAD-8064DC372AE1}.Development|Default.Build.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {73D5D72E-76A3-4E82-B9DC-01A8129D00F4}
+		SolutionGuid = {6C3535A2-11B1-46BE-84B9-7907EB52E4C5}
 	EndGlobalSection
 EndGlobal
