@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package12_BENEFL_Integrated_Prior_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{AE12CA95-295E-452C-8AF0-D51D32295A34}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{3DCD6C12-C05B-4D68-8DAA-29DA42F57C15}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA6rK6OKhUUtBgEKWMaI5jmAAAAAASAAACgAAAAEAAAACgXmmkEnQm8JW1iKsDSDiYYAAAA2d41dA538WwIlm8RPFWiRpS3DI7LIeI+FAAAAAmejZdRuzcNt6CJTSYgeL74XFa7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABHvWiekxUV3ymCESjM0EbwAAAAAASAAACgAAAAEAAAAGOjmpNVo8KRh+IWq6jwQGkYAAAAjBIDsbFYBP6Um6emcRMcAw1MM7xVI2ZeFAAAACHg8F0z0UZmmlUIS/9zKRHZkPhK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -51,119 +51,119 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 0"
-              DTS:DTSID="{F088A986-FBC4-419D-871E-00814ADE0BCF}"
+              DTS:DTSID="{0CEA349D-4AE2-42A1-A9E9-C2FC1E73F358}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 1"
-              DTS:DTSID="{6A836B34-1F99-43E7-A706-717694D267AB}"
+              DTS:DTSID="{A567BF54-50FC-453D-B1C7-2B4CE8848F1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 2"
-              DTS:DTSID="{CB21F9A8-B6EF-45B8-9486-CD4C6E4539A8}"
+              DTS:DTSID="{66F1C745-FC5B-4035-B0BF-78CA22E35AE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 3"
-              DTS:DTSID="{6FA90867-B4B4-499E-AB83-D4465F19EBB2}"
+              DTS:DTSID="{9869B630-8960-421F-82C2-79E9994587F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 4"
-              DTS:DTSID="{2E3C0A80-FCA0-40FE-BEB4-3D7EDEED5224}"
+              DTS:DTSID="{CD2EAF4F-971D-400D-B2BF-AB723BD5B967}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 5"
-              DTS:DTSID="{DCD6FA59-6555-4C7F-BE12-DB83A884A56E}"
+              DTS:DTSID="{1C2ACF23-450C-4509-9FC2-73EE3BBA6D1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 6"
-              DTS:DTSID="{091D2733-7E78-4C9B-85CA-C09F9A73BBD5}"
+              DTS:DTSID="{FF853649-9D98-4390-AD7E-34D9D1E96A51}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 7"
-              DTS:DTSID="{BE76ACB9-148F-4603-A15F-25E65B842779}"
+              DTS:DTSID="{F3AF2A2E-EF2E-48F3-9740-3483F53E0324}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 8"
-              DTS:DTSID="{8FE57B44-6ACB-402A-A787-C15DD90A24A4}"
+              DTS:DTSID="{E112CA7A-58FD-440E-87CC-9B27D6B21D6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 9"
-              DTS:DTSID="{3366B316-1B87-4A4A-85DA-9A7A0319C74D}"
+              DTS:DTSID="{183F3DCA-6D4A-4AB2-8EEF-32800816B68C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 10"
-              DTS:DTSID="{08FD650D-4B61-4F73-9DD1-A1068CAEC1E0}"
+              DTS:DTSID="{6BF852D7-02FB-4448-9F6D-79EBC34BF795}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 11"
-              DTS:DTSID="{24ACFB2D-FF32-4A26-B63B-73C5E19A29D9}"
+              DTS:DTSID="{32AE67DE-4C3F-4C94-9EB0-C4D8055D296F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 12"
-              DTS:DTSID="{9887C389-F6C2-445E-A372-160F7DF520B9}"
+              DTS:DTSID="{A99BB72D-0026-4590-837E-740D2F81B7BB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -186,11 +186,23 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{AF683D84-C145-44FB-9F77-BE8CE864EFA2}"
-      DTS:IncludeInDebugDump="6789"
+      DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ChildParameter">
       <DTS:VariableValue
-        DTS:DataType="20">0</DTS:VariableValue>
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{106474F9-054C-4D04-A73A-55EC75E7B958}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET NumRowsNotInserted =&quot;+ (DT_WSTR, 1000) @[User::NotInsertedRecord] +&quot;, NumRowsTotal =&quot;+ (DT_WSTR, 1000) @[User::TotalRecord] +&quot;,NumRowsInserted =&quot;+  (DT_WSTR, 1000)  @[User::NoOfRecordInserted] +&quot; ,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE() +&quot; ' Where Id=&quot;+ (DT_WSTR, 1000) @[User::PackageLogID] +&#xA;&#xA;&quot;; &quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EndTask">
+      <DTS:VariableValue
+        DTS:DataType="8">Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/28/2022 5:47:25 AM ' Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -202,7 +214,55 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' Package12_BENEFL_Integrated_Prior_Import','',
-'0','','3/7/2022 4:32:13 AM','0')</DTS:VariableValue>
+'0','','3/28/2022 5:47:25 AM','')</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7E36BE29-A523-4017-9B4B-C0E8733F3EF1}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NoOfRecordInserted">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{77FF9CB9-C2BC-48EA-AC88-FAD6C2C94DCD}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NotInsertedRecord">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CC2E6F92-8F4A-43FD-8430-D26EC978D92C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageLogID">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BBB37561-799B-44E7-ACFB-1A70D29E8204}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+  @[User::ChildParameter]  +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="StartTask">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('Package12_BENEFL_Integrated_Prior_Import','{3E578D24-581D-4943-B249-C90DDA1F526A}','','BE015','V057\SSingh_Beneflex','BE015','3/28/2022 5:47:25 AM'); 
+SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B7C1BAC5-EBF5-49E5-822E-DF8BF54B781F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalRecord">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -261,92 +321,79 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 0]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 0"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 1"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 2"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 3]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 3"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 4]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 4"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 5]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 5"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 6]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 6"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 7"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 8]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 8"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 9]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 9"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 10]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 10"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 11]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 11"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 12]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Column 12"
                       lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
@@ -365,11 +412,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
                       name="Copy of Column 0"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -386,11 +433,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
                       name="Copy of Column 1"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -407,11 +454,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
                       name="Copy of Column 2"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -428,11 +475,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
                       name="Copy of Column 3"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -449,11 +496,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
                       name="Copy of Column 4"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -470,11 +517,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
                       name="Copy of Column 5"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -489,13 +536,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
-                      dataType="wstr"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
+                      errorRowDisposition="RedirectRow"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
                       name="Copy of Column 6"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -510,13 +556,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
-                      dataType="wstr"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
+                      errorRowDisposition="RedirectRow"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
                       name="Copy of Column 7"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -533,11 +578,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
                       name="Copy of Column 8"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -552,13 +597,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
-                      dataType="wstr"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
+                      errorRowDisposition="RedirectRow"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
                       name="Copy of Column 9"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -575,11 +619,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
                       name="Copy of Column 10"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -596,11 +640,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
                       name="Copy of Column 11"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -617,11 +661,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
                       name="Copy of Column 12"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -662,6 +706,35 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\Inserted Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Inserted Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::NoOfRecordInserted</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Inserted Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -694,8 +767,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
@@ -716,8 +788,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
@@ -738,8 +809,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
@@ -760,8 +830,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
@@ -782,8 +851,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
@@ -804,8 +872,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
@@ -826,8 +893,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
@@ -848,8 +914,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
@@ -870,8 +935,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
@@ -892,8 +956,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
@@ -914,8 +977,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
@@ -936,8 +998,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
@@ -958,8 +1019,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
@@ -983,81 +1043,68 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 0" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 1" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 3" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 4" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 5" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 6" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 7" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 8" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 9" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 10" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 11" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="wstr"
+                      length="255"
                       name="Column 12" />
                   </externalMetadataColumns>
                 </output>
@@ -1086,6 +1133,35 @@
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::NotInsertedRecord</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1206,15 +1282,13 @@
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]" />
                     <inputColumn
                       refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 6]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="date"
                       cachedName="Copy of Column 6"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]" />
                     <inputColumn
                       refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 7]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="date"
                       cachedName="Copy of Column 7"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]" />
@@ -1227,8 +1301,7 @@
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]" />
                     <inputColumn
                       refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 9]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="date"
                       cachedName="Copy of Column 9"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]" />
@@ -1376,20 +1449,372 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 0"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 1"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 2"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 3]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 3"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 4]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 4"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 5]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 5"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 6]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 6"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 7]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 7"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 8]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 8"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 9]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 9"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 10]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 10"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 11]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 11"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 12]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 12"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
+                      dataType="wstr"
+                      length="255"
+                      name="Line type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="TPA Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
+                      dataType="wstr"
+                      length="255"
+                      name="Bencode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employer Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="Account Type Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="PY Start Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan End Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
+                      dataType="wstr"
+                      length="255"
+                      name="Grace_Roll" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Runout Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Term Runout Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan Min" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan Max" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date dt]"
+                      dataType="dbTimeStamp2"
+                      name="Runout Date dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Billable Runout]"
+                      dataType="wstr"
+                      length="255"
+                      name="Billable Runout" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[AccountUniqueKey]"
+                      dataType="wstr"
+                      length="255"
+                      name="AccountUniqueKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date Number]"
+                      dataType="wstr"
+                      length="255"
+                      name="Term Runout Date Number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date dt]"
+                      dataType="dbTimeStamp2"
+                      name="Plan End Date dt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date Number]"
+                      dataType="i4"
+                      name="Runout Date Number" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Total Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Total Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalRecord</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Total Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+              endId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+              name="Data Conversion Error Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 1]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Total Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 11]"
+              endId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Inserted Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 12]"
+              endId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\End Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{FDB9BA8A-B67B-4EA2-8DCA-9BE5CA4CE0FA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="End Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{52CD6876-2FE5-41EB-B541-D69771E642D2}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::EndTask" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1428,36 +1853,6 @@
           Language="CSharp"
           ReadOnlyVariables="GlobalStartPackageLogId"
           ReadWriteVariables="ChildParameter">
-          <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
-[assembly: AssemblyCopyright("Copyright @  2022")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1577,6 +1972,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -1799,34 +2223,35 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
-    "ings")]
-
-namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -2016,6 +2441,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{96CC90BA-FCB6-44FC-953C-08B7B264DE3A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{52CD6876-2FE5-41EB-B541-D69771E642D2}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::StartTask" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageLogID"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2029,11 +2478,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{5DF86CDD-BC1C-4B3A-81A8-8E1C6581F2FA}"
+      DTS:DTSID="{4BAC1D42-8572-4DA6-BD6E-3C254D1C12A1}"
       DTS:From="Package\Get  Global Id"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Start Package" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{E5C69CDA-55A1-4475-8739-9B82E3ACBD01}"
+      DTS:From="Package\Start Package"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
       DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{C2FA03F4-61DE-4234-8EDD-227571AE9D67}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\End Package" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -2089,45 +2554,83 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="247,164" />
+          TopLeft="320,247" />
         <NodeLayout
           Size="170,42"
           Id="Package\Execute SQL Task"
-          TopLeft="178,68" />
+          TopLeft="282,152" />
         <NodeLayout
           Size="147,42"
           Id="Package\Get  Global Id"
           TopLeft="100,11" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="263,110">
+          TopLeft="367,194">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61.5,54"
+              EndConnector="30.5,53"
               Start="0,0"
-              End="61.5,46.5">
+              End="30.5,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
+                    End="0,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
                   <mssgle:LineSegment
-                    End="57.5,27" />
+                    End="26.5,26.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="57.5,27"
-                    Point2="61.5,27"
-                    Point3="61.5,31" />
+                    Point1="26.5,26.5"
+                    Point2="30.5,26.5"
+                    Point3="30.5,30.5" />
                   <mssgle:LineSegment
-                    End="61.5,46.5" />
+                    End="30.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Start Package"
+          TopLeft="356,47" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="247,32">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109,36"
+              Start="0,0"
+              End="101.5,36">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.5,0"
+                    Point2="54.5,0"
+                    Point3="54.5,4" />
+                  <mssgle:LineSegment
+                    End="54.5,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.5,32"
+                    Point2="54.5,36"
+                    Point3="58.5,36" />
+                  <mssgle:LineSegment
+                    End="101.5,36" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2137,25 +2640,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="247,32">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="430,89">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16,36"
+              EndConnector="-63,63"
               Start="0,0"
-              End="16,28.5">
+              End="-63,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="12,0" />
+                    End="0,27.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="12,0"
-                    Point2="16,0"
-                    Point3="16,4" />
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
                   <mssgle:LineSegment
-                    End="16,28.5" />
+                    End="-59,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-59,31.5"
+                    Point2="-63,31.5"
+                    Point3="-63,35.5" />
+                  <mssgle:LineSegment
+                    End="-63,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\End Package"
+          TopLeft="497,324" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="397.5,289">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="171.5,35"
+              Start="0,0"
+              End="171.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="167.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="167.5,17.5"
+                    Point2="171.5,17.5"
+                    Point3="171.5,21.5" />
+                  <mssgle:LineSegment
+                    End="171.5,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2183,7 +2730,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="307,42"
           Id="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import"
@@ -2191,25 +2738,83 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="241,103" />
+          TopLeft="425,177" />
         <NodeLayout
           Size="349,42"
           Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR"
-          TopLeft="194,212" />
+          TopLeft="102,292" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Total Row Count"
+          TopLeft="374,104" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Inserted Row Count"
+          TopLeft="227,219" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="667,209" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="323,72">
+          TopLeft="324.5,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,31"
+              EndConnector="130,32"
               Start="0,0"
-              End="0,23.5">
+              End="130,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12"
+                    Point2="0,16"
+                    Point3="4,16" />
+                  <mssgle:LineSegment
+                    End="126,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126,16"
+                    Point2="130,16"
+                    Point3="130,20" />
+                  <mssgle:LineSegment
+                    End="130,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
+          TopLeft="454.5,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,31"
+              Start="0,0"
+              End="51,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="47,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47,15.5"
+                    Point2="51,15.5"
+                    Point3="51,19.5" />
+                  <mssgle:LineSegment
+                    End="51,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2220,30 +2825,132 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="321.5,145">
+          TopLeft="425,196.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="47,67"
+              EndConnector="-110,22.5"
               Start="0,0"
-              End="47,59.5">
+              End="-110,15">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="-106,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="4,33.5" />
+                    Point1="-106,0"
+                    Point2="-110,0"
+                    Point3="-110,4" />
                   <mssgle:LineSegment
-                    End="43,33.5" />
+                    End="-110,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+          TopLeft="586,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,32"
+              Start="0,0"
+              End="73.5,32">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="43,33.5"
-                    Point2="47,33.5"
-                    Point3="47,37.5" />
+                    Point1="36.5,0"
+                    Point2="40.5,0"
+                    Point3="40.5,4" />
                   <mssgle:LineSegment
-                    End="47,59.5" />
+                    End="40.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.5,28"
+                    Point2="40.5,32"
+                    Point3="44.5,32" />
+                  <mssgle:LineSegment
+                    End="73.5,32" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.58638671875,-17.43359375,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 11]"
+          TopLeft="315,261">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-38.5,31"
+              Start="0,0"
+              End="-38.5,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="-4,15.5" />
+                  <mssgle:LineSegment
+                    End="-34.5,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.5,15.5"
+                    Point2="-38.5,15.5"
+                    Point3="-38.5,19.5" />
+                  <mssgle:LineSegment
+                    End="-38.5,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="395,42"
+          Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR"
+          TopLeft="652,300" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 12]"
+          TopLeft="733.5,251">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,49"
+              Start="0,0"
+              End="116,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="112,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112,24.5"
+                    Point2="116,24.5"
+                    Point3="116,28.5" />
+                  <mssgle:LineSegment
+                    End="116,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2257,6 +2964,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
