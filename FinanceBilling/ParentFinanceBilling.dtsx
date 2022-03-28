@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="159"
-  DTS:VersionGUID="{E6951B19-C8A1-409C-90F5-C69BE9F567F3}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{F18FA06D-D795-49E0-86AA-2D23645513A2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,14 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=BE015;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=BE015;User ID=Finance_Billing;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAefqMXJrDvfl7iTGR/gX4+AAAAAASAAACgAAAAEAAAAEqFoq+xRAJX40xnCYmrwf4YAAAAS2gRRaOCnklBNDRmXMwqqYOTLgGFBKJiFAAAAB19T54P5xPZZUl2MzlLc7vCwy94</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -58,7 +65,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="DestinationPath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_17_09_02_26</DTS:VariableValue>
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_24_09_42_14</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -69,7 +76,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="EndTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/17/2022 9:02:27 AM' Where Id=0; 
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/24/2022 9:42:14 AM' Where Id=0; 
 
 EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;
 EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;
@@ -89,7 +96,7 @@ EXEC PSP_UPDATE_SPMBYACAREPORT_CLIENTALTID_FROM_CLIENTLIST; EXEC SPS_TRUNCATE_HE
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',
-'0','','3/17/2022 9:02:27 AM','0');
+'0','','3/24/2022 9:42:14 AM','0');
 EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -101,7 +108,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="FailedTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/17/2022 9:02:27 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/24/2022 9:42:14 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -150,7 +157,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="StartTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\MJaswal_Beneflex','BE015','3/17/2022 9:02:27 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/24/2022 9:42:14 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
