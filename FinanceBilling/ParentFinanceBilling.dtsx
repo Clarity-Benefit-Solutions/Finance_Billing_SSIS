@@ -7,7 +7,7 @@
   DTS:CreatorName="V057\SSingh_Beneflex"
   DTS:DTSID="{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
@@ -616,11 +616,13 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
           DTS:LocaleID="-1"
           DTS:ObjectName="Execute SQL Task">
           <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE(), "+(DT_WSTR,12)@[User::GlobalStartPackageLogId]+")"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{CDBA6F30-4F84-4642-B8AC-C49AD4DA6AAB}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::ErrorVariable" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','ParentFinanceBilling','',&#xA;'0','',GETDATE(), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -668,11 +670,11 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         <NodeLayout
           Size="179,42"
           Id="Package\End Package"
-          TopLeft="784.5,924.5" />
+          TopLeft="812.277777777778,841.166666666667" />
         <NodeLayout
           Size="163,42"
           Id="Package\File System Task"
-          TopLeft="400,711.571428571429" />
+          TopLeft="593.333333333333,651.571428571429" />
         <NodeLayout
           Size="163,42"
           Id="Package\Foreach Loop Container\File System Task"
@@ -680,10 +682,10 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="291,199"
-          Size="291,242"
+          PanelSize="214,131"
+          Size="214,174"
           Id="Package\Foreach Loop Container"
-          TopLeft="343,830.857142857143" />
+          TopLeft="559.666666666667,770.857142857143" />
         <NodeLayout
           Size="270,42"
           Id="Package\Sequence Container\1_BENEFL_Integrated_Current_Import"
@@ -739,32 +741,44 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="1391,392"
-          Size="1391,435"
+          PanelSize="1378,354"
+          Size="1378,397"
           Id="Package\Sequence Container"
           TopLeft="14.3333333333335,192.666666666667" />
         <NodeLayout
           Size="148,42"
           Id="Package\Start Package"
-          TopLeft="545,89" />
+          TopLeft="627.222222222222,107.888888888889" />
         <NodeLayout
           Size="247,42"
           Id="Package\Truncate Helper &amp; Process Tables"
-          TopLeft="1056,919" />
+          TopLeft="1093.77777777778,840.111111111111" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="480.416666666667,627.666666666667">
+          TopLeft="703.333333333333,589.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,83.904761904762"
+              EndConnector="-28.5000000000003,61.904761904762"
               Start="0,0"
-              End="0,76.404761904762">
+              End="-28.5000000000003,54.404761904762">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,76.404761904762" />
+                    End="0,26.952380952381" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.952380952381"
+                    Point2="0,30.952380952381"
+                    Point3="-4,30.952380952381" />
+                  <mssgle:LineSegment
+                    End="-24.5000000000003,30.952380952381" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24.5000000000003,30.952380952381"
+                    Point2="-28.5000000000003,30.952380952381"
+                    Point3="-28.5000000000003,34.952380952381" />
+                  <mssgle:LineSegment
+                    End="-28.5000000000003,54.404761904762" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -775,30 +789,18 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="619,131">
+          TopLeft="702.277777777778,149.888888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="90.8333333333335,61.666666666667"
+              EndConnector="0,42.7777777777781"
               Start="0,0"
-              End="90.8333333333335,54.166666666667">
+              End="0,35.2777777777781">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.8333333333335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.8333333333335"
-                    Point2="0,30.8333333333335"
-                    Point3="4,30.8333333333335" />
-                  <mssgle:LineSegment
-                    End="86.8333333333335,30.8333333333335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="86.8333333333335,30.8333333333335"
-                    Point2="90.8333333333335,30.8333333333335"
-                    Point3="90.8333333333335,34.8333333333335" />
-                  <mssgle:LineSegment
-                    End="90.8333333333335,54.166666666667" />
+                    End="0,35.2777777777781" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -809,18 +811,18 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="634,948.678571428572">
+          TopLeft="773.666666666667,860.011904761905">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.5,0"
+              EndConnector="38.6111111111111,0"
               Start="0,0"
-              End="117,0">
+              End="31.1111111111111,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="117,0" />
+                    End="31.1111111111111,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -831,18 +833,30 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="485,753.571428571429">
+          TopLeft="674.833333333333,693.571428571429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,77.285714285714"
+              EndConnector="-8.16666666666652,77.2857142857139"
               Start="0,0"
-              End="0,69.785714285714">
+              End="-8.16666666666652,69.7857142857139">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.785714285714" />
+                    End="0,34.6428571428569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.6428571428569"
+                    Point2="0,38.6428571428569"
+                    Point3="-4,38.6428571428569" />
+                  <mssgle:LineSegment
+                    End="-4.16666666666652,38.6428571428569" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.16666666666652,38.6428571428569"
+                    Point2="-8.16666666666652,38.6428571428569"
+                    Point3="-8.16666666666652,42.6428571428569" />
+                  <mssgle:LineSegment
+                    End="-8.16666666666652,69.7857142857139" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -853,18 +867,18 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="937.5,939.75">
+          TopLeft="991.277777777778,861.638888888889">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="118.5,0"
+              EndConnector="102.5,0"
               Start="0,0"
-              End="111,0">
+              End="94.9999999999999,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="111,0" />
+                    End="94.9999999999999,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -880,7 +894,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     design-time-name="Package.EventHandlers[OnError]">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170,42"
           Id="Package.EventHandlers[OnError]\Execute SQL Task"
@@ -920,9 +934,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

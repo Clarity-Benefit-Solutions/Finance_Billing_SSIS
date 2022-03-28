@@ -7,7 +7,7 @@
   DTS:CreatorName="V057\mkhan_BENEFLEX"
   DTS:DTSID="{3E578D24-581D-4943-B249-C90DDA1F526A}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package12_BENEFL_Integrated_Prior_Import"
   DTS:PackageType="5"
@@ -1191,7 +1191,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2532,12 +2532,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
-'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE(), "+(DT_WSTR,12) @[User::ChildParameter]+")"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{52CD6876-2FE5-41EB-B541-D69771E642D2}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package12_BENEFL_Integrated_Prior_Import','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','Package12_BENEFL_Integrated_Prior_Import','',&#xA;'0','',GETDATE(), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>

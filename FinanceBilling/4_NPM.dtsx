@@ -7,7 +7,7 @@
   DTS:CreatorName="V057\mkhan_BENEFLEX"
   DTS:DTSID="{BA59733B-95F2-4DD4-B98F-55F8C85C91B3}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
   DTS:ObjectName="4_NPM"
   DTS:PackageType="5"
@@ -56,7 +56,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ClientName"
-              DTS:DTSID="{53C1D781-A22C-486A-9690-9CF0BDF704F3}"
+              DTS:DTSID="{CC196C3F-C2E0-46A0-B6DB-B1297193E6DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DivisionName"
-              DTS:DTSID="{14F43FCC-BBA5-4E87-A46B-5137DB0C850D}"
+              DTS:DTSID="{D4D8B691-9733-4118-BCA2-FB3DB9B1FF3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FullName"
-              DTS:DTSID="{3E466160-5664-4FCA-8048-5EC9F9D5FBC2}"
+              DTS:DTSID="{26E606EC-B61D-4C0F-B3CD-97A8744F544F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="SSN"
-              DTS:DTSID="{183D6908-00AE-4075-AC10-F91FFD690C76}"
+              DTS:DTSID="{D3C063FD-DA37-44C7-97A5-7B885D47B332}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CoverageLevel"
-              DTS:DTSID="{77F00B38-5124-4E67-A500-C06FB583484E}"
+              DTS:DTSID="{D2C59FD4-59E5-471E-9D98-20A95813A3FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address"
-              DTS:DTSID="{900AECC0-BE31-47A4-BF10-3D6018D2D311}"
+              DTS:DTSID="{9E3FF13D-FE79-4308-A6AF-4C04F4DAFB05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +110,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address2"
-              DTS:DTSID="{2D0658CA-FF6B-4CE8-B061-A47E0EB1CDF7}"
+              DTS:DTSID="{B624B10E-2723-4983-B11C-F3F4F9513506}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +119,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{6A022B94-35BB-4848-977E-6670DA0912E6}"
+              DTS:DTSID="{E56155B5-3DF3-4AD0-9790-70916F330FDC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -128,7 +128,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="StateOrProvince"
-              DTS:DTSID="{F263477D-6DFF-4054-B6CA-7BFA8F4DE6F2}"
+              DTS:DTSID="{9C9EC50B-DAF4-400D-82DF-A29ADE45B00E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +137,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="PostalCode"
-              DTS:DTSID="{C8A273A3-EA26-42B2-B51C-1E6E887E58B6}"
+              DTS:DTSID="{6BB2CA2E-2E5F-4105-99CB-6D446F940A8E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -146,16 +146,15 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{BC709D82-1D81-4C64-8334-7CE1922AD030}"
+              DTS:DTSID="{F03DCD9D-5420-4071-AD96-1881FDA8D78E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="PDFGeneratedDateTime"
-              DTS:DTSID="{31065B43-0BCA-482E-88E4-693D1574EFA2}"
+              DTS:DTSID="{43845DDD-AC48-416F-916E-825D4EACEB31}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -164,7 +163,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="IndividualIdentifier"
-              DTS:DTSID="{D9F26C21-776A-4A75-93C3-FD34DE76A8D8}"
+              DTS:DTSID="{62CD86C3-C974-4788-9E4B-013C052EE3E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +172,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Type"
-              DTS:DTSID="{EBCEE6E8-7B21-4A72-996B-261BD193FF03}"
+              DTS:DTSID="{72ABB17B-97AF-4E45-BF1A-783FB60433CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -182,7 +181,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="MemberID"
-              DTS:DTSID="{F430B8E1-1997-4453-AEC7-CADF02CD9EB3}"
+              DTS:DTSID="{2C81554F-407D-445E-ACC8-DFE4E73F5384}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1221,9 +1220,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       name="Country" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[PDFGeneratedDateTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="date"
                       name="PDFGeneratedDateTime" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].ExternalColumns[IndividualIdentifier]"
@@ -1296,7 +1293,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1993,14 +1990,35 @@ using System.Runtime.CompilerServices;
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_68cf7524642e4a1892bdf261139c9df1")]
+[assembly: AssemblyCopyright("Copyright @  2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -2272,12 +2290,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="SqlStatementSource">"Insert into TBL_ERROR_LOGS values('"+@[System::MachineName]+"','"+@[System::PackageName]+"','"+@[System::SourceName]+"',
-'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE())"</DTS:PropertyExpression>
+'"+(DT_WSTR,12)@[System::ErrorCode]+"','"+replace(@[System::ErrorDescription],"'","")+"',GETDATE(), "+(DT_WSTR,12) @[User::ChildParameter]+")"</DTS:PropertyExpression>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{853BE530-A035-4D59-A386-E076266CA372}"
-              SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','4_NPM','',&#xA;'0','',GETDATE())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','4_NPM','',&#xA;'0','',GETDATE(), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
