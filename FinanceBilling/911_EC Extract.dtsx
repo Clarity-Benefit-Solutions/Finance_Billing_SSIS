@@ -7,12 +7,12 @@
   DTS:CreatorName="V057\mkhan_BENEFLEX"
   DTS:DTSID="{ADB5E5D6-44DE-49B1-9A54-02A6C4631C3A}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3002.113"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="911_EC Extract"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{96BC9F42-014F-4EA2-BEB5-09D33AA4B4CE}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{E50DC64B-C2F2-401B-B24E-41C43B3F63B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,6 +23,8 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=BE015;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -459,11 +461,23 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{02A409E2-5059-43FA-8F82-808CBE2009CA}"
-      DTS:IncludeInDebugDump="6789"
+      DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="ChildParameter">
       <DTS:VariableValue
-        DTS:DataType="20">0</DTS:VariableValue>
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CCE083C0-E204-4753-8FE7-E3BAA6067F2D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Update TBL_LOGGINGDB SET NumRowsNotInserted =&quot;+ (DT_WSTR, 1000) @[User::NotInsertedRecord] +&quot;, NumRowsTotal =&quot;+ (DT_WSTR, 1000) @[User::TotalRecord] +&quot;,NumRowsInserted =&quot;+  (DT_WSTR, 1000)  @[User::NoOfRecordInserted] +&quot; ,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE() +&quot; ' Where Id=&quot;+ (DT_WSTR, 1000) @[User::PackageLogID] +&#xA;&#xA;&quot;; &quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EndTask">
+      <DTS:VariableValue
+        DTS:DataType="8">Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/29/2022 11:31:21 AM ' Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -475,7 +489,55 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 911_EC Extract','',
-'0','','3/17/2022 9:10:14 AM','0')</DTS:VariableValue>
+'0','','3/29/2022 11:31:21 AM','')</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{32FEA432-3BD9-402F-B122-791FC7FA0BFD}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NoOfRecordInserted">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A5FF0A5B-698E-45EB-BAAE-6F163D1564A7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="NotInsertedRecord">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{308B9E28-3A6F-4FED-8708-5947D68A802B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageLogID">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2CF11E6B-07C5-4EF3-84C8-E3DB4470C2EE}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+  @[User::ChildParameter]  +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="StartTask">
+      <DTS:VariableValue
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('911_EC Extract','{ADB5E5D6-44DE-49B1-9A54-02A6C4631C3A}','','BE015','V057\SSingh_Beneflex','BE015','3/29/2022 11:31:21 AM'); 
+SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6C323961-9EF3-4979-9E86-4772A28FE6EA}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalRecord">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -538,309 +600,265 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[RecordType]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="RecordType"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[RecordType]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Tpa Id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Tpa Id"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Tpa Id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employer Id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employer Id"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Account Type Code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Account Type Code"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Type Code]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan Id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Plan Id"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Social Security Number]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Social Security Number"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Social Security Number]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee ID"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Dependent ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Dependent ID"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Dependent ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan Start Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Plan Start Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Start Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan End Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Plan End Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan End Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Effective Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Effective Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Effective Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Termination Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Termination Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Termination Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Account Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Account Status"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Status]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Employee Status"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Status]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Last Name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Last Name"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Last Name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee First Name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee First Name"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee First Name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Current Annual Election]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="Current Annual Election"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Current Annual Election]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Original Prefunded/Annual Election Amount]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Original Prefunded/Annual Election Amount"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Original Prefunded/Annual Election Amount]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Individual Amount]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Individual Amount"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Individual Amount]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Annual Election]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Employee Annual Election"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Annual Election]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Pay Period Election]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Employee Pay Period Election"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Pay Period Election]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employer Annual Election]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Employer Annual Election"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Annual Election]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employer Pay Period Election]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Employer Pay Period Election"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Pay Period Election]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Contribution YTD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="Employee Contribution YTD"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Contribution YTD]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employer Contribution YTD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
+                      cachedDataType="wstr"
+                      cachedLength="255"
                       cachedName="Employer Contribution YTD"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Contribution YTD]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Other Deposits]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Other Deposits"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Other Deposits]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Disbursements PTD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Disbursements PTD"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursements PTD]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Disbursable Balance]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Disbursable Balance"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursable Balance]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Available Balance]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Available Balance"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Available Balance]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Auto Reimbursement Setting]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Auto Reimbursement Setting"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Reimbursement Setting]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Start Auto Deposit Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Start Auto Deposit Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Start Auto Deposit Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Auto Deposit Calendar ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Auto Deposit Calendar ID"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Deposit Calendar ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Card Number]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Card Number"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Card Number]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Coverage Tier Id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Coverage Tier Id"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Coverage Tier Id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Address 1]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Address 1"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Address 2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Address 2"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 2]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee City"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee City]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee State]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee State"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee State]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Zip"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Zip]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Phone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Phone"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Phone]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Email Address]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Email Address"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Email Address]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employee Birth Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Employee Birth Date"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Birth Date]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ProductPartnerAcctStatus]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="ProductPartnerAcctStatus"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctStatus]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ProductPartnerAcctCloseDate]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="ProductPartnerAcctCloseDate"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctCloseDate]" />
@@ -859,11 +877,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RecordType]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RecordType]"
                       name="Copy of RecordType"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -880,11 +898,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Tpa Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Tpa Id]"
                       name="Copy of Tpa Id"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -901,11 +919,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Id]"
                       name="Copy of Employer Id"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -922,11 +940,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Type Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Type Code]"
                       name="Copy of Account Type Code"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -943,11 +961,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Id]"
                       name="Copy of Plan Id"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -964,11 +982,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Social Security Number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Social Security Number]"
                       name="Copy of Employee Social Security Number"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -985,11 +1003,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee ID]"
                       name="Copy of Employee ID"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1006,11 +1024,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Dependent ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Dependent ID]"
                       name="Copy of Dependent ID"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1027,11 +1045,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Start Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Start Date]"
                       name="Copy of Plan Start Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1048,11 +1066,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan End Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan End Date]"
                       name="Copy of Plan End Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1069,11 +1087,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Effective Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Effective Date]"
                       name="Copy of Effective Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1090,11 +1108,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Termination Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Termination Date]"
                       name="Copy of Termination Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1111,11 +1129,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Status]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="10"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Status]"
                       name="Copy of Account Status"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1132,11 +1150,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Status]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="10"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Status]"
                       name="Copy of Employee Status"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1153,11 +1171,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Last Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Last Name]"
                       name="Copy of Employee Last Name"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1174,11 +1192,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee First Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee First Name]"
                       name="Copy of Employee First Name"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1195,11 +1213,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Current Annual Election]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Current Annual Election]"
                       name="Copy of Current Annual Election"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1216,11 +1234,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Original Prefunded/Annual Election Amount]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Original Prefunded/Annual Election Amount]"
                       name="Copy of Original Prefunded/Annual Election Amount"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1237,11 +1255,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Individual Amount]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Individual Amount]"
                       name="Copy of Individual Amount"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1258,11 +1276,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Annual Election]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Annual Election]"
                       name="Copy of Employee Annual Election"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1279,11 +1297,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Pay Period Election]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Pay Period Election]"
                       name="Copy of Employee Pay Period Election"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1300,11 +1318,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Annual Election]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Annual Election]"
                       name="Copy of Employer Annual Election"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1321,11 +1339,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Pay Period Election]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Pay Period Election]"
                       name="Copy of Employer Pay Period Election"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1342,11 +1360,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Contribution YTD]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Contribution YTD]"
                       name="Copy of Employee Contribution YTD"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1363,11 +1381,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Contribution YTD]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="15"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Contribution YTD]"
                       name="Copy of Employer Contribution YTD"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1384,11 +1402,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Other Deposits]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Other Deposits]"
                       name="Copy of Other Deposits"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1405,11 +1423,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Disbursements PTD]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Disbursements PTD]"
                       name="Copy of Disbursements PTD"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1426,11 +1444,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Disbursable Balance]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Disbursable Balance]"
                       name="Copy of Disbursable Balance"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1447,11 +1465,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Available Balance]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Available Balance]"
                       name="Copy of Available Balance"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1468,11 +1486,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Auto Reimbursement Setting]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Auto Reimbursement Setting]"
                       name="Copy of Auto Reimbursement Setting"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1489,11 +1507,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Auto Deposit Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start Auto Deposit Date]"
                       name="Copy of Start Auto Deposit Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1510,11 +1528,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Auto Deposit Calendar ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Auto Deposit Calendar ID]"
                       name="Copy of Auto Deposit Calendar ID"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1531,11 +1549,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Card Number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Card Number]"
                       name="Copy of Card Number"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1552,11 +1570,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Coverage Tier Id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Coverage Tier Id]"
                       name="Copy of Coverage Tier Id"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1573,11 +1591,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Address 1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Address 1]"
                       name="Copy of Employee Address 1"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1594,11 +1612,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Address 2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Address 2]"
                       name="Copy of Employee Address 2"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1615,11 +1633,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee City]"
                       name="Copy of Employee City"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1636,11 +1654,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee State]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee State]"
                       name="Copy of Employee State"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1657,11 +1675,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Zip]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Zip]"
                       name="Copy of Employee Zip"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1678,11 +1696,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Phone]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Phone]"
                       name="Copy of Employee Phone"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1699,11 +1717,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Email Address]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Email Address]"
                       name="Copy of Employee Email Address"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1720,11 +1738,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Birth Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employee Birth Date]"
                       name="Copy of Employee Birth Date"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1741,11 +1759,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductPartnerAcctStatus]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductPartnerAcctStatus]"
                       name="Copy of ProductPartnerAcctStatus"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1762,11 +1780,11 @@
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductPartnerAcctCloseDate]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductPartnerAcctCloseDate]"
                       name="Copy of ProductPartnerAcctCloseDate"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -1807,6 +1825,35 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\Inserted Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Inserted Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::NoOfRecordInserted</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Inserted Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Read Csv 911_EC Extract"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1839,8 +1886,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[RecordType]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[RecordType]"
@@ -1861,8 +1907,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Tpa Id]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Tpa Id]"
@@ -1883,8 +1928,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Id]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employer Id]"
@@ -1905,8 +1949,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Type Code]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Account Type Code]"
@@ -1927,8 +1970,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Id]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Plan Id]"
@@ -1949,8 +1991,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Social Security Number]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Social Security Number]"
@@ -1971,8 +2012,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee ID]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee ID]"
@@ -1993,8 +2033,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Dependent ID]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Dependent ID]"
@@ -2015,8 +2054,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Start Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Plan Start Date]"
@@ -2037,8 +2075,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan End Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Plan End Date]"
@@ -2059,8 +2096,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Effective Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Effective Date]"
@@ -2081,8 +2117,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Termination Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Termination Date]"
@@ -2103,12 +2138,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Status]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Account Status]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Status]"
                       name="Account Status"
                       truncationRowDisposition="FailComponent">
@@ -2125,12 +2159,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Status]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Status]"
-                      length="10"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Status]"
                       name="Employee Status"
                       truncationRowDisposition="FailComponent">
@@ -2147,8 +2180,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Last Name]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Last Name]"
@@ -2169,8 +2201,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee First Name]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee First Name]"
@@ -2191,8 +2222,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Current Annual Election]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Current Annual Election]"
@@ -2213,12 +2243,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Original Prefunded/Annual Election Amount]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Original Prefunded/Annual Election Amount]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Original Prefunded/Annual Election Amount]"
                       name="Original Prefunded/Annual Election Amount"
                       truncationRowDisposition="FailComponent">
@@ -2235,12 +2264,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Individual Amount]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Individual Amount]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Individual Amount]"
                       name="Individual Amount"
                       truncationRowDisposition="FailComponent">
@@ -2257,12 +2285,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Annual Election]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Annual Election]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Annual Election]"
                       name="Employee Annual Election"
                       truncationRowDisposition="FailComponent">
@@ -2279,12 +2306,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Pay Period Election]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Pay Period Election]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Pay Period Election]"
                       name="Employee Pay Period Election"
                       truncationRowDisposition="FailComponent">
@@ -2301,12 +2327,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Annual Election]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employer Annual Election]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Annual Election]"
                       name="Employer Annual Election"
                       truncationRowDisposition="FailComponent">
@@ -2323,12 +2348,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Pay Period Election]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employer Pay Period Election]"
-                      length="15"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Pay Period Election]"
                       name="Employer Pay Period Election"
                       truncationRowDisposition="FailComponent">
@@ -2345,12 +2369,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Contribution YTD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Contribution YTD]"
-                      length="15"
+                      length="255"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Contribution YTD]"
                       name="Employee Contribution YTD"
                       truncationRowDisposition="FailComponent">
@@ -2367,12 +2390,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Contribution YTD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employer Contribution YTD]"
-                      length="15"
+                      length="255"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Contribution YTD]"
                       name="Employer Contribution YTD"
                       truncationRowDisposition="FailComponent">
@@ -2389,8 +2411,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Other Deposits]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Other Deposits]"
@@ -2411,12 +2432,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursements PTD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Disbursements PTD]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursements PTD]"
                       name="Disbursements PTD"
                       truncationRowDisposition="FailComponent">
@@ -2433,12 +2453,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursable Balance]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Disbursable Balance]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursable Balance]"
                       name="Disbursable Balance"
                       truncationRowDisposition="FailComponent">
@@ -2455,12 +2474,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Available Balance]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Available Balance]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Available Balance]"
                       name="Available Balance"
                       truncationRowDisposition="FailComponent">
@@ -2477,12 +2495,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Reimbursement Setting]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Auto Reimbursement Setting]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Reimbursement Setting]"
                       name="Auto Reimbursement Setting"
                       truncationRowDisposition="FailComponent">
@@ -2499,12 +2516,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Start Auto Deposit Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Start Auto Deposit Date]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Start Auto Deposit Date]"
                       name="Start Auto Deposit Date"
                       truncationRowDisposition="FailComponent">
@@ -2521,12 +2537,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Deposit Calendar ID]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Auto Deposit Calendar ID]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Deposit Calendar ID]"
                       name="Auto Deposit Calendar ID"
                       truncationRowDisposition="FailComponent">
@@ -2543,12 +2558,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Card Number]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Card Number]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Card Number]"
                       name="Card Number"
                       truncationRowDisposition="FailComponent">
@@ -2565,12 +2579,11 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Coverage Tier Id]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Coverage Tier Id]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Coverage Tier Id]"
                       name="Coverage Tier Id"
                       truncationRowDisposition="FailComponent">
@@ -2587,8 +2600,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 1]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Address 1]"
@@ -2609,8 +2621,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 2]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Address 2]"
@@ -2631,8 +2642,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee City]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee City]"
@@ -2653,8 +2663,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee State]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee State]"
@@ -2675,8 +2684,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Zip]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Zip]"
@@ -2697,8 +2705,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Phone]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Phone]"
@@ -2719,8 +2726,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Email Address]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Email Address]"
@@ -2741,8 +2747,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Birth Date]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[Employee Birth Date]"
@@ -2763,8 +2768,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctStatus]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[ProductPartnerAcctStatus]"
@@ -2785,8 +2789,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctCloseDate]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].ExternalColumns[ProductPartnerAcctCloseDate]"
@@ -3104,6 +3107,35 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::NotInsertedRecord</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -3128,7 +3160,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3759,20 +3791,764 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="TBL_STAGING_EC_EXTRACT_ERROR"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TBL_STAGING_EC_EXTRACT_ERROR]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  connectionManagerRefId="Package.ConnectionManagers[BE015.Finance_Billing.Finance_Billing]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[RecordType]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RecordType"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[RecordType]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[RecordType]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Tpa Id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Tpa Id"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Tpa Id]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Tpa Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employer Id"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Id]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Account Type Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Account Type Code"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Type Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Plan Id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Id"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Id]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Social Security Number]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Social Security Number"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Social Security Number]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Social Security Number]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee ID"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Dependent ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Dependent ID"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Dependent ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Dependent ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Plan Start Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Start Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Start Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan Start Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Plan End Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan End Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Plan End Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Effective Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Effective Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Effective Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Effective Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Termination Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Termination Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Termination Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Termination Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Account Status]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Account Status"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Status]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Account Status]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Status]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Employee Status"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Status]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Status]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Last Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Last Name"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Last Name]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Last Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee First Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee First Name"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee First Name]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee First Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Current Annual Election]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Current Annual Election"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Current Annual Election]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Current Annual Election]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Original Prefunded/Annual Election Amount]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Original Prefunded/Annual Election Amount"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Original Prefunded/Annual Election Amount]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Original Prefunded/Annual Election Amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Individual Amount]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Individual Amount"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Individual Amount]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Individual Amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Annual Election]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Employee Annual Election"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Annual Election]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Annual Election]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Pay Period Election]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Employee Pay Period Election"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Pay Period Election]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Pay Period Election]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Annual Election]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Employer Annual Election"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Annual Election]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Annual Election]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Pay Period Election]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Employer Pay Period Election"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Pay Period Election]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Pay Period Election]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Contribution YTD]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Contribution YTD"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Contribution YTD]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Contribution YTD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Contribution YTD]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employer Contribution YTD"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Contribution YTD]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employer Contribution YTD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Other Deposits]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Other Deposits"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Other Deposits]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Other Deposits]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Disbursements PTD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Disbursements PTD"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Disbursements PTD]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursements PTD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Disbursable Balance]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Disbursable Balance"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Disbursable Balance]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Disbursable Balance]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Available Balance]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Available Balance"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Available Balance]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Available Balance]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Auto Reimbursement Setting]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Auto Reimbursement Setting"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Auto Reimbursement Setting]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Reimbursement Setting]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Start Auto Deposit Date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Start Auto Deposit Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Start Auto Deposit Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Start Auto Deposit Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Auto Deposit Calendar ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Auto Deposit Calendar ID"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Auto Deposit Calendar ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Auto Deposit Calendar ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Card Number]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Card Number"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Card Number]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Card Number]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Coverage Tier Id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Coverage Tier Id"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Coverage Tier Id]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Coverage Tier Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Address 1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Address 1"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Address 1]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Address 2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Address 2"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Address 2]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Address 2]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee City"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee City]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee City]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee State]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee State"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee State]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee State]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Zip]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Zip"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Zip]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Zip]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Phone"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Phone]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Phone]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Email Address]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Email Address"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Email Address]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Email Address]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[Employee Birth Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employee Birth Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Birth Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[Employee Birth Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[ProductPartnerAcctStatus]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ProductPartnerAcctStatus"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ProductPartnerAcctStatus]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctStatus]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[ProductPartnerAcctCloseDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ProductPartnerAcctCloseDate"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ProductPartnerAcctCloseDate]"
+                      lineageId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output].Columns[ProductPartnerAcctCloseDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[RecordType]"
+                      dataType="wstr"
+                      length="255"
+                      name="RecordType" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Tpa Id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tpa Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employer Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="Account Type Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Social Security Number]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Social Security Number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Dependent ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Dependent ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Start Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan Start Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Plan End Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Effective Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Effective Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Termination Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Termination Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Status]"
+                      dataType="wstr"
+                      length="10"
+                      name="Account Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Status]"
+                      dataType="wstr"
+                      length="10"
+                      name="Employee Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Last Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Last Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee First Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee First Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Current Annual Election]"
+                      dataType="wstr"
+                      length="15"
+                      name="Current Annual Election" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Original Prefunded/Annual Election Amount]"
+                      dataType="wstr"
+                      length="15"
+                      name="Original Prefunded/Annual Election Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Individual Amount]"
+                      dataType="wstr"
+                      length="15"
+                      name="Individual Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Annual Election]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employee Annual Election" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Pay Period Election]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employee Pay Period Election" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Annual Election]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employer Annual Election" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Pay Period Election]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employer Pay Period Election" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Contribution YTD]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employee Contribution YTD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Contribution YTD]"
+                      dataType="wstr"
+                      length="15"
+                      name="Employer Contribution YTD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Other Deposits]"
+                      dataType="wstr"
+                      length="255"
+                      name="Other Deposits" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Disbursements PTD]"
+                      dataType="wstr"
+                      length="255"
+                      name="Disbursements PTD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Disbursable Balance]"
+                      dataType="wstr"
+                      length="255"
+                      name="Disbursable Balance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Available Balance]"
+                      dataType="wstr"
+                      length="255"
+                      name="Available Balance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Auto Reimbursement Setting]"
+                      dataType="wstr"
+                      length="255"
+                      name="Auto Reimbursement Setting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Start Auto Deposit Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Start Auto Deposit Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Auto Deposit Calendar ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Auto Deposit Calendar ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Card Number]"
+                      dataType="wstr"
+                      length="255"
+                      name="Card Number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Coverage Tier Id]"
+                      dataType="wstr"
+                      length="255"
+                      name="Coverage Tier Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Address 1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Address 1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Address 2]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Address 2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee City]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee State]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Zip]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Email Address]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Email Address" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employee Birth Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Employee Birth Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ProductPartnerAcctStatus]"
+                      dataType="wstr"
+                      length="255"
+                      name="ProductPartnerAcctStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ProductPartnerAcctCloseDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="ProductPartnerAcctCloseDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[UniqueKeyAccounts]"
+                      dataType="wstr"
+                      length="255"
+                      name="UniqueKeyAccounts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Billable Account]"
+                      dataType="wstr"
+                      length="255"
+                      name="Billable Account" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[UniqueKeyPerpay]"
+                      dataType="wstr"
+                      length="255"
+                      name="UniqueKeyPerpay" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EB Term Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="EB Term Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[EB Term Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="EB Term Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="wstr"
+                      length="255"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Total Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Total Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalRecord</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Total Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+              endId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+              name="Data Conversion Error Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Inserted Row Count.Inputs[Row Count Input 1]"
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Data Flow Task\Total Row Count.Inputs[Row Count Input 1]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Read Csv 911_EC Extract.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 1]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Total Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 11]"
+              endId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Inserted Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Row Count Output 12]"
+              endId="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\End Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9DD0A9F6-D8F1-450F-85D4-9BDC5071273F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="End Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{574E3CDB-4102-412B-9EE1-DC4210E265FF}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::EndTask" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3811,6 +4587,15 @@
           Language="CSharp"
           ReadOnlyVariables="GlobalStartPackageLogId"
           ReadWriteVariables="ChildParameter">
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3930,35 +4715,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
-    "ings")]
-
-namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -4098,6 +4854,35 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -4127,15 +4912,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4316,12 +5092,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Start Package"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{22D9A354-66E3-4F00-93B4-F76B741EC27D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Start Package"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{574E3CDB-4102-412B-9EE1-DC4210E265FF}"
+          SQLTask:SqlStmtSourceType="Variable"
+          SQLTask:SqlStatementSource="User::StartTask" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageLogID"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{821410F8-AC6F-4E84-A729-251BA898CF5A}"
+      DTS:DTSID="{E150D031-8F8B-487D-A764-CB7E7DB1FFC2}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -4329,11 +5129,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{1C2551F6-7AD9-4DDD-BB6B-581C6B394BF5}"
-      DTS:From="Package\Get  Global Id"
+      DTS:DTSID="{718B0C96-BCC3-4160-93F2-0EF64383E508}"
+      DTS:From="Package\Start Package"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Execute SQL Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{F25BCA6E-19CD-471F-9DB5-3D70364F96A1}"
+      DTS:From="Package\Get  Global Id"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Start Package" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{58C055A8-492A-4BD2-825E-3955CFEEA832}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\End Package" />
   </DTS:PrecedenceConstraints>
   <DTS:EventHandlers>
     <DTS:EventHandler
@@ -4371,7 +5187,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{574E3CDB-4102-412B-9EE1-DC4210E265FF}"
-              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','911_EC Extract','',&#xA;'0','',GETDATE(), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="Insert into TBL_ERROR_LOGS values('BE015','911_EC Extract','',&#xA;'0','',GETDATE(), )" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -4388,7 +5204,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
@@ -4401,6 +5217,110 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="159,42"
           Id="Package\Get  Global Id"
           TopLeft="100,26" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Start Package"
+          TopLeft="336,55" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\End Package"
+          TopLeft="471,266" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="336,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-103,37"
+              Start="0,0"
+              End="-103,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-99,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-99,0"
+                    Point2="-103,0"
+                    Point3="-103,4" />
+                  <mssgle:LineSegment
+                    End="-103,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="259,47">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77,23.3333333333333"
+              Start="0,0"
+              End="69.5,23.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.5045871559633,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.5045871559633,0"
+                    Point2="44.5045871559633,0"
+                    Point3="44.5045871559633,4" />
+                  <mssgle:LineSegment
+                    End="44.5045871559633,19.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.5045871559633,19.3333333333333"
+                    Point2="44.5045871559633,23.3333333333333"
+                    Point3="48.5045871559633,23.3333333333333" />
+                  <mssgle:LineSegment
+                    End="69.5,23.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="380,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91,34"
+              Start="0,0"
+              End="83.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.5,0"
+                    Point2="45.5,0"
+                    Point3="45.5,4" />
+                  <mssgle:LineSegment
+                    End="45.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,30"
+                    Point2="45.5,34"
+                    Point3="49.5,34" />
+                  <mssgle:LineSegment
+                    End="83.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="233,155">
@@ -4435,40 +5355,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="179.5,68">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53.5,45"
-              Start="0,0"
-              End="53.5,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="4,22.5" />
-                  <mssgle:LineSegment
-                    End="49.5,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="49.5,22.5"
-                    Point2="53.5,22.5"
-                    Point3="53.5,26.5" />
-                  <mssgle:LineSegment
-                    End="53.5,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4488,11 +5374,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="234,42"
           Id="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT"
-          TopLeft="337,284" />
+          TopLeft="128,291" />
         <NodeLayout
           Size="207,42"
           Id="Package\Data Flow Task\Read Csv 911_EC Extract"
@@ -4501,76 +5387,214 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="344,177" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Total Row Count"
+          TopLeft="446,115" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="378.5,93">
+          TopLeft="482,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46,84"
+              EndConnector="44.5,43"
               Start="0,0"
-              End="46,76.5">
+              End="44.5,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="40.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38"
-                    Point2="0,42"
-                    Point3="4,42" />
+                    Point1="40.5,0"
+                    Point2="44.5,0"
+                    Point3="44.5,4" />
                   <mssgle:LineSegment
-                    End="42,42" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42,42"
-                    Point2="46,42"
-                    Point3="46,46" />
-                  <mssgle:LineSegment
-                    End="46,76.5" />
+                    End="44.5,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="424.5,219">
+          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
+          TopLeft="446,136">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.5,65"
+              EndConnector="-21.5,41"
               Start="0,0"
-              End="29.5,57.5">
+              End="-21.5,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="-17.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="4,32.5" />
+                    Point1="-17.5,0"
+                    Point2="-21.5,0"
+                    Point3="-21.5,4" />
                   <mssgle:LineSegment
-                    End="25.5,32.5" />
+                    End="-21.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Inserted Row Count"
+          TopLeft="126,211" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="344,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42,34"
+              Start="0,0"
+              End="-34.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-17,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="25.5,32.5"
-                    Point2="29.5,32.5"
-                    Point3="29.5,36.5" />
+                    Point1="-17,0"
+                    Point2="-21,0"
+                    Point3="-21,4" />
                   <mssgle:LineSegment
-                    End="29.5,57.5" />
+                    End="-21,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,30"
+                    Point2="-21,34"
+                    Point3="-25,34" />
+                  <mssgle:LineSegment
+                    End="-34.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 11]"
+          TopLeft="214,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31,38"
+              Start="0,0"
+              End="31,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
+                  <mssgle:LineSegment
+                    End="27,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27,19"
+                    Point2="31,19"
+                    Point3="31,23" />
+                  <mssgle:LineSegment
+                    End="31,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="556,239" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
+          TopLeft="505,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,62"
+              Start="0,0"
+              End="43.5,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.5,0"
+                    Point2="25.5,0"
+                    Point3="25.5,4" />
+                  <mssgle:LineSegment
+                    End="25.5,58" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.5,58"
+                    Point2="25.5,62"
+                    Point3="29.5,62" />
+                  <mssgle:LineSegment
+                    End="43.5,62" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-40.58638671875,-17.43359375,132.1727734375,11.43359375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="279,42"
+          Id="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR"
+          TopLeft="620,326" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 12]"
+          TopLeft="622.5,281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137,45"
+              Start="0,0"
+              End="137,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="133,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133,22.5"
+                    Point2="137,22.5"
+                    Point3="137,26.5" />
+                  <mssgle:LineSegment
+                    End="137,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4578,6 +5602,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT_ERROR">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
