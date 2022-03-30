@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="4_NPM"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{607CD1E1-C195-4618-BBF1-FA5754EFC7C2}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{7FB721B9-25E4-47D0-9E38-0C4FE795E5AA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC4KyUSZ/UGygYNK/J+Q7/8AAAAAASAAACgAAAAEAAAAIBEE871pjQoBQXPmXD6vvcYAAAAFsmA6hW3UYmLMd9pWGeiU4UH4VG4oTtEFAAAAPgUGVOC9gQKX3z5Nt+cYA5UrsEL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkHxZcHRvrEG+o2WemO6dLwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA6AqLwaVmoWkyF45WAta3ZAAAAAASAAACgAAAAEAAAAN8RyLicAP68Mw9ITUPT5nkYAAAAy8TrpjrnA1/gdX85RW33uWAIC4Li3nFhFAAAAKGY2u8GGsx/lV/IJr19T2WuCk1l</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -224,7 +224,7 @@
 
  
 
-Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/30/2022 7:44:41 AM ' Where Id=0; </DTS:VariableValue>
+Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/30/2022 11:10:21 AM ' Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -236,7 +236,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 4_NPM','',
-'0','','3/30/2022 7:44:41 AM','')</DTS:VariableValue>
+'0','','3/30/2022 11:10:21 AM','')</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -274,7 +274,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:Namespace="User"
       DTS:ObjectName="StartTask">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('4_NPM','{BA59733B-95F2-4DD4-B98F-55F8C85C91B3}','','BE015','V057\SSingh_Beneflex','BE015','3/30/2022 7:44:41 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('4_NPM','{BA59733B-95F2-4DD4-B98F-55F8C85C91B3}','','BE015','V057\SSingh_Beneflex','BE015','3/30/2022 11:10:21 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -3078,6 +3078,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedName="MemberID"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[MemberID]"
                       lineageId="Package\Data Flow Task\Read CSV NPM.Outputs[Flat File Source Output].Columns[MemberID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Code]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumnName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="ErrorColumnName"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Column]"
+                      lineageId="Package\Data Flow Task\Get Error Column.Outputs[Output 0].Columns[ErrorColumnName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3171,6 +3185,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="wstr"
                       length="255"
                       name="Alternate ER ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Code]"
+                      dataType="i4"
+                      name="Error Code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Column]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Error Column" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_NPM_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Logging Db Id]"
+                      dataType="i4"
+                      name="Logging Db Id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4108,6 +4136,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Inserted Row Count"
+          TopLeft="250,197" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="409.5,147.5" />
+        <NodeLayout
           Size="185,42"
           Id="Package\Data Flow Task\TBL_STAGING_NPM"
           TopLeft="188.5,282.5" />
@@ -4128,13 +4164,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Data Flow Task\Read CSV NPM"
           TopLeft="336.5,14.5" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="409.5,147.5" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Inserted Row Count"
-          TopLeft="250,197" />
+          Size="165,42"
+          Id="Package\Data Flow Task\Get Error Column"
+          TopLeft="789,147" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Row Count Output 12]"
           TopLeft="675.5,241">
@@ -4232,6 +4264,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="789,173.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47,46.3333333333333"
+              Start="0,0"
+              End="-39.5,46.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-15.8348623853211,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.8348623853211,0"
+                    Point2="-19.8348623853211,0"
+                    Point3="-19.8348623853211,4" />
+                  <mssgle:LineSegment
+                    End="-19.8348623853211,42.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.8348623853211,42.3333333333333"
+                    Point2="-19.8348623853211,46.3333333333333"
+                    Point3="-23.8348623853211,46.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-39.5,46.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="415.5,56.5">
           <EdgeLayout.Curve>
@@ -4293,10 +4359,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Data Flow Task\Get Error Column"
-          TopLeft="789,147" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
           TopLeft="570.5,168.25">
@@ -4319,40 +4381,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <mssgm:EdgeLabel
               BoundingBox="39.41361328125,5,132.1727734375,11.43359375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="789,173.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-47,46.3333333333333"
-              Start="0,0"
-              End="-39.5,46.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-15.8348623853211,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.8348623853211,0"
-                    Point2="-19.8348623853211,0"
-                    Point3="-19.8348623853211,4" />
-                  <mssgle:LineSegment
-                    End="-19.8348623853211,42.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19.8348623853211,42.3333333333333"
-                    Point2="-19.8348623853211,46.3333333333333"
-                    Point3="-23.8348623853211,46.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-39.5,46.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
