@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="1_BENEFL_Integrated_Current_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="116"
-  DTS:VersionGUID="{75AEE3B4-D66E-42D6-A929-F707997E657E}">
+  DTS:VersionBuild="133"
+  DTS:VersionGUID="{F094B92E-3A9C-4415-B89B-2A2607FB545D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,8 +23,6 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=BE015;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -192,12 +190,15 @@
       DTS:CreationName=""
       DTS:DTSID="{DED49AB4-32C2-453C-8E2F-1034201CCE1F}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;Update TBL_LOGGINGDB SET NumRowsNotInserted =&quot;+ (DT_WSTR, 1000) @[User::NotInsertedRecord] +&quot;, NumRowsTotal =&quot;+ (DT_WSTR, 1000) @[User::TotalRecord] +&quot;,NumRowsInserted =&quot;+  (DT_WSTR, 1000)  @[User::NoOfRecordInserted] +&quot; ,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE() +&quot; ' Where Id=&quot;+ (DT_WSTR, 1000) @[User::PackageLogID] +&#xA;&#xA;&quot;; &quot;"
+      DTS:Expression="&quot;Update [dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR] SET [Logging Db Id]=&quot;+(DT_WSTR, 1000) @[User::PackageLogID]+&quot; WHERE [Logging Db Id] IS NULL  ;&#xA;&#xA;&#xA;Update TBL_LOGGINGDB SET NumRowsNotInserted =&quot;+ (DT_WSTR, 1000) @[User::NotInsertedRecord] +&quot;, NumRowsTotal =&quot;+ (DT_WSTR, 1000) @[User::TotalRecord] +&quot;,NumRowsInserted =&quot;+  (DT_WSTR, 1000)  @[User::NoOfRecordInserted] +&quot; ,EndDateTime='&quot;+(DT_WSTR, 25) (DT_DATE) GETDATE() +&quot; '  Where Id=&quot;+ (DT_WSTR, 1000) @[User::PackageLogID] +&#xA;&#xA;&quot;; &quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="EndTask">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/30/2022 4:10:10 AM ' Where Id=0; </DTS:VariableValue>
+        DTS:DataType="8">Update [dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR] SET [Logging Db Id]=0 WHERE [Logging Db Id] IS NULL  ;
+
+
+Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/29/2022 7:10:11 AM '  Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -209,7 +210,7 @@
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','Package1','',
-'0','','3/30/2022 4:10:10 AM','10')</DTS:VariableValue>
+'0','','3/29/2022 7:10:11 AM','10')</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -240,14 +241,24 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{E855A9DD-5EE1-43AA-B2E3-D6986C9DF03B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentTaskGuid">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{DF5BA409-86C8-4856-924E-29393727AACC}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+  @[User::ChildParameter]  +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
+      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+ @[User::ParentTaskGuid]   +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="StartTask">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('1_BENEFL_Integrated_Current_Import','{1FE9DF36-A1AB-4982-A28A-9CEBB530C255}','','BE015','V057\SSingh_Beneflex','BE015','3/30/2022 4:10:10 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('1_BENEFL_Integrated_Current_Import','{1FE9DF36-A1AB-4982-A28A-9CEBB530C255}','','BE015','V057\MJaswal_Beneflex','BE015','3/29/2022 7:10:11 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -332,12 +343,6 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       cachedLength="255"
                       cachedName="Column 2"
                       lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 3]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 3"
-                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 4]"
                       cachedDataType="wstr"
@@ -582,27 +587,6 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
-                      name="Copy of Column 3"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1243,92 +1227,96 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 0]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 0"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 1"
+                      cachedName="Column 1"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 2]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 0]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 2"
+                      cachedName="Column 0"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 2"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 3]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 3]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 3"
+                      cachedName="Column 3"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 4]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 4]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 4"
+                      cachedName="Column 4"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 5]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 5]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 5"
+                      cachedName="Column 5"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 6]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 6"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 7]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 7"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 8]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 6]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 8"
+                      cachedName="Column 6"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 7]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 7"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 8]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 8"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 9]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 9"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 9]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 9"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 10]"
-                      cachedDataType="i4"
-                      cachedName="Copy of Column 10"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 10]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 10"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 11]"
-                      cachedDataType="decimal"
-                      cachedName="Copy of Column 11"
-                      cachedScale="2"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 11]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 11"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Copy of Column 12]"
-                      cachedDataType="decimal"
-                      cachedName="Copy of Column 12"
-                      cachedScale="2"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].Columns[Column 12]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Column 12"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]" />
+                      lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1477,7 +1465,7 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1615,6 +1603,18 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       cachedName="Column 6"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
                       lineageId="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Code]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Column]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1872,8 +1872,8 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
           VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp"
-          ReadOnlyVariables="GlobalStartPackageLogId"
-          ReadWriteVariables="ChildParameter">
+          ReadOnlyVariables="GlobalStartPackageLogId,Parameter"
+          ReadWriteVariables="ChildParameter,ParentTaskGuid">
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -2098,6 +2098,7 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
         {
             // TODO: Add your code here
             Dts.Variables["ChildParameter"].Value = Dts.Variables["GlobalStartPackageLogId"].Value;
+            Dts.Variables["ParentTaskGuid"].Value = Dts.Variables["Parameter"].Value;
             Dts.TaskResult = (int)ScriptResults.Success;
         }
 
@@ -2125,7 +2126,7 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
     <msb:CodeName>ST_68cf7524642e4a1892bdf261139c9df1</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_68cf7524642e4a1892bdf261139c9df1</msb:DisplayName>
-    <msb:ProjectId>{9B880EAD-D165-4109-9959-504AF27B0DAA}</msb:ProjectId>
+    <msb:ProjectId>{90E57189-E9D9-4863-AF9B-07F1FC7B0596}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_68cf7524642e4a1892bdf261139c9df1.csproj" />
@@ -2135,6 +2136,18 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
     <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
     <msb:File Include="ScriptMain.cs" />
+    <msb:Breakpoint Include="fcfbfd8697324fdba41242f6d597b554">
+      <msb:FileName>ScriptMain.cs</msb:FileName>
+      <msb:LineNumber>95</msb:LineNumber>
+      <msb:ColumnNumber>13</msb:ColumnNumber>
+      <msb:Enabled>True</msb:Enabled>
+      <msb:ConditionType>1</msb:ConditionType>
+      <msb:Condition>
+      </msb:Condition>
+      <msb:Language>C#</msb:Language>
+      <msb:HitCountType>1</msb:HitCountType>
+      <msb:HitCountTarget>1</msb:HitCountTarget>
+    </msb:Breakpoint>
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
@@ -2353,103 +2366,77 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
           <BinaryItem
             Name="ST_68cf7524642e4a1892bdf261139c9df1.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJL7PWIAAAAAAAAAAOAAIiALATAAAA4AAAAIAAAAAAAAwi0A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJvFQmIAAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAAJi4A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHAtAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANQtAABPAAAAAEAAAGwEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAyA0AAAAgAAAADgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAQAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAFgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACk
-LQAAAAAAAEgAAAACAAUABCEAALQLAAABAAAAAAAAALgsAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAwBBAAAAAAAAAAIoEAAACm8RAAAKcgEAAHBvEgAACgIo
-EAAACm8RAAAKch8AAHBvEgAACm8TAAAKbxQAAAoCKBAAAAoWbxUAAAoqHgIoFgAACioeAigXAAAK
-Kq5+AQAABC0eck8AAHDQAwAAAigYAAAKbxkAAApzGgAACoABAAAEfgEAAAQqGn4CAAAEKh4CgAIA
-AAQqGn4DAAAEKh4CKBsAAAoqLnMIAAAGgAMAAAQqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
-AAAAAAUAbAAAALgDAAAjfgAAJAQAAFwFAAAjU3RyaW5ncwAAAACACQAAxAAAACNVUwBECgAAEAAA
-ACNHVUlEAAAAVAoAAGABAAAjQmxvYgAAAAAAAAACAAABVx2gAQkDAAAA+gEzABYAAAEAAAAdAAAA
-BQAAAAYAAAAJAAAAAQAAABsAAAACAAAAEAAAAAIAAAADAAAABAAAAAEAAAAEAAAAAQAAAAEAAAAA
-AHYDAQAAAAAABgAlAkYEBgC0AkYEBgBxATMEDwC6BAAABgCeAfQDBgAIAvQDBgDpAfQDBgCbAvQD
-BgBFAvQDBgBeAvQDBgC1AfQDBgDQAewCCgB5AiUDCgDwACUDBgCuA6cDBgBUATMEBgAtBacDBgAW
-BGYEBgAGBN8DDgAkAWADDgCFAWADDgAMAcoDBgA5AUYECgBOAyUDEgD8BJsAEgBuAJsABgC7AKcD
-BgB3AKcDBgBTBfQDAAAAACUAAAAAAAEAAQABABAAvwMBADkAAQABAAAAEABtBMkERQABAAMAAAEQ
-AAYFyQRZAAMABwADAQAAHwUAAD0ABAAKABEAswNjABEA4ABnABEAXgBrAAYGTQBvAFaADwVyAFaA
-wAByAFAgAAAAAIYAxQMGAAEAnSAAAAAAhhgmBAYAAQClIAAAAACDGCYEBgABAK0gAAAAAJMIEgR2
-AAEA2SAAAAAAkwjIAHsAAQDgIAAAAACTCNQAgAABAOggAAAAAJYINAWGAAIA7yAAAAAAhhgmBAYA
-AgD3IAAAAACRGCwEiwACAAAAAQDmAgkAJgQBABEAJgQGABkAJgQKACkAJgQQADEAJgQQADkAJgQQ
-AEEAJgQQAEkAJgQQAFEAJgQQAFkAJgQQAGEAJgQQAGkAJgQGAIEAJgQGAKkAJgQVALkAJgQGAHEA
-FwUbAMEA+AQgAMkAngMlANEA0gIrANEA3AIvAMEAQAUBAHEAJgQGAIkAJgQGANkAiQA0ANkATwU7
-AJEAJgRAALEAJgQGAAgAFABZAAgAGABeACkAcwDGAC4ACwCeAC4AEwCnAC4AGwDGAC4AIwDPAC4A
-KwD4AC4AMwD4AC4AOwD4AC4AQwDPAC4ASwD+AC4AUwD4AC4AWwAVAUMAYwBeAEkAcwDGAGEAewBe
-AGMAawBeAAMAAQAEAAMAAAAWBI8AAADoAJQAAAA4BZkAAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcA
-BIAAAAEAAAC3H6leAAAAAAAAAQAAAAQAAAAAAAAAAAAAAEcAVQAAAAAADgAAAAAAAAAAAAAAUAAG
-AwAAAAAEAAAAAAAAAAAAAABHAKcDAAAAAA4AAAAAAAAAAAAAAFAALgAAAAAAAAAAAAEAAAB3BAAA
-BQACAAAAAAAAU1RfNjhjZjc1MjQ2NDJlNGExODkyYmRmMjYxMTM5YzlkZjEAPE1vZHVsZT4ATWlj
-cm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAHZhbHVlX18AbXNjb3JsaWIAZGVmYXVsdEluc3Rh
-bmNlAFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAE1pY3Jvc29m
-dC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAVHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0
-dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UAQXBwbGljYXRp
-b25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRy
-aWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVk
-aXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJh
-ZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3Vy
-YXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJl
-bGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHly
-aWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0VudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlD
-b21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAGdldF9WYWx1ZQBz
-ZXRfVmFsdWUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBNaWNyb3NvZnQuU3FsU2Vy
-dmVyLlNjcmlwdFRhc2sATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuVGFza3MuU2NyaXB0VGFzawBT
-Y3JpcHRPYmplY3RNb2RlbABTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU1RfNjhjZjc1MjQ2NDJlNGEx
-ODkyYmRmMjYxMTM5YzlkZjEuZGxsAGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAFNj
-cmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AU3lzdGVt
-LlJlZmxlY3Rpb24AQ3VsdHVyZUluZm8AZ2V0X1Jlc291cmNlTWFuYWdlcgAuY3RvcgAuY2N0b3IA
-U3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVt
-LlJlc291cmNlcwBTVF82OGNmNzUyNDY0MmU0YTE4OTJiZGYyNjExMzljOWRmMS5Qcm9wZXJ0aWVz
-LlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU1RfNjhjZjc1MjQ2NDJlNGExODky
-YmRmMjYxMTM5YzlkZjEuUHJvcGVydGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAFN1Y2Nlc3MA
-Z2V0X0R0cwBTY3JpcHRSZXN1bHRzAE9iamVjdABnZXRfRGVmYXVsdABzZXRfVGFza1Jlc3VsdABn
-ZXRfQXNzZW1ibHkAAB1DAGgAaQBsAGQAUABhAHIAYQBtAGUAdABlAHIAAC9HAGwAbwBiAGEAbABT
-AHQAYQByAHQAUABhAGMAawBhAGcAZQBMAG8AZwBJAGQAAHFTAFQAXwA2ADgAYwBmADcANQAyADQA
-NgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYAMQAxADMAOQBjADkAZABmADEALgBQAHIAbwBw
-AGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAAE3eEeebL7RHkfR8E+IRNY4ABCAB
-AQgDIAABBSABARERBCABAQ4FIAEBEVEEIAASYQQgABJlBSABEmkcAyAAHAQgAQEcBgABEm0RcQQg
-ABJ1BiACAQ4SdQi3elxWGTTgiQiJhF3NgIDMkQQAAAAABAEAAAADBhJJAwYSTQMGEhACBggDBhEU
-BAAAEkkEAAASTQUAAQESTQQAABIQAwAAAQQIABJJBAgAEk0ECAASEAgBAAgAAAAAAB4BAAEAVAIW
-V3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfNjhjZjc1MjQ2NDJlNGExODky
-YmRmMjYxMTM5YzlkZjEAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAASQEAGi5ORVRGcmFt
-ZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29y
-ayA0LjUAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBt
-c2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2Vu
-PWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAA
-AAAAAAAAAABQQURQQURQtAAAAJgtAAAAAAAAAAAAALItAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AACkLQAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAA
-AAAASAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYA
-TwAAAAAAvQTv/gAAAQAAAAEAqV63HwAAAQCpXrcfPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA
-AEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkA
-bwBuAAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAw
-ADAAMAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAA
-YQBuAHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBu
-AAAAAABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYA
-MQAxADMAOQBjADkAZABmADEAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAw
-AC4AOAAxADEAOQAuADIANAAyADMAMwAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUA
-AABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYAMQAx
-ADMAOQBjADkAZABmADEALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgA
-dAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMgAAACoAAQABAEwAZQBnAGEAbABU
-AHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUA
-bgBhAG0AZQAAAFMAVABfADYAOABjAGYANwA1ADIANAA2ADQAMgBlADQAYQAxADgAOQAyAGIAZABm
-ADIANgAxADEAMwA5AGMAOQBkAGYAMQAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEA
-bQBlAAAAAABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAy
-ADYAMQAxADMAOQBjADkAZABmADEAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4A
-AAAxAC4AMAAuADgAMQAxADkALgAyADQAMgAzADMAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAg
-AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADgAMQAxADkALgAyADQAMgAzADMAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAxD0A
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAALA4AAAAgAAAAEAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAGwEAAAAQAAAAAYAAAASAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAI
+LgAAAAAAAEgAAAACAAUAOCEAAOQLAAABAAAAAAAAABwtAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAwB1AAAAAAAAAAIoEAAACm8RAAAKcgEAAHBvEgAACgIo
+EAAACm8RAAAKch8AAHBvEgAACm8TAAAKbxQAAAoCKBAAAApvEQAACnJPAABwbxIAAAoCKBAAAApv
+EQAACnJtAABwbxIAAApvEwAACm8UAAAKAigQAAAKFm8VAAAKKh4CKBYAAAoqHgIoFwAACiqufgEA
+AAQtHnKBAABw0AMAAAIoGAAACm8ZAAAKcxoAAAqAAQAABH4BAAAEKhp+AgAABCoeAoACAAAEKhp+
+AwAABCoeAigbAAAKKi5zCAAABoADAAAEKgBCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAF
+AGwAAAC4AwAAI34AACQEAABcBQAAI1N0cmluZ3MAAAAAgAkAAPQAAAAjVVMAdAoAABAAAAAjR1VJ
+RAAAAIQKAABgAQAAI0Jsb2IAAAAAAAAAAgAAAVcdoAEJAwAAAPoBMwAWAAABAAAAHQAAAAUAAAAG
+AAAACQAAAAEAAAAbAAAAAgAAABAAAAACAAAAAwAAAAQAAAABAAAABAAAAAEAAAABAAAAAAB2AwEA
+AAAAAAYAJQJGBAYAtAJGBAYAcQEzBA8AugQAAAYAngH0AwYACAL0AwYA6QH0AwYAmwL0AwYARQL0
+AwYAXgL0AwYAtQH0AwYA0AHsAgoAeQIlAwoA8AAlAwYArgOnAwYAVAEzBAYALQWnAwYAFgRmBAYA
+BgTfAw4AJAFgAw4AhQFgAw4ADAHKAwYAOQFGBAoATgMlAxIA/ASbABIAbgCbAAYAuwCnAwYAdwCn
+AwYAUwX0AwAAAAAlAAAAAAABAAEAAQAQAL8DAQA5AAEAAQAAABAAbQTJBEUAAQADAAABEAAGBckE
+WQADAAcAAwEAAB8FAAA9AAQACgARALMDYwARAOAAZwARAF4AawAGBk0AbwBWgA8FcgBWgMAAcgBQ
+IAAAAACGAMUDBgABANEgAAAAAIYYJgQGAAEA2SAAAAAAgxgmBAYAAQDhIAAAAACTCBIEdgABAA0h
+AAAAAJMIyAB7AAEAFCEAAAAAkwjUAIAAAQAcIQAAAACWCDQFhgACACMhAAAAAIYYJgQGAAIAKyEA
+AAAAkRgsBIsAAgAAAAEA5gIJACYEAQARACYEBgAZACYECgApACYEEAAxACYEEAA5ACYEEABBACYE
+EABJACYEEABRACYEEABZACYEEABhACYEEABpACYEBgCBACYEBgCpACYEFQC5ACYEBgBxABcFGwDB
+APgEIADJAJ4DJQDRANICKwDRANwCLwDBAEAFAQBxACYEBgCJACYEBgDZAIkANADZAE8FOwCRACYE
+QACxACYEBgAIABQAWQAIABgAXgApAHMAxgAuAAsAngAuABMApwAuABsAxgAuACMAzwAuACsA+AAu
+ADMA+AAuADsA+AAuAEMAzwAuAEsA/gAuAFMA+AAuAFsAFQFDAGMAXgBJAHMAxgBhAHsAXgBjAGsA
+XgADAAEABAADAAAAFgSPAAAA6ACUAAAAOAWZAAIABAADAAIABQAFAAEABgAFAAIABwAHAASAAAAB
+AAAAux+tIAAAAAAAAAEAAAAEAAAAAAAAAAAAAABHAFUAAAAAAA4AAAAAAAAAAAAAAFAABgMAAAAA
+BAAAAAAAAAAAAAAARwCnAwAAAAAOAAAAAAAAAAAAAABQAC4AAAAAAAAAAAABAAAAdwQAAAUAAgAA
+AAAAAFNUXzY4Y2Y3NTI0NjQyZTRhMTg5MmJkZjI2MTEzOWM5ZGYxADxNb2R1bGU+AE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuTWFuYWdlZERUUwB2YWx1ZV9fAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBW
+YXJpYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJvbUhhbmRsZQBNaWNyb3NvZnQuU3Fs
+U2VydmVyLkR0cy5SdW50aW1lAFR5cGUARmFpbHVyZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQBy
+ZXNvdXJjZUN1bHR1cmUAVlNUQVJUU2NyaXB0T2JqZWN0TW9kZWxCYXNlAEFwcGxpY2F0aW9uU2V0
+dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRl
+AERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JC
+cm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFy
+a0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9u
+QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0
+aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRB
+dHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFu
+eUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBnZXRfVmFsdWUAc2V0X1Zh
+bHVlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcATWljcm9zb2Z0LlNxbFNlcnZlci5T
+Y3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sAU2NyaXB0
+T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNUXzY4Y2Y3NTI0NjQyZTRhMTg5MmJk
+ZjI2MTEzOWM5ZGYxLmRsbABnZXRfSXRlbQBTeXN0ZW0ARW51bQByZXNvdXJjZU1hbgBTY3JpcHRN
+YWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZs
+ZWN0aW9uAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5c3Rl
+bS5EaWFnbm9zdGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNv
+dXJjZXMAU1RfNjhjZjc1MjQ2NDJlNGExODkyYmRmMjYxMTM5YzlkZjEuUHJvcGVydGllcy5SZXNv
+dXJjZXMucmVzb3VyY2VzAERlYnVnZ2luZ01vZGVzAFNUXzY4Y2Y3NTI0NjQyZTRhMTg5MmJkZjI2
+MTEzOWM5ZGYxLlByb3BlcnRpZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5ncwBTdWNjZXNzAGdldF9E
+dHMAU2NyaXB0UmVzdWx0cwBPYmplY3QAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1bHQAZ2V0X0Fz
+c2VtYmx5AAAdQwBoAGkAbABkAFAAYQByAGEAbQBlAHQAZQByAAAvRwBsAG8AYgBhAGwAUwB0AGEA
+cgB0AFAAYQBjAGsAYQBnAGUATABvAGcASQBkAAAdUABhAHIAZQBuAHQAVABhAHMAawBHAHUAaQBk
+AAATUABhAHIAYQBtAGUAdABlAHIAAHFTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEA
+MQA4ADkAMgBiAGQAZgAyADYAMQAxADMAOQBjADkAZABmADEALgBQAHIAbwBwAGUAcgB0AGkAZQBz
+AC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAUZlL81ePjS5zPoOWGOJuEAAQgAQEIAyAAAQUgAQEREQQg
+AQEOBSABARFRBCAAEmEEIAASZQUgARJpHAMgABwEIAEBHAYAARJtEXEEIAASdQYgAgEOEnUIt3pc
+Vhk04IkIiYRdzYCAzJEEAAAAAAQBAAAAAwYSSQMGEk0DBhIQAgYIAwYRFAQAABJJBAAAEk0FAAEB
+Ek0EAAASEAMAAAEECAASSQQIABJNBAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRp
+b25UaHJvd3MBCAEAAgAAAAAAKAEAI1NUXzY4Y2Y3NTI0NjQyZTRhMTg5MmJkZjI2MTEzOWM5ZGYx
+AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjIAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249
+djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41ALQAAADOyu++
+AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNp
+b249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRl
+MDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFE
+ULQAAAD8LQAAAAAAAAAAAAAWLgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACC4AAAAAAAAAAAAA
+AABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2458,7 +2445,47 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
+AABIAAAAWEAAABAEAAAAAAAAAAAAABAENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
+AAAAAAC9BO/+AAABAAAAAQCtILsfAAABAK0gux8/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
+AG4AAAAAAAAAsARwAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABMAwAAAQAwADAA
+MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
+AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
+AAAAAFMAVABfADYAOABjAGYANwA1ADIANAA2ADQAMgBlADQAYQAxADgAOQAyAGIAZABmADIANgAx
+ADEAMwA5AGMAOQBkAGYAMQAAADwADgABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
+LgA4ADEAMgAzAC4AOAAzADYANQAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBU
+AF8ANgA4AGMAZgA3ADUAMgA0ADYANAAyAGUANABhADEAOAA5ADIAYgBkAGYAMgA2ADEAMQAzADkA
+YwA5AGQAZgAxAC4AZABsAGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABD
+AG8AcAB5AHIAaQBnAGgAdAAgAEAAIAAgADIAMAAyADIAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEA
+ZABlAG0AYQByAGsAcwAAAAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBt
+AGUAAABTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYA
+MQAxADMAOQBjADkAZABmADEALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAA
+AAAAUwBUAF8ANgA4AGMAZgA3ADUAMgA0ADYANAAyAGUANABhADEAOAA5ADIAYgBkAGYAMgA2ADEA
+MQAzADkAYwA5AGQAZgAxAAAAQAAOAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAu
+ADAALgA4ADEAMgAzAC4AOAAzADYANQAAAEQADgABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMA
+aQBvAG4AAAAxAC4AMAAuADgAMQAyADMALgA4ADMANgA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAAAoPgAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
+          <Breakpoint
+            Enabled="True"
+            File="ScriptMain.cs"
+            Line="95"
+            Column="13" />
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2589,7 +2616,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Id="Package\Execute SQL Task"
           TopLeft="282,141" />
         <NodeLayout
-          Size="147,42"
+          Size="144,42"
           Id="Package\Get  Global Id"
           TopLeft="136,38" />
         <NodeLayout
@@ -2666,30 +2693,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="283,59">
+          TopLeft="280,59">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="105,37"
+              EndConnector="108,37"
               Start="0,0"
-              End="97.5,37">
+              End="100.5,37">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="48.5,0" />
+                    End="50,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="48.5,0"
-                    Point2="52.5,0"
-                    Point3="52.5,4" />
+                    Point1="50,0"
+                    Point2="54,0"
+                    Point3="54,4" />
                   <mssgle:LineSegment
-                    End="52.5,33" />
+                    End="54,33" />
                   <mssgle:CubicBezierSegment
-                    Point1="52.5,33"
-                    Point2="52.5,37"
-                    Point3="56.5,37" />
+                    Point1="54,33"
+                    Point2="54,37"
+                    Point3="58,37" />
                   <mssgle:LineSegment
-                    End="97.5,37" />
+                    End="100.5,37" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2741,9 +2768,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="170,42"
+          Size="NaN,NaN"
           Id="Package.EventHandlers[OnError]\Execute SQL Task"
-          TopLeft="288,60" />
+          TopLeft="NaN,NaN" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
@@ -2754,14 +2781,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="161,42"
-          Id="Package\Data Flow Task\Total Row Count"
-          TopLeft="476,126" />
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="457,208" />
         <NodeLayout
           Size="321,42"
           Id="Package\Data Flow Task\Read Csv 1_BENEFL_Integrated_Current_Import"
           TopLeft="314,22" />
         <NodeLayout
-          Size="309,42"
+          Size="161,42"
+          Id="Package\Data Flow Task\Total Row Count"
+          TopLeft="476,126" />
+        <NodeLayout
+          Size="283,42"
           Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT"
           TopLeft="133,316" />
         <NodeLayout
@@ -2776,10 +2807,74 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="133,42"
           Id="Package\Data Flow Task\Row Count"
           TopLeft="717,232" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="457,208" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 11]"
+          TopLeft="320,280">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-45.5,36"
+              Start="0,0"
+              End="-45.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="-4,18" />
+                  <mssgle:LineSegment
+                    End="-41.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-41.5,18"
+                    Point2="-45.5,18"
+                    Point3="-45.5,22" />
+                  <mssgle:LineSegment
+                    End="-45.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
+          TopLeft="556.5,168">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19,40"
+              Start="0,0"
+              End="-19,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-15,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15,20"
+                    Point2="-19,20"
+                    Point3="-19,24" />
+                  <mssgle:LineSegment
+                    End="-19,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="474.5,64">
