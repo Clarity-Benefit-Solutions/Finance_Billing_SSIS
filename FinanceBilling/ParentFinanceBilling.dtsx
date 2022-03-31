@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ParentFinanceBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="184"
-  DTS:VersionGUID="{75BE35C6-863D-461E-85C2-382230EE3F6F}">
+  DTS:VersionBuild="189"
+  DTS:VersionGUID="{2089D7F5-FA65-4EDE-95A3-A8CA7F0AD184}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -60,7 +60,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="DestinationPath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_30_11_40_27</DTS:VariableValue>
+        DTS:DataType="8">E:\Finance_Billing\Archive_Files\FileProcessed_2022_03_31_03_34_31</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -71,7 +71,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="EndTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/30/2022 11:40:27 AM' Where Id=0; 
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=1,IsFailed=0,IsCompleted=1,EndDateTime='3/31/2022 3:34:31 AM' Where Id=0; 
 
 EXEC PSP_UPDATE_SPMBYACAREPORT_UNIQUE;
 EXEC PSP_INSERT_SPMBYACAREPORT_FROM_SPMBYACAREPORT;
@@ -91,7 +91,7 @@ EXEC PSP_UPDATE_SPMBYACAREPORT_CLIENTALTID_FROM_CLIENTLIST; EXEC SPS_TRUNCATE_HE
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015','ParentTask','',
-'0','','3/30/2022 11:40:27 AM','0');
+'0','','3/31/2022 3:34:31 AM','0');
 EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -103,7 +103,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="FailedTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/30/2022 11:40:27 AM' Where Id=0</DTS:VariableValue>
+        DTS:DataType="8">Update TBL_LOGGINGDB SET IsSuccess=0,IsFailed=1,IsCompleted=1,EndDateTime='3/31/2022 3:34:31 AM' Where Id=0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -152,7 +152,7 @@ EXEC [dbo].[PSP_TRUNCATE_TABLE_2];</DTS:VariableValue>
       DTS:Namespace="User"
       DTS:ObjectName="StartTaskInformation">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/30/2022 11:40:27 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('ParentFinanceBilling','{A5AA7166-F79E-49C3-8BE4-5FCD196AE8BF}','','BE015','V057\SSingh_Beneflex','BE015','3/31/2022 3:34:31 AM'); 
 SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -669,7 +669,7 @@ SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
         <NodeLayout
           Size="163,42"
           Id="Package\File System Task"
-          TopLeft="593.333333333333,651.571428571429" />
+          TopLeft="591.333333333333,651.571428571429" />
         <NodeLayout
           Size="163,42"
           Id="Package\Foreach Loop Container\File System Task"
@@ -724,7 +724,7 @@ SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
         <NodeLayout
           Size="269,42"
           Id="Package\Sequence Container\911_EC Extract"
-          TopLeft="682.5,217" />
+          TopLeft="674.5,194" />
         <NodeLayout
           Size="283,42"
           Id="Package\Sequence Container\912_EB Extract"
@@ -754,9 +754,9 @@ SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-28.5000000000005,55.904761904762"
+              EndConnector="-30.5000000000005,55.904761904762"
               Start="0,0"
-              End="-28.5000000000005,48.404761904762">
+              End="-30.5000000000005,48.404761904762">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -767,13 +767,13 @@ SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
                     Point2="0,27.952380952381"
                     Point3="-4,27.952380952381" />
                   <mssgle:LineSegment
-                    End="-24.5000000000005,27.952380952381" />
+                    End="-26.5000000000005,27.952380952381" />
                   <mssgle:CubicBezierSegment
-                    Point1="-24.5000000000005,27.952380952381"
-                    Point2="-28.5000000000005,27.952380952381"
-                    Point3="-28.5000000000005,31.952380952381" />
+                    Point1="-26.5000000000005,27.952380952381"
+                    Point2="-30.5000000000005,27.952380952381"
+                    Point3="-30.5000000000005,31.952380952381" />
                   <mssgle:LineSegment
-                    End="-28.5000000000005,48.404761904762" />
+                    End="-30.5000000000005,48.404761904762" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -828,30 +828,18 @@ SELECT ?= SCOPE_IDENTITY()  ;</DTS:VariableValue>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="674.833333333333,693.571428571429">
+          TopLeft="669.75,693.571428571429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.16666666666652,77.2857142857139"
+              EndConnector="0,77.285714285714"
               Start="0,0"
-              End="-8.16666666666652,69.7857142857139">
+              End="0,69.785714285714">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.6428571428569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.6428571428569"
-                    Point2="0,38.6428571428569"
-                    Point3="-4,38.6428571428569" />
-                  <mssgle:LineSegment
-                    End="-4.16666666666652,38.6428571428569" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.16666666666652,38.6428571428569"
-                    Point2="-8.16666666666652,38.6428571428569"
-                    Point3="-8.16666666666652,42.6428571428569" />
-                  <mssgle:LineSegment
-                    End="-8.16666666666652,69.7857142857139" />
+                    End="0,69.785714285714" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

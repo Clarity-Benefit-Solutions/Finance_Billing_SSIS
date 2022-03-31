@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="8_Cobraletters"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{6F8F7270-4E86-4B16-AC07-5CF7BF1B1042}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{06E74B8A-915E-48E7-BCDC-7D758FAE3B8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -136,7 +136,7 @@
       <DTS:VariableValue
         DTS:DataType="8">Update [dbo].[TBL_STAGING_COBRA_LETTERS_ERRORS] SET [Logging Db Id]=0 WHERE [Logging Db Id] IS NULL  ;
 
-Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/30/2022 11:17:21 AM ' Where Id=0; </DTS:VariableValue>
+Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='3/31/2022 5:47:16 AM ' Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -148,7 +148,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 8_Cobraletters','',
-'0','','3/30/2022 11:17:21 AM','')</DTS:VariableValue>
+'0','','3/31/2022 5:47:16 AM','')</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -191,12 +191,12 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:CreationName=""
       DTS:DTSID="{E6822DFF-CFB8-4100-968E-8EE63DD70AC1}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+  @[User::ChildParameter]  +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
+      DTS:Expression="&quot;Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('&quot;+ @[System::PackageName] +&quot;','&quot;+ @[System::PackageID]+&quot;','&quot;+  @[User::ParentTaskGuid]   +&quot;','&quot;+ @[System::MachineName] +&quot;','&quot;+ @[System::UserName] +&quot;','&quot;+ @[System::CreatorComputerName] +&quot;','&quot;+  (DT_WSTR, 25) (DT_DATE) GETDATE()   +&quot;'); &#xA;SELECT ? = SCOPE_IDENTITY();&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="StartTask">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('8_Cobraletters','{AD52936F-13B8-4DB7-AE1F-E8113D231B5F}','','BE015','V057\SSingh_Beneflex','BE015','3/30/2022 11:17:21 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('8_Cobraletters','{AD52936F-13B8-4DB7-AE1F-E8113D231B5F}','','BE015','V057\SSingh_Beneflex','BE015','3/31/2022 5:47:16 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -2612,7 +2612,7 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
     <msb:CodeName>ST_b98561c4d23142d7a4c11ab18a4948b0</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_b98561c4d23142d7a4c11ab18a4948b0</msb:DisplayName>
-    <msb:ProjectId>{7F39C447-9DFC-458B-9DB7-3C7DDD4B2F83}</msb:ProjectId>
+    <msb:ProjectId>{718B0D5F-C0F4-4BA0-A8C8-CE0D70D24F11}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_b98561c4d23142d7a4c11ab18a4948b0.csproj" />
@@ -2811,7 +2811,7 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
           <BinaryItem
             Name="ST_b98561c4d23142d7a4c11ab18a4948b0.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAFlIRGIAAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAASi4A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAMd3RWIAAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAASi4A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAPgtAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2840,7 +2840,7 @@ ABwFIADJAMIDJQDRAPYCKwDRAAADLwDBAGQFAQBxAEoEBgCJAEoEBgDZAK0ANADZAHMFOwCRAEoE
 QACxAEoEBgAIABQAWQAIABgAXgApAHMAxgAuAAsAngAuABMApwAuABsAxgAuACMAzwAuACsA+AAu
 ADMA+AAuADsA+AAuAEMAzwAuAEsA/gAuAFMA+AAuAFsAFQFDAGMAXgBJAHMAxgBhAHsAXgBjAGsA
 XgADAAEABAADAAAAOgSPAAAADAGUAAAAXAWZAAIABAADAAIABQAFAAEABgAFAAIABwAHAASAAAAB
-AAAAvB9MOQAAAAAAAAEAAAAEAAAAAAAAAAAAAABHAHkAAAAAAA4AAAAAAAAAAAAAAFAAKgMAAAAA
+AAAAvR9DKAAAAAAAAAEAAAAEAAAAAAAAAAAAAABHAHkAAAAAAA4AAAAAAAAAAAAAAFAAKgMAAAAA
 BAAAAAAAAAAAAAAARwDLAwAAAAAOAAAAAAAAAAAAAABQAFIAAAAAAAAAAAABAAAAmwQAAAUAAgAA
 AAAAAFNUX2I5ODU2MWM0ZDIzMTQyZDdhNGMxMWFiMThhNDk0OGIwAFNUXzY4Y2Y3NTI0NjQyZTRh
 MTg5MmJkZjI2MTEzOWM5ZGYxADxNb2R1bGU+AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdlZERU
@@ -2871,7 +2871,7 @@ YQByAGEAbQBlAHQAZQByAAAvRwBsAG8AYgBhAGwAUwB0AGEAcgB0AFAAYQBjAGsAYQBnAGUATABv
 AGcASQBkAAAdUABhAHIAZQBuAHQAVABhAHMAawBHAHUAaQBkAAATUABhAHIAYQBtAGUAdABlAHIA
 AHFTAFQAXwA2ADgAYwBmADcANQAyADQANgA0ADIAZQA0AGEAMQA4ADkAMgBiAGQAZgAyADYAMQAx
 ADMAOQBjADkAZABmADEALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
-AAB0ZCW3LNFVRq+6aLbcURCtAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFRBCAAEmEEIAASZQUg
+AAC7NF8tHP0iTJuU6Ic1RNm8AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFRBCAAEmEEIAASZQUg
 ARJpHAMgABwEIAEBHAYAARJtEXEEIAASdQYgAgEOEnUIt3pcVhk04IkIiYRdzYCAzJEEAAAAAAQB
 AAAAAwYSSQMGEk0DBhIQAgYIAwYRFAQAABJJBAAAEk0FAAEBEk0EAAASEAMAAAEECAASSQQIABJN
 BAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEA
@@ -2892,14 +2892,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
 AABIAAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
-AAAAAAC9BO/+AAABAAAAAQBMObwfAAABAEw5vB8/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+AAAAAAC9BO/+AAABAAAAAQBDKL0fAAABAEMovR8/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
 RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
 AG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAA
 MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
 AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
 AAAAAFMAVABfADYAOABjAGYANwA1ADIANAA2ADQAMgBlADQAYQAxADgAOQAyAGIAZABmADIANgAx
 ADEAMwA5AGMAOQBkAGYAMQAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
-LgA4ADEAMgA0AC4AMQA0ADYANgA4AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
+LgA4ADEAMgA1AC4AMQAwADMAMAA3AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
 AFMAVABfAGIAOQA4ADUANgAxAGMANABkADIAMwAxADQAMgBkADcAYQA0AGMAMQAxAGEAYgAxADgA
 YQA0ADkANAA4AGIAMAAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0
 AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMgAyAAAAKgABAAEATABlAGcAYQBsAFQA
@@ -2908,8 +2908,8 @@ AGEAbQBlAAAAUwBUAF8AYgA5ADgANQA2ADEAYwA0AGQAMgAzADEANAAyAGQANwBhADQAYwAxADEA
 YQBiADEAOABhADQAOQA0ADgAYgAwAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
 AGUAAAAAAFMAVABfADYAOABjAGYANwA1ADIANAA2ADQAMgBlADQAYQAxADgAOQAyAGIAZABmADIA
 NgAxADEAMwA5AGMAOQBkAGYAMQAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
-ADEALgAwAC4AOAAxADIANAAuADEANAA2ADYAOAAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
-VgBlAHIAcwBpAG8AbgAAADEALgAwAC4AOAAxADIANAAuADEANAA2ADYAOAAAAAAAAAAAAAAAAAAA
+ADEALgAwAC4AOAAxADIANQAuADEAMAAzADAANwAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4AOAAxADIANQAuADEAMAAzADAANwAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -3217,6 +3217,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Data Flow Task\Get Error Column Name"
           TopLeft="738,162" />
         <NodeLayout
+          Size="161,42"
+          Id="Package\Data Flow Task\Total Row Count"
+          TopLeft="536,78" />
+        <NodeLayout
           Size="234,42"
           Id="Package\Data Flow Task\TBL_STAGING_COBRA_LETTERS"
           TopLeft="197,301" />
@@ -3232,10 +3236,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Size="294,42"
           Id="Package\Data Flow Task\TBL_STAGING_COBRA_LETTER_ERROR"
           TopLeft="804,306" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Total Row Count"
-          TopLeft="536,78" />
         <NodeLayout
           Size="176,42"
           Id="Package\Data Flow Task\Inserted Row Count"
@@ -3275,7 +3275,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3309,7 +3311,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3343,7 +3347,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3377,7 +3383,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3411,7 +3419,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3445,7 +3455,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
