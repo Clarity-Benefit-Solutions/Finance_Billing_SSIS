@@ -7,12 +7,12 @@
   DTS:CreatorName="V057\mkhan_BENEFLEX"
   DTS:DTSID="{ADB5E5D6-44DE-49B1-9A54-02A6C4631C3A}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
   DTS:ObjectName="911_EC Extract"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{4B642CCC-2734-4C4D-BF04-05A0C24E2D02}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{652D4294-0790-4500-A952-2D6BFE7C7807}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,8 +23,6 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=BE015;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -482,7 +480,7 @@
 
 
 
-Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='4/6/2022 1:17:34 AM ' Where Id=0; </DTS:VariableValue>
+Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='4/12/2022 10:59:01 AM ' Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -494,7 +492,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 911_EC Extract','',
-'0','','4/6/2022 1:17:34 AM','')</DTS:VariableValue>
+'0','','4/12/2022 10:59:01 AM','')</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -542,7 +540,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:Namespace="User"
       DTS:ObjectName="StartTask">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('911_EC Extract','{ADB5E5D6-44DE-49B1-9A54-02A6C4631C3A}','','BE015','V057\SSingh_Beneflex','BE015','4/6/2022 1:17:34 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('911_EC Extract','{ADB5E5D6-44DE-49B1-9A54-02A6C4631C3A}','','BE015','V057\SSingh_Beneflex','BE015','4/12/2022 10:59:01 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -4154,7 +4152,7 @@ public class ScriptMain : UserComponent
     public override void PreExecute()
     {
         base.PreExecute();
-        rowNumber = 0;
+        rowNumber = 1;
         /*
          * Add your code here
          */
@@ -4307,6 +4305,7 @@ namespace SC_49c3e5ea3788475cb21be90c16134051.Properties {
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -4383,23 +4382,23 @@ namespace SC_49c3e5ea3788475cb21be90c16134051.Properties {
                       dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_49c3e5ea3788475cb21be90c16134051</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_49c3e5ea3788475cb21be90c16134051</msb:DisplayName>
-    <msb:ProjectId>{2E52A3E0-CF37-4760-B6B6-B0831ABBCBD7}</msb:ProjectId>
+    <msb:ProjectId>{164B2773-73D5-4A3B-9DCC-DEC7011DAADC}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_49c3e5ea3788475cb21be90c16134051.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
     <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="main.cs" />
-    <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -4535,7 +4534,7 @@ namespace SC_49c3e5ea3788475cb21be90c16134051.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDADkiTWIAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAIjEA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDALGTVWIAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAIjEA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANAwAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4543,7 +4542,7 @@ AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAKBEAAAAgAAAAEgAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
 LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAE
 MQAAAAAAAEgAAAACAAUApCEAAHQOAAABAAAAAAAAABgwAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAADoCKBAAAAoCFn0BAAAEKh4CKBEAAAoqbgICewEAAAQXWH0B
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAADoCKBAAAAoCF30BAAAEKh4CKBEAAAoqbgICewEAAAQXWH0B
 AAAEAwJ7AQAABG8GAAAGKh4CKAoAAAYqKgIDBAUoEgAACio6AhYDjBoAAAEoEwAACipaAywIAhYo
 FAAACipyAQAAcHMVAAAKeh4CKBYAAAoqHgIoFwAACip+AigYAAAKAgJzDgAABn0CAAAEAgJzDwAA
 Bn0DAAAEKpIEcp4AAHAabxkAAAosFQIFAgMoGgAACg4EcwUAAAZvDAAABipKKwcCA28NAAAGA28I
@@ -4606,8 +4605,8 @@ cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
 AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
 dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
 AEMAXwA0ADkAYwAzAGUANQBlAGEAMwA3ADgAOAA0ADcANQBjAGIAMgAxAGIAZQA5ADAAYwAxADYA
-MQAzADQAMAA1ADEALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAMS4
-7JfvvDdGlr8okwmG7SIABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkJIAMBEj0dCBJBBSACAQgc
+MQAzADQAMAA1ADEALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAC2a
+usjKQddPoUQvvVD646cABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkJIAMBEj0dCBJBBSACAQgc
 AyAAAgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEC
 BggDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAAS
 UQQAABJVBQABARJVBAAAEiADAAABAygACAMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQAB
@@ -6059,7 +6058,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6715,7 +6714,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -7512,6 +7511,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           ReadOnlyVariables="GlobalStartPackageLogId,Parameter"
           ReadWriteVariables="ChildParameter,ParentTaskGuid">
           <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -7630,35 +7638,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
-    "ings")]
-
-namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[
@@ -7883,6 +7862,35 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -7912,15 +7920,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -8398,21 +8397,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Data Flow Task\Total Row Count"
           TopLeft="446,115" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\Data Flow Task\Get Column Name"
-          TopLeft="598.5,167.5" />
-        <NodeLayout
           Size="234,42"
           Id="Package\Data Flow Task\TBL_STAGING_EC_EXTRACT"
           TopLeft="128,291" />
         <NodeLayout
-          Size="207,42"
-          Id="Package\Data Flow Task\Read Csv 911_EC Extract"
-          TopLeft="275,51" />
+          Size="158,42"
+          Id="Package\Data Flow Task\GetRowNumber"
+          TopLeft="602,38" />
         <NodeLayout
           Size="133,42"
           Id="Package\Data Flow Task\Row Count"
           TopLeft="556,239" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Data Flow Task\Read Csv 911_EC Extract"
+          TopLeft="275,51" />
         <NodeLayout
           Size="176,42"
           Id="Package\Data Flow Task\Inserted Row Count"
@@ -8425,6 +8424,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="344,177" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Data Flow Task\Get Column Name"
+          TopLeft="598.5,167.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Row Count Output 12]"
           TopLeft="622.5,281">
@@ -8522,6 +8525,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 01]"
+          TopLeft="681,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-154.5,35"
+              Start="0,0"
+              End="-154.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-150.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-150.5,17.5"
+                    Point2="-154.5,17.5"
+                    Point3="-154.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-154.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="681,209.5">
           <EdgeLayout.Curve>
@@ -8547,6 +8584,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                     Point3="-58.5,18.75" />
                   <mssgle:LineSegment
                     End="-58.5,22" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="482,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,-13"
+              Start="0,0"
+              End="112.5,-13">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56,0"
+                    Point2="60,0"
+                    Point3="60,-4" />
+                  <mssgle:LineSegment
+                    End="60,-9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60,-9"
+                    Point2="60,-13"
+                    Point3="64,-13" />
+                  <mssgle:LineSegment
+                    End="112.5,-13" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8623,78 +8694,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <mssgm:EdgeLabel
               BoundingBox="-19.33638671875,1,132.1727734375,11.43359375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\GetRowNumber"
-          TopLeft="602,38" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="482,72">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120,-13"
-              Start="0,0"
-              End="112.5,-13">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="56,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56,0"
-                    Point2="60,0"
-                    Point3="60,-4" />
-                  <mssgle:LineSegment
-                    End="60,-9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60,-9"
-                    Point2="60,-13"
-                    Point3="64,-13" />
-                  <mssgle:LineSegment
-                    End="112.5,-13" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 01]"
-          TopLeft="681,80">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-154.5,35"
-              Start="0,0"
-              End="-154.5,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
-                  <mssgle:LineSegment
-                    End="-150.5,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-150.5,17.5"
-                    Point2="-154.5,17.5"
-                    Point3="-154.5,21.5" />
-                  <mssgle:LineSegment
-                    End="-154.5,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
