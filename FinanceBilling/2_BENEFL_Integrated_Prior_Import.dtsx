@@ -7,12 +7,12 @@
   DTS:CreatorName="V057\mkhan_BENEFLEX"
   DTS:DTSID="{3E578D24-581D-4943-B249-C90DDA1F526A}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LastModifiedProductVersion="14.0.3002.113"
   DTS:LocaleID="1033"
   DTS:ObjectName="2_BENEFL_Integrated_Prior_Import"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{EB7C61F8-090C-4A23-B72A-F8998CD2BD5C}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{BD9FFCEC-5F95-45F7-BB50-BAAC93F3BC65}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,8 +23,6 @@
       DTS:ObjectName="BE015.Finance_Billing.Finance_Billing">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=BE015;Initial Catalog=Finance_Billing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -38,6 +36,7 @@
           DTS:Format="Delimited"
           DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
@@ -49,8 +48,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 0"
-              DTS:DTSID="{0CEA349D-4AE2-42A1-A9E9-C2FC1E73F358}"
+              DTS:ObjectName="Line type"
+              DTS:DTSID="{E106B216-F4E0-4C92-A7E3-ACB3A0F1245A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,8 +57,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 1"
-              DTS:DTSID="{A567BF54-50FC-453D-B1C7-2B4CE8848F1B}"
+              DTS:ObjectName="TPA Code"
+              DTS:DTSID="{69C18750-77AD-476D-B1E9-159DCCBDE507}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -67,8 +66,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 2"
-              DTS:DTSID="{66F1C745-FC5B-4035-B0BF-78CA22E35AE2}"
+              DTS:ObjectName="Bencode"
+              DTS:DTSID="{B2CA3653-9C41-44F2-AFFF-84863BFE166C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,8 +75,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 3"
-              DTS:DTSID="{9869B630-8960-421F-82C2-79E9994587F7}"
+              DTS:ObjectName="Employer Name"
+              DTS:DTSID="{1749B7EE-35CD-4C37-A1C7-3FCADE273FEA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -85,8 +84,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 4"
-              DTS:DTSID="{CD2EAF4F-971D-400D-B2BF-AB723BD5B967}"
+              DTS:ObjectName="Account Type Code"
+              DTS:DTSID="{EAEEF41A-810F-4074-8222-EF93CB44B1CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -94,8 +93,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 5"
-              DTS:DTSID="{1C2ACF23-450C-4509-9FC2-73EE3BBA6D1F}"
+              DTS:ObjectName="Plan ID"
+              DTS:DTSID="{F1D953D9-166A-4DF3-A0A8-8E66B88C63BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,8 +102,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 6"
-              DTS:DTSID="{FF853649-9D98-4390-AD7E-34D9D1E96A51}"
+              DTS:ObjectName="PY Start Date"
+              DTS:DTSID="{402C4440-63B6-4FA9-9031-FE752B7D2251}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -112,8 +111,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 7"
-              DTS:DTSID="{F3AF2A2E-EF2E-48F3-9740-3483F53E0324}"
+              DTS:ObjectName="Plan End Date"
+              DTS:DTSID="{4C3821AB-05E2-4AED-88A5-91AAE636835A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,8 +120,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 8"
-              DTS:DTSID="{E112CA7A-58FD-440E-87CC-9B27D6B21D6E}"
+              DTS:ObjectName="Grace_Roll"
+              DTS:DTSID="{115E83E5-2A15-4AB7-9C66-B2AD1DB6DFB2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,8 +129,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 9"
-              DTS:DTSID="{183F3DCA-6D4A-4AB2-8EEF-32800816B68C}"
+              DTS:ObjectName="Runout Date"
+              DTS:DTSID="{58E40C47-C705-4010-88DD-4D22072093F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -139,8 +138,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 10"
-              DTS:DTSID="{6BF852D7-02FB-4448-9F6D-79EBC34BF795}"
+              DTS:ObjectName="Term Runout Date"
+              DTS:DTSID="{EB14230A-AF8F-4619-AB32-AA1F7348179B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,8 +147,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 11"
-              DTS:DTSID="{32AE67DE-4C3F-4C94-9EB0-C4D8055D296F}"
+              DTS:ObjectName="Plan Min"
+              DTS:DTSID="{9E7B6D11-9FD5-463E-8138-353566A6334F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -157,8 +156,8 @@
               DTS:MaximumWidth="255"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="Column 12"
-              DTS:DTSID="{A99BB72D-0026-4590-837E-740D2F81B7BB}"
+              DTS:ObjectName="Plan Max"
+              DTS:DTSID="{BDAC17A4-66CD-4DB5-937B-CFEE5BACB7BE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -199,7 +198,7 @@
       <DTS:VariableValue
         DTS:DataType="8">Update [dbo].[TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR] SET [Logging Db Id]=0 WHERE [Logging Db Id] IS NULL  ;
 
-Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='4/5/2022 11:29:10 AM '  Where Id=0; </DTS:VariableValue>
+Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted =0 ,EndDateTime='4/12/2022 10:45:34 AM '  Where Id=0; </DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -211,7 +210,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:ObjectName="ErrorVariable">
       <DTS:VariableValue
         DTS:DataType="8">Insert into TBL_ERROR_LOGS values('BE015',' 2_BENEFL_Integrated_Prior_Import','',
-'0','','4/5/2022 11:29:10 AM','')</DTS:VariableValue>
+'0','','4/12/2022 10:45:34 AM','')</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -259,7 +258,7 @@ Update TBL_LOGGINGDB SET NumRowsNotInserted =0, NumRowsTotal =0,NumRowsInserted 
       DTS:Namespace="User"
       DTS:ObjectName="StartTask">
       <DTS:VariableValue
-        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('2_BENEFL_Integrated_Prior_Import','{3E578D24-581D-4943-B249-C90DDA1F526A}','','BE015','V057\SSingh_Beneflex','BE015','4/5/2022 11:29:10 AM'); 
+        DTS:DataType="8">Insert Into TBL_LOGGINGDB (PackageName,PackageId,Guid,MachineName,UserName,DataSource,StartDateTime)  VALUES('2_BENEFL_Integrated_Prior_Import','{3E578D24-581D-4943-B249-C90DDA1F526A}','','BE015','V057\SSingh_Beneflex','BE015','4/12/2022 10:45:34 AM'); 
 SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
@@ -327,88 +326,88 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 0]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 0"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 1"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 2"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 3]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 3"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 4]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 4"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 5]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 5"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 6]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 6"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 7]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 7"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 8]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 8"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 9]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 9"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 10]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 10"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 11]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 11"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Column 12]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 12"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[RowNumber]"
                       cachedDataType="i4"
                       cachedName="RowNumber"
                       lineageId="Package\Data Flow Task\GetRowNumber.Outputs[Output 0].Columns[RowNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Line type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Line type"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[TPA Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TPA Code"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Bencode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Bencode"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Employer Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employer Name"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Account Type Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Account Type Code"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan ID"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PY Start Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PY Start Date"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan End Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan End Date"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Grace_Roll]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Grace_Roll"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Runout Date"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Term Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Term Runout Date"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan Min]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Min"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Plan Max]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Max"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -421,20 +420,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                   synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Line type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]"
-                      name="Copy of Column 0"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Line type]"
+                      name="Copy of Line type"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -442,20 +441,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TPA Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]"
-                      name="Copy of Column 1"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TPA Code]"
+                      name="Copy of TPA Code"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -463,20 +462,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Bencode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]"
-                      name="Copy of Column 2"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Bencode]"
+                      name="Copy of Bencode"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -484,20 +483,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]"
-                      name="Copy of Column 3"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Employer Name]"
+                      name="Copy of Employer Name"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -505,20 +504,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Type Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]"
-                      name="Copy of Column 4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Account Type Code]"
+                      name="Copy of Account Type Code"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -526,20 +525,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]"
-                      name="Copy of Column 5"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan ID]"
+                      name="Copy of Plan ID"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -547,19 +546,19 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PY Start Date]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]"
-                      name="Copy of Column 6"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PY Start Date]"
+                      name="Copy of PY Start Date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -567,19 +566,19 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan End Date]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]"
-                      name="Copy of Column 7"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan End Date]"
+                      name="Copy of Plan End Date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -587,20 +586,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Grace_Roll]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]"
-                      name="Copy of Column 8"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Grace_Roll]"
+                      name="Copy of Grace_Roll"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -608,19 +607,19 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Runout Date]"
                       dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]"
-                      name="Copy of Column 9"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Runout Date]"
+                      name="Copy of Runout Date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -628,20 +627,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Term Runout Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
                       length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]"
-                      name="Copy of Column 10"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Term Runout Date]"
+                      name="Copy of Term Runout Date"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -649,20 +648,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Min]"
+                      dataType="decimal"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]"
-                      name="Copy of Column 11"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Min]"
+                      name="Copy of Plan Min"
+                      scale="2"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -670,20 +669,20 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
-                      dataType="wstr"
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Max]"
+                      dataType="decimal"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="RedirectRow"
-                      length="255"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]"
-                      name="Copy of Column 12"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Plan Max]"
+                      name="Copy of Plan Max"
+                      scale="2"
                       truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -694,10 +693,10 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RowNumber]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RowNumber]"
                       name="Copy of RowNumber"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="RedirectRow">
                       <properties>
                         <property
                           containsID="true"
@@ -730,6 +729,129 @@ SELECT ? = SCOPE_IDENTITY();</DTS:VariableValue>
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[PY Start Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PY Start Date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]},1,4) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]},5,2) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]},7,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING([PY Start Date],1,4) + "-" + SUBSTRING([PY Start Date],5,2) + "-" + SUBSTRING([PY Start Date],7,2)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Plan End Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan End Date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]},1,4) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]},5,2) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]},7,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING([Plan End Date],1,4) + "-" + SUBSTRING([Plan End Date],5,2) + "-" + SUBSTRING([Plan End Date],7,2)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Runout Date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]},1,4) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]},5,2) + "-" + [SUBSTRING](#{Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]},7,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING([Runout Date],1,4) + "-" + SUBSTRING([Runout Date],5,2) + "-" + SUBSTRING([Runout Date],7,2)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1100,14 +1222,14 @@ public class Input0Buffer: ScriptBuffer
     {
     }
 
-    public String Column0
+    public Int32 ErrorCode
     {
         get
         {
-            return Buffer.GetString(BufferColumnIndexes[0]);
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
         }
     }
-    public bool Column0_IsNull
+    public bool ErrorCode_IsNull
     {
         get
         {
@@ -1115,14 +1237,14 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public String Column1
+    public Int32 ErrorColumn
     {
         get
         {
-            return Buffer.GetString(BufferColumnIndexes[1]);
+            return Buffer.GetInt32(BufferColumnIndexes[1]);
         }
     }
-    public bool Column1_IsNull
+    public bool ErrorColumn_IsNull
     {
         get
         {
@@ -1130,206 +1252,11 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public String Column2
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[2]);
-        }
-    }
-    public bool Column2_IsNull
-    {
-        get
-        {
-            return IsNull(2);
-        }
-    }
-
-    public String Column3
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[3]);
-        }
-    }
-    public bool Column3_IsNull
-    {
-        get
-        {
-            return IsNull(3);
-        }
-    }
-
-    public String Column4
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[4]);
-        }
-    }
-    public bool Column4_IsNull
-    {
-        get
-        {
-            return IsNull(4);
-        }
-    }
-
-    public String Column5
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[5]);
-        }
-    }
-    public bool Column5_IsNull
-    {
-        get
-        {
-            return IsNull(5);
-        }
-    }
-
-    public String Column6
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[6]);
-        }
-    }
-    public bool Column6_IsNull
-    {
-        get
-        {
-            return IsNull(6);
-        }
-    }
-
-    public String Column7
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[7]);
-        }
-    }
-    public bool Column7_IsNull
-    {
-        get
-        {
-            return IsNull(7);
-        }
-    }
-
-    public String Column8
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[8]);
-        }
-    }
-    public bool Column8_IsNull
-    {
-        get
-        {
-            return IsNull(8);
-        }
-    }
-
-    public String Column9
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[9]);
-        }
-    }
-    public bool Column9_IsNull
-    {
-        get
-        {
-            return IsNull(9);
-        }
-    }
-
-    public String Column10
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[10]);
-        }
-    }
-    public bool Column10_IsNull
-    {
-        get
-        {
-            return IsNull(10);
-        }
-    }
-
-    public String Column11
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[11]);
-        }
-    }
-    public bool Column11_IsNull
-    {
-        get
-        {
-            return IsNull(11);
-        }
-    }
-
-    public String Column12
-    {
-        get
-        {
-            return Buffer.GetString(BufferColumnIndexes[12]);
-        }
-    }
-    public bool Column12_IsNull
-    {
-        get
-        {
-            return IsNull(12);
-        }
-    }
-
-    public Int32 ErrorCode
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[13]);
-        }
-    }
-    public bool ErrorCode_IsNull
-    {
-        get
-        {
-            return IsNull(13);
-        }
-    }
-
-    public Int32 ErrorColumn
-    {
-        get
-        {
-            return Buffer.GetInt32(BufferColumnIndexes[14]);
-        }
-    }
-    public bool ErrorColumn_IsNull
-    {
-        get
-        {
-            return IsNull(14);
-        }
-    }
-
     public String ErrorDescription
     {
         set
         {
-            this[15] = value;
+            this[2] = value;
         }
     }
     public bool ErrorDescription_IsNull
@@ -1338,7 +1265,7 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(15);
+                SetNull(2);
             }
             else
             {
@@ -1351,7 +1278,7 @@ public class Input0Buffer: ScriptBuffer
     {
         set
         {
-            this[16] = value;
+            this[3] = value;
         }
     }
     public bool ErrorColumnName_IsNull
@@ -1360,7 +1287,7 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(16);
+                SetNull(3);
             }
             else
             {
@@ -1425,7 +1352,7 @@ namespace SC_6648f55c25de486daf9162509d00cdf3.Properties {
     <msb:CodeName>SC_6648f55c25de486daf9162509d00cdf3</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_6648f55c25de486daf9162509d00cdf3</msb:DisplayName>
-    <msb:ProjectId>{F76D2BB5-F299-479E-8790-DC9F55641AD7}</msb:ProjectId>
+    <msb:ProjectId>{95537285-49EA-4D40-9653-A784E4A87B97}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_6648f55c25de486daf9162509d00cdf3.csproj" />
@@ -1486,7 +1413,7 @@ using System.Runtime.CompilerServices;
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{a2a4ed34-ad04-4155-87f8-0d5d8cb29344}</ProjectGuid>
+    <ProjectGuid>{A2A4ED34-AD04-4155-87F8-0D5D8CB29344}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SC_6648f55c25de486daf9162509d00cdf3</RootNamespace>
@@ -1494,7 +1421,8 @@ using System.Runtime.CompilerServices;
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1556,8 +1484,8 @@ using System.Runtime.CompilerServices;
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_6648f55c25de486daf9162509d00cdf3" IconIndex="0"></Host>
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
         <ProjectClient>
           <HostIdentifier>SSIS_SC140</HostIdentifier>
         </ProjectClient>
@@ -1664,149 +1592,122 @@ namespace SC_6648f55c25de486daf9162509d00cdf3.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHwrRGIAAAAAAAAAAOAAIiALATAAABoAAAAIAAAAAAAA1jkA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGtbUGIAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA9jMA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIQ5AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKQzAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA3BkAAAAgAAAAGgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAcAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAIgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC4
-OQAAAAAAAEgAAAACAAUAsCMAABwVAAABAAAAAAAAAMw4AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA/BMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADY
+MwAAAAAAAEgAAAACAAUAHCIAANAQAAABAAAAAAAAAOwyAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMANgAAAAEAABEDAigSAAAK
-A28gAAAGbxMAAApvJAAABgIoEgAACnUOAAABCgMGA28iAAAGbxQAAApvJgAABioeAigqAAAGKioC
+A28GAAAGbxMAAApvCgAABgIoEgAACnUOAAABCgMGA28IAAAGbxQAAApvDAAABioeAigQAAAGKioC
 AwQFKBUAAAoqUgJ7FgAACgJ7FwAAChaUbxgAAAoqIgIWKBkAAAoqUgJ7FgAACgJ7FwAACheUbxgA
-AAoqIgIXKBkAAAoqUgJ7FgAACgJ7FwAAChiUbxgAAAoqIgIYKBkAAAoqUgJ7FgAACgJ7FwAAChmU
-bxgAAAoqIgIZKBkAAAoqUgJ7FgAACgJ7FwAAChqUbxgAAAoqIgIaKBkAAAoqUgJ7FgAACgJ7FwAA
-ChuUbxgAAAoqIgIbKBkAAAoqUgJ7FgAACgJ7FwAAChyUbxgAAAoqIgIcKBkAAAoqUgJ7FgAACgJ7
-FwAACh2UbxgAAAoqIgIdKBkAAAoqUgJ7FgAACgJ7FwAACh6UbxgAAAoqIgIeKBkAAAoqVgJ7FgAA
-CgJ7FwAACh8JlG8YAAAKKiYCHwkoGQAACipWAnsWAAAKAnsXAAAKHwqUbxgAAAoqJgIfCigZAAAK
-KlYCexYAAAoCexcAAAofC5RvGAAACiomAh8LKBkAAAoqVgJ7FgAACgJ7FwAACh8MlG8YAAAKKiYC
-HwwoGQAACipWAnsWAAAKAnsXAAAKHw2UbxoAAAoqJgIfDSgZAAAKKlYCexYAAAoCexcAAAofDpRv
-GgAACiomAh8OKBkAAAoqKgIfDwMoGwAACipeAywJAh8PKBwAAAoqcgEAAHBzHQAACnoqAh8QAygb
-AAAKKl4DLAkCHxAoHAAACipyAQAAcHMdAAAKeh4CKB4AAAoqHgIoHwAACip+AiggAAAKAgJzLgAA
-Bn0BAAAEAgJzLwAABn0CAAAEKpIEcp4AAHAabyEAAAosFQIFAgMoIgAACg4EcwUAAAZvLAAABipK
-KwcCA28tAAAGA28oAAAGLfEqBio6AigjAAAKAgN9AwAABCo6AigjAAAKAgN9BAAABCoeAigjAAAK
-Kq5+BQAABC0ecq4AAHDQBwAAAigkAAAKbyUAAApzJgAACoAFAAAEfgUAAAQqGn4GAAAEKh4CgAYA
-AAQqGn4HAAAEKh4CKCcAAAoqLnM1AAAGgAcAAAQqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5
-AAAAAAUAbAAAALwIAAAjfgAAKAkAAAgJAAAjU3RyaW5ncwAAAAAwEgAAIAEAACNVUwBQEwAAEAAA
-ACNHVUlEAAAAYBMAALwBAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAhAAAA
-CAAAAAcAAAA2AAAAEQAAACcAAAAQAAAAAQAAAAMAAAAlAAAAJgAAAAEAAAAFAAAAAQAAAAAAGwQB
-AAAAAAAGABIDPQcGAKYDPQcGAF4CKgcPALEHAAAGAIsCCQYGAPUCCQYGANYCCQYGAI0DCQYGADID
-CQYGAEsDCQYGAKICCQYGAL0C4QMKAGYDqwEOACcA9AYKANMGqwESAMQGqwEKAHsGqwEKAHcIqwEG
-ADoIsQUGAEECKgcGAOQGXQcGAG8G9AUWABECBQQWAHICBQQWAPkB3wUGACYCPQcOAAEA9AYGABsG
-sQUGAP4DsQUGAF4GsQUGAMwBsQUGAGkBsQUGAPwICQYAAAAA/wAAAAAAAQABAAEAEADEBQAAEAAB
-AAEAAQAQALcGAAA9AAEABQABABAAWQgAAEkAAQAqAAEAEAAuCAAATQADAC4AAQAQAO8HAABNAAQA
-LwAAABAAZAfAB00ABQAwAAABEAAeCMAHZQAHADQABgAuCIUABgDvB4kAAQBnCI0AAQBnCI0AEQC4
-BZEAEQDpAZUAEQBLAZkAUCAAAAAAxgDEAwYAAQBYIAAAAADGAM8DBgABAGAgAAAAAMYA2QidAAEA
-oiAAAAAAhhgdBwYAAgCqIAAAAACGGB0HKgACALUgAAAAAIYIQACjAAUAyiAAAAAAhghXBEwABQDT
-IAAAAACGCFkAowAFAOggAAAAAIYIfgRMAAUA8SAAAAAAhgh7AKMABQAGIQAAAACGCKUETAAFAA8h
-AAAAAIYIqwCjAAUAJCEAAAAAhgi4BEwABQAtIQAAAACGCLcAowAFAEIhAAAAAIYIywRMAAUASyEA
-AAAAhgjDAKMABQBgIQAAAACGCN4ETAAFAGkhAAAAAIYIzwCjAAUAfiEAAAAAhgjxBEwABQCHIQAA
-AACGCNsAowAFAJwhAAAAAIYIBAVMAAUApSEAAAAAhgjnAKMABQC6IQAAAACGCBcFTAAFAMMhAAAA
-AIYI8wCjAAUA2SEAAAAAhggqBUwABQDjIQAAAACGCBoAowAFAPkhAAAAAIYIQwRMAAUAAyIAAAAA
-hghMAKMABQAZIgAAAACGCGoETAAFACMiAAAAAIYIZQCjAAUAOSIAAAAAhgiRBEwABQBDIgAAAACG
-CFsBpwAFAFkiAAAAAIYIPQVMAAUAYyIAAAAAhgjPBacABQB5IgAAAACGCG0FTAAFAIMiAAAAAIYI
-NQYQAAUAjiIAAAAAhgiEBasABgCmIgAAAACGCI0BEAAHALEiAAAAAIYIUgWrAAgAySIAAAAAhgDw
-CEwACQDRIgAAAACGAEEITAAJANkiAAAAAIYYHQcGAAkA+SIAAAAAxgDMCLAACQAeIwAAAADGAcUI
-nQANADEjAAAAAMYB2QidAA4AMyMAAAAAhhgdB7oADwBCIwAAAACGGB0HugAQAFEjAAAAAIMYHQcG
-ABEAWSMAAAAAkwjgBsAAEQCFIwAAAACTCNEBxQARAIwjAAAAAJMI3QHKABEAlCMAAAAAlghNCNAA
-EgCbIwAAAACGGB0HBgASAKMjAAAAAJEYIwfVABIAAAABAPQIAAABANkGAAACAPkHAAADAIkGAAAB
-ANsDAAABANsDAAABANsDAAABANsDAAABAAgBAAACAKEBAAADANkGAAAEAIkGAAABANkGAAABAPQI
-AAABAH0IAAABAH0IAAABANsDCQAdBwEAEQAdBwYAGQAdBwoAKQAdBxAAMQAdBxAAOQAdBxAAQQAd
-BxAASQAdBxAAUQAdBxAAWQAdBxAAYQAdBxAAaQAdBwYAoQAdBwYAwQAdBxUA0QAdBwYAkQDEAwYA
-kQDPAwYAkQAsASAA2QBKBiUAcQAQASUAeQAdByoAeQDZBjQAeQD5BzgAgQD7AyUAeQCZBTwAgQBy
-AEEAeQCoBUYAeQCgBQEA4QAdBxAAeQDwCEwAeQBBCEwAkQAdBwYA6QAnCFAAkQANCFcAmQAdBwYA
-+QB7AV0A+QD4CGUAqQAdB2sAyQAdBwYALgALAPQALgATAP0ALgAbABwBLgAjACUBLgArAE4BLgAz
-AE4BLgA7AE4BLgBDACUBLgBLAFQBLgBTAE4BLgBbAGsBQwBjALUB4QB7ALUB4wBrALUBaQRzABwB
-iQRzABwBGwADAAEABwAjAAgAJQAAAEQA2QAAAFsE3QAAAF0A2QAAAIIE3QAAAH8A2QAAAKkE3QAA
-AK8A2QAAALwE3QAAALsA2QAAAM8E3QAAAMcA2QAAAOIE3QAAANMA2QAAAPUE3QAAAN8A2QAAAAgF
-3QAAAOsA2QAAABsF3QAAAPcA2QAAAC4F3QAAAB4A2QAAAEcE3QAAAFAA2QAAAG4E3QAAAGkA2QAA
-AJUE3QAAAF8B4QAAAEEF3QAAANMF4QAAAHEF3QAAAE0G2QAAAIgF3QAAAJEB2QAAAFYF3QAAAOQG
-5QAAAPEB6gAAAFEI7wACAAYAAwACAAcABQACAAgABwACAAkACQACAAoACwACAAsADQACAAwADwAC
-AA0AEQACAA4AEwACAA8AFQACABAAFwACABEAGQACABIAGwACABMAHQACABQAHwACABUAIQACABYA
-IwACABcAJQACABgAJwACABkAKQACABoAKwACABsALQACABwALwACAB0AMQACAB4AMwACAB8ANQAC
-ACAANwACACEAOQACACIAOwACACMAPQABACQAPwABACUAQQABACYAQwABACcARQACADEARwACADIA
-SQABADMASQACADQASwAEgAAAAQAAAAAAAAAAAAAAAACHAAAABAAAAAAAAAAAAAAAcwBCAQAAAAAO
-AAAAAAAAAAAAAAB8AIcIAAAAAA4AAAAAAAAAAAAAAHwAkwYAAAAADgAAAAAAAAAAAAAAfACkCAAA
-AAAEAAAAAAAAAAAAAABzALEFAAAAAAAAAAABAAAAbgcAAAAAAAAASURUU0NvbXBvbmVudE1ldGFE
-YXRhMTAwAGdldF9Db2x1bW4xMABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAZ2V0X0NvbHVtbjAA
-Z2V0X0NvbHVtbjExAGdldF9Db2x1bW4xAGdldF9Db2x1bW4xMgBHZXRJbnQzMgBnZXRfQ29sdW1u
-MgBTQ182NjQ4ZjU1YzI1ZGU0ODZkYWY5MTYyNTA5ZDAwY2RmMwBnZXRfQ29sdW1uMwBnZXRfQ29s
-dW1uNABnZXRfQ29sdW1uNQBnZXRfQ29sdW1uNgBnZXRfQ29sdW1uNwBnZXRfQ29sdW1uOABnZXRf
-Q29sdW1uOQA8TW9kdWxlPgBJbnB1dElEAEdldElkZW50aWZpY2F0aW9uU3RyaW5nQnlJRABnZXRf
-Q29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNvZGUA
-UnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUAc2V0X0Vycm9yQ29sdW1uTmFtZQBJ
-bnB1dE5hbWUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVy
-ZQBzZXRfQ3VsdHVyZQByZXNvdXJjZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRp
-dG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25V
-c2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJp
-YnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRh
-cmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNz
-ZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRl
-AEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lT
-U2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1
-dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2
-YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAEdldFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50
-TW9kZWwAU0NfNjY0OGY1NWMyNWRlNDg2ZGFmOTE2MjUwOWQwMGNkZjMuZGxsAGdldF9Db2x1bW4x
-MF9Jc051bGwAZ2V0X0NvbHVtbjBfSXNOdWxsAGdldF9Db2x1bW4xMV9Jc051bGwAZ2V0X0NvbHVt
-bjFfSXNOdWxsAGdldF9Db2x1bW4xMl9Jc051bGwAZ2V0X0NvbHVtbjJfSXNOdWxsAGdldF9Db2x1
-bW4zX0lzTnVsbABnZXRfQ29sdW1uNF9Jc051bGwAZ2V0X0NvbHVtbjVfSXNOdWxsAGdldF9Db2x1
-bW42X0lzTnVsbABnZXRfQ29sdW1uN19Jc051bGwAZ2V0X0NvbHVtbjhfSXNOdWxsAGdldF9Db2x1
-bW45X0lzTnVsbABnZXRfRXJyb3JDb2RlX0lzTnVsbABzZXRfRXJyb3JDb2x1bW5OYW1lX0lzTnVs
-bABnZXRfRXJyb3JDb2x1bW5fSXNOdWxsAHNldF9FcnJvckRlc2NyaXB0aW9uX0lzTnVsbABTZXRO
-dWxsAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9FcnJvckNvbHVt
-bgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVj
-dGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9uAEdldEVy
-cm9yRGVzY3JpcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFw
-AE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1dDBCdWZm
-ZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIATWljcm9z
-b2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRp
-YWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNl
-cwBTQ182NjQ4ZjU1YzI1ZGU0ODZkYWY5MTYyNTA5ZDAwY2RmMy5Qcm9wZXJ0aWVzLlJlc291cmNl
-cy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNjY0OGY1NWMyNWRlNDg2ZGFmOTE2MjUwOWQw
-MGNkZjMuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5J
-bmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0
-X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1p
-Y3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhv
-c3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0
-X0Fzc2VtYmx5AAAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBv
-AHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAA
-dgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAA
-D0kAbgBwAHUAdAAgADAAAHFTAEMAXwA2ADYANAA4AGYANQA1AGMAMgA1AGQAZQA0ADgANgBkAGEA
-ZgA5ADEANgAyADUAMAA5AGQAMAAwAGMAZABmADMALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBl
-AHMAbwB1AHIAYwBlAHMAAPYm3Io6MqVGngFtzWn3ATwABCABAQgDIAABBSABARERBCABAQ4FIAEB
-EV0EBwESOQQgABJtBCABDggJIAMBEkEdCBJFAwYSQQMGHQgEIAECCAQgAQgIBSACAQgcAyAAAgYg
-AgIOEXkFIAEdCAgHAAESfRGAgQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMG
-EhgDBhJJAwYSVQMGElkDBhIgBSABARIMAyAADgMgAAgEIAEBAgkgBAEIDhJBEkUFIAEBEkkEAAAS
-VQQAABJZBQABARJZBAAAEiADAAABAygADgMoAAIDKAAIBAgAElUECAASWQQIABIgCAEACAAAAAAA
-HgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ182NjQ4ZjU1YzI1
-ZGU0ODZkYWY5MTYyNTA5ZDAwY2RmMwAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIyAABJAQAa
-Lk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQg
-RnJhbWV3b3JrIDQuNQQBAAAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVz
-b3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwg
-UHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVS
-ZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAArDkAAAAAAAAAAAAAxjkAAAAgAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAALg5AAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAA
-AP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAA
-AFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAA
-vQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAAB
-AFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAA
-AAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAw
-ADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkA
-TgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABT
+AAoqIgIXKBkAAAoqJgIYAygaAAAKKloDLAgCGCgbAAAKKnIBAABwcxwAAAp6JgIZAygaAAAKKloD
+LAgCGSgbAAAKKnIBAABwcxwAAAp6HgIoHQAACioeAigeAAAKKn4CKB8AAAoCAnMUAAAGfQEAAAQC
+AnMVAAAGfQIAAAQqkgRyngAAcBpvIAAACiwVAgUCAyghAAAKDgRzBQAABm8SAAAGKkorBwIDbxMA
+AAYDbw4AAAYt8SoGKjoCKCIAAAoCA30DAAAEKjoCKCIAAAoCA30EAAAEKh4CKCIAAAoqrn4FAAAE
+LR5yrgAAcNAHAAACKCMAAApvJAAACnMlAAAKgAUAAAR+BQAABCoafgYAAAQqHgKABgAABCoafgcA
+AAQqHgIoJgAACioucxsAAAaABwAABCoAAABCU0pCAQABAAAAAAAMAAAAdjQuMC4zMDMxOQAAAAAF
+AGwAAAAQBgAAI34AAHwGAABsBwAAI1N0cmluZ3MAAAAA6A0AACABAAAjVVMACA8AABAAAAAjR1VJ
+RAAAABgPAAC4AQAAI0Jsb2IAAAAAAAAAAgAAAVcVogEJAQAAAPoBMwAWAAABAAAAIQAAAAgAAAAH
+AAAAHAAAABEAAAAmAAAAEAAAAAEAAAADAAAACwAAAAwAAAABAAAABQAAAAEAAAAAAHkDAQAAAAAA
+BgBzAqEFBgAHA6EFBgC/AY4FDwAVBgAABgDsAW0EBgBWAm0EBgA3Am0EBgDuAm0EBgCTAm0EBgCs
+Am0EBgADAm0EBgAeAkIDCgDHAgwBDgAaAFgFCgA3BQwBEgAoBQwBCgDfBAwBCgDbBgwBBgCeBhUE
+BgCiAY4FBgBIBcEFBgDTBFgEFgByAWMDFgDTAWMDFgBaAUMEBgCHAaEFDgABAFgFBgB/BBUEBgBc
+AxUEBgDCBBUEBgAtARUEBgDKABUEBgBgB20EAAAAAGAAAAAAAAEAAQABABAAKAQAABAAAQABAAEA
+EAAbBQAAPQABAAUAAQAQAL0GAABJAAEAEAABABAAkgYAAE0AAwAUAAEAEABTBgAATQAEABUAAAAQ
+AMgFJAZNAAUAFgAAARAAggYkBmUABwAaAAYAkgaFAAYAUwaJAAEAywaNAAEAywaNABEAHASRABEA
+SgGVABEArACZAFAgAAAAAMYAJQMGAAEAWCAAAAAAxgAwAwYAAQBgIAAAAADGAD0HnQABAKIgAAAA
+AIYYgQUGAAIAqiAAAAAAhhiBBSoAAgC1IAAAAACGCLwAowAFAMogAAAAAIYIoQNMAAUA0yAAAAAA
+hggzBKMABQDoIAAAAACGCNEDTAAFAPEgAAAAAIYImQQQAAUA+yAAAAAAhgjoA6cABgASIQAAAACG
+CO4AEAAHABwhAAAAAIYItgOnAAgAMyEAAAAAhgBUB0wACQA7IQAAAACGAKUGTAAJAEMhAAAAAIYY
+gQUGAAkAYyEAAAAAxgAwB6wACQCIIQAAAADGASkHnQANAJshAAAAAMYBPQedAA4AnSEAAAAAhhiB
+BbYADwCsIQAAAACGGIEFtgAQALshAAAAAIMYgQUGABEAwyEAAAAAkwhEBbwAEQDvIQAAAACTCDIB
+wQARAPYhAAAAAJMIPgHGABEA/iEAAAAAlgixBswAEgAFIgAAAACGGIEFBgASAA0iAAAAAJEYhwXR
+ABIAAAABAFgHAAABAD0FAAACAF0GAAADAO0EAAABADwDAAABADwDAAABADwDAAABADwDAAABAGkA
+AAACAAIBAAADAD0FAAAEAO0EAAABAD0FAAABAFgHAAABAOEGAAABAOEGAAABADwDCQCBBQEAEQCB
+BQYAGQCBBQoAKQCBBRAAMQCBBRAAOQCBBRAAQQCBBRAASQCBBRAAUQCBBRAAWQCBBRAAYQCBBRAA
+aQCBBQYAoQCBBQYAwQCBBRUA0QCBBQYAkQAlAwYAkQAwAwYAkQCNACAA2QCuBCUAcQBxACUAeQCB
+BSoAeQA9BTQAeQBdBjgAgQAzADwAeQD9A0EAeQAMBEYAeQAEBAEA4QCBBRAAeQBUB0wAeQClBkwA
+kQCBBQYA6QCLBlAAkQBxBlcAmQCBBQYA+QDcAF0A+QBcB2UAqQCBBWsAyQCBBQYALgALAPAALgAT
+APkALgAbABgBLgAjACEBLgArAEoBLgAzAEoBLgA7AEoBLgBDACEBLgBLAFABLgBTAEoBLgBbAGcB
+QwBjALEB4QB7ALEB4wBrALEBKQFzABgBSQFzABgBGwADAAEABwAJAAgACwAAAMAA1QAAAKUD2QAA
+ADcE1QAAANUD2QAAALEE3QAAAOwD2QAAAPIA3QAAALoD2QAAAEgF4QAAAFIB5gAAALUG6wACAAYA
+AwACAAcABQACAAgABwACAAkACQABAAoACwABAAsADQABAAwADwABAA0AEQACABcAEwACABgAFQAB
+ABkAFQACABoAFwAEgAAAAQAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAAAAAAAcwCjAAAAAAAOAAAA
+AAAAAAAAAAB8AOsGAAAAAA4AAAAAAAAAAAAAAHwA9wQAAAAADgAAAAAAAAAAAAAAfAAIBwAAAAAE
+AAAAAAAAAAAAAABzABUEAAAAAAAAAAABAAAA0gUAAAAAAElEVFNDb21wb25lbnRNZXRhRGF0YTEw
+MABJRFRTQ29tcG9uZW50TWV0YURhdGExMzAAR2V0SW50MzIAU0NfNjY0OGY1NWMyNWRlNDg2ZGFm
+OTE2MjUwOWQwMGNkZjMAPE1vZHVsZT4ASW5wdXRJRABHZXRJZGVudGlmaWNhdGlvblN0cmluZ0J5
+SUQAZ2V0X0NvbXBvbmVudE1ldGFEYXRhAG1zY29ybGliAGRlZmF1bHRJbnN0YW5jZQBnZXRfRXJy
+b3JDb2RlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxlAHNldF9FcnJvckNvbHVt
+bk5hbWUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0
+X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NC
+YXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVn
+Z2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2Fi
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJp
+YnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmli
+dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
+dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
+dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
+QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4
+ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBv
+bmVudE1vZGVsAFNDXzY2NDhmNTVjMjVkZTQ4NmRhZjkxNjI1MDlkMDBjZGYzLmRsbABnZXRfRXJy
+b3JDb2RlX0lzTnVsbABzZXRfRXJyb3JDb2x1bW5OYW1lX0lzTnVsbABnZXRfRXJyb3JDb2x1bW5f
+SXNOdWxsAHNldF9FcnJvckRlc2NyaXB0aW9uX0lzTnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3Rl
+bQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAGdldF9FcnJvckNvbHVtbgBTeXN0ZW0uQ29uZmlndXJh
+dGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0
+aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9uAEdldEVycm9yRGVzY3JpcHRpb24AU3Ry
+aW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABNaWNyb3Nv
+ZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIA
+U2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMu
+UGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5S
+dW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTQ182NjQ4ZjU1YzI1ZGU0
+ODZkYWY5MTYyNTA5ZDAwY2RmMy5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdn
+aW5nTW9kZXMAU0NfNjY0OGY1NWMyNWRlNDg2ZGFmOTE2MjUwOWQwMGNkZjMuUHJvcGVydGllcwBW
+YXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRDb2x1bW5JbmRleGVzAFNldHRpbmdzAEVx
+dWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBv
+bmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIu
+VHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJ
+bnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kA
+cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
+AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
+dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
 AEMAXwA2ADYANAA4AGYANQA1AGMAMgA1AGQAZQA0ADgANgBkAGEAZgA5ADEANgAyADUAMAA5AGQA
-MAAwAGMAZABmADMAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAu
-ADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADYANgA0ADgAZgA1ADUA
-YwAyADUAZABlADQAOAA2AGQAYQBmADkAMQA2ADIANQAwADkAZAAwADAAYwBkAGYAMwAuAGQAbABs
-AAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQA
-IABAACAAIAAyADAAMgAyAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAA
-AAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANgA2ADQA
-OABmADUANQBjADIANQBkAGUANAA4ADYAZABhAGYAOQAxADYAMgA1ADAAOQBkADAAMABjAGQAZgAz
-AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADYANgA0ADgA
-ZgA1ADUAYwAyADUAZABlADQAOAA2AGQAYQBmADkAMQA2ADIANQAwADkAZAAwADAAYwBkAGYAMwAA
-ADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgA
-AQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAA
+MAAwAGMAZABmADMALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAOwi
+X9tgzTdKtDtmICxnSrIABCABAQgDIAABBSABARERBCABAQ4FIAEBEV0EBwESOQQgABJtBCABDggJ
+IAMBEkEdCBJFAwYSQQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYgAgIOEXkFIAEdCAgHAAESfRGA
+gQUgABKAhQcgAgEOEoCFCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIg
+BSABARIMAyAACAQgAQECCSAEAQgOEkESRQUgAQESSQQAABJVBAAAElkFAAEBElkEAAASIAMAAAED
+KAAIAygAAgMoAA4ECAASVQQIABJZBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRp
+b25UaHJvd3MBCAEAAgAAAAAAKAEAI1NDXzY2NDhmNTVjMjVkZTQ4NmRhZjkxNjI1MDlkMDBjZGYz
+AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjIAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249
+djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAALQA
+AADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIs
+IFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1
+NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAA
+UEFEUEFEULQAAADMMwAAAAAAAAAAAADmMwAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2DMAAAAA
+AAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwA2ADYANAA4AGYANQA1AGMAMgA1AGQAZQA0ADgANgBkAGEAZgA5ADEANgAyADUAMAA5
+AGQAMAAwAGMAZABmADMAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADYANgA0ADgAZgA1
+ADUAYwAyADUAZABlADQAOAA2AGQAYQBmADkAMQA2ADIANQAwADkAZAAwADAAYwBkAGYAMwAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAyAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANgA2
+ADQAOABmADUANQBjADIANQBkAGUANAA4ADYAZABhAGYAOQAxADYAMgA1ADAAOQBkADAAMABjAGQA
+ZgAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADYANgA0
+ADgAZgA1ADUAYwAyADUAZABlADQAOAA2AGQAYQBmADkAMQA2ADIANQAwADkAZAAwADAAYwBkAGYA
+MwAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1814,7 +1715,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA2DkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA+DMAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1823,7 +1724,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -1859,7 +1760,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">55</property>
+                  typeConverter="NOTBROWSABLE">ED</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -1870,84 +1771,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   hasSideEffects="true"
                   name="Input 0">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 0]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 0"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 1"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 2"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 3]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 3"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 4]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 4"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 5]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 5"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 6]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 6"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 7]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 7"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 8]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 8"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 9]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 9"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 10]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 10"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 11]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 11"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[Column 12]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 12"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Get Column Name.Inputs[Input 0].Columns[ErrorCode]"
                       cachedDataType="i4"
@@ -1979,7 +1802,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Data Flow Task\Get Column Name.Outputs[Output 0].Columns[ErrorColumnName]"
                       codePage="1252"
                       dataType="str"
-                      length="500"
+                      length="255"
                       lineageId="Package\Data Flow Task\Get Column Name.Outputs[Output 0].Columns[ErrorColumnName]"
                       name="ErrorColumnName" />
                   </outputColumns>
@@ -2288,7 +2111,7 @@ public class ScriptMain : UserComponent
     public override void PreExecute()
     {
         base.PreExecute();
-        rowNumber = 0;
+        rowNumber = 1;
         /*
          * Add your code here
          */
@@ -2441,6 +2264,7 @@ namespace SC_09f975b2900f4bc1afb63dca4f60565d.Properties {
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -2517,23 +2341,23 @@ namespace SC_09f975b2900f4bc1afb63dca4f60565d.Properties {
                       dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_09f975b2900f4bc1afb63dca4f60565d</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_09f975b2900f4bc1afb63dca4f60565d</msb:DisplayName>
-    <msb:ProjectId>{94FCB42B-A95C-4520-B3AD-E89B39802514}</msb:ProjectId>
+    <msb:ProjectId>{C6A20284-0F07-4BF6-92A9-3D8C613DCDE1}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_09f975b2900f4bc1afb63dca4f60565d.csproj" />
     <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="main.cs" />
-    <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -2669,7 +2493,7 @@ namespace SC_09f975b2900f4bc1afb63dca4f60565d.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDANdfTGIAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAIjEA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAFCQVWIAAAAAAAAAAOAAIiALATAAABIAAAAIAAAAAAAAIjEA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAANAwAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2677,7 +2501,7 @@ AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAKBEAAAAgAAAAEgAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAUAAAAAAAAAAAAAAAAAABAAABA
 LnJlbG9jAAAMAAAAAGAAAAACAAAAGgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAE
 MQAAAAAAAEgAAAACAAUApCEAAHQOAAABAAAAAAAAABgwAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAADoCKBAAAAoCFn0BAAAEKh4CKBEAAAoqbgICewEAAAQXWH0B
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAADoCKBAAAAoCF30BAAAEKh4CKBEAAAoqbgICewEAAAQXWH0B
 AAAEAwJ7AQAABG8GAAAGKh4CKAoAAAYqKgIDBAUoEgAACio6AhYDjBoAAAEoEwAACipaAywIAhYo
 FAAACipyAQAAcHMVAAAKeh4CKBYAAAoqHgIoFwAACip+AigYAAAKAgJzDgAABn0CAAAEAgJzDwAA
 Bn0DAAAEKpIEcp4AAHAabxkAAAosFQIFAgMoGgAACg4EcwUAAAZvDAAABipKKwcCA28NAAAGA28I
@@ -2740,8 +2564,8 @@ cwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAg
 AHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAA
 dABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFT
 AEMAXwAwADkAZgA5ADcANQBiADIAOQAwADAAZgA0AGIAYwAxAGEAZgBiADYAMwBkAGMAYQA0AGYA
-NgAwADUANgA1AGQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAEfU
-sNs7qlBKka0/wfQP7KAABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkJIAMBEj0dCBJBBSACAQgc
+NgAwADUANgA1AGQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAE7v
+kyeerk1PhIHnYN/KPnYABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkJIAMBEj0dCBJBBSACAQgc
 AyAAAgYgAgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEC
 BggDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAAS
 UQQAABJVBQABARJVBAAAEiADAAABAygACAMoAAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQAB
@@ -2918,14 +2742,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Line type]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]"
-                      name="Column 0"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]"
+                      name="Line type"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2939,14 +2763,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[TPA Code]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]"
-                      name="Column 1"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]"
+                      name="TPA Code"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2960,14 +2784,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Bencode]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]"
-                      name="Column 2"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]"
+                      name="Bencode"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2981,14 +2805,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Employer Name]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]"
-                      name="Column 3"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]"
+                      name="Employer Name"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3002,14 +2826,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Account Type Code]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]"
-                      name="Column 4"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]"
+                      name="Account Type Code"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3023,14 +2847,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan ID]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]"
-                      name="Column 5"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]"
+                      name="Plan ID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3044,14 +2868,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[PY Start Date]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]"
-                      name="Column 6"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]"
+                      name="PY Start Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3065,14 +2889,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan End Date]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]"
-                      name="Column 7"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]"
+                      name="Plan End Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3086,14 +2910,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Grace_Roll]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]"
-                      name="Column 8"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]"
+                      name="Grace_Roll"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3107,14 +2931,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Runout Date]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]"
-                      name="Column 9"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]"
+                      name="Runout Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3128,14 +2952,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Term Runout Date]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]"
-                      name="Column 10"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]"
+                      name="Term Runout Date"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3149,14 +2973,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan Min]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]"
-                      name="Column 11"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]"
+                      name="Plan Min"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3170,14 +2994,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                      externalMetadataColumnId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan Max]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]"
-                      name="Column 12"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]"
+                      name="Plan Max"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3194,70 +3018,70 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Line type]"
                       dataType="wstr"
                       length="255"
-                      name="Column 0" />
+                      name="Line type" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[TPA Code]"
                       dataType="wstr"
                       length="255"
-                      name="Column 1" />
+                      name="TPA Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Bencode]"
                       dataType="wstr"
                       length="255"
-                      name="Column 2" />
+                      name="Bencode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Employer Name]"
                       dataType="wstr"
                       length="255"
-                      name="Column 3" />
+                      name="Employer Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Account Type Code]"
                       dataType="wstr"
                       length="255"
-                      name="Column 4" />
+                      name="Account Type Code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan ID]"
                       dataType="wstr"
                       length="255"
-                      name="Column 5" />
+                      name="Plan ID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[PY Start Date]"
                       dataType="wstr"
                       length="255"
-                      name="Column 6" />
+                      name="PY Start Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan End Date]"
                       dataType="wstr"
                       length="255"
-                      name="Column 7" />
+                      name="Plan End Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Grace_Roll]"
                       dataType="wstr"
                       length="255"
-                      name="Column 8" />
+                      name="Grace_Roll" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Runout Date]"
                       dataType="wstr"
                       length="255"
-                      name="Column 9" />
+                      name="Runout Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Term Runout Date]"
                       dataType="wstr"
                       length="255"
-                      name="Column 10" />
+                      name="Term Runout Date" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan Min]"
                       dataType="wstr"
                       length="255"
-                      name="Column 11" />
+                      name="Plan Min" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                      refId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].ExternalColumns[Plan Max]"
                       dataType="wstr"
                       length="255"
-                      name="Column 12" />
+                      name="Plan Max" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3343,7 +3167,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3391,93 +3215,96 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 0]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Line type]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 0"
+                      cachedName="Line type"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 0]" />
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 1]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[TPA Code]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 1"
+                      cachedName="TPA Code"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 1]" />
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 2]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Term Runout Date]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 2"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 3]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 3"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 3]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 4]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 4"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 4]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 5]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 5"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 5]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 6]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 6"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 6]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 7]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 7"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 8]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 8"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 8]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 9]"
-                      cachedDataType="date"
-                      cachedName="Copy of Column 9"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 9]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 10]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 10"
+                      cachedName="Term Runout Date"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 10]" />
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 11]"
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Plan Max]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Column 11"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 11]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Copy of Column 12]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Copy of Column 12"
+                      cachedName="Plan Max"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Column 12]" />
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Plan Min]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Min"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Bencode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Bencode"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Employer Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employer Name"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Account Type Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Account Type Code"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Plan ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan ID"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[PY Start Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PY Start Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Plan End Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan End Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Grace_Roll]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Grace_Roll"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].Columns[Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Runout Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3626,7 +3453,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3674,97 +3501,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 0]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 0"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 0]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 1]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 1"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 1]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 2"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 2]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 3]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 3"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 3]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 4]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 4"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 4]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 5]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 5"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 5]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 6]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 6"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 6]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 7]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 7"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 8]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 8"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 8]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 9]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 9"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 9]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 10]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 10"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 10]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 11]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 11"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 11]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Column 12]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Column 12"
-                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
-                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Column 12]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorCode]"
                       cachedDataType="i4"
                       cachedName="ErrorCode"
@@ -3774,7 +3510,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[ErrorColumnName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="500"
+                      cachedLength="255"
                       cachedName="ErrorColumnName"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Error Column]"
                       lineageId="Package\Data Flow Task\Get Column Name.Outputs[Output 0].Columns[ErrorColumnName]" />
@@ -3784,6 +3520,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedName="RowNumber"
                       externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[RowNumber]"
                       lineageId="Package\Data Flow Task\GetRowNumber.Outputs[Output 0].Columns[RowNumber]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Line type]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Line type"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Line type]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Line type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[TPA Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TPA Code"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[TPA Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[TPA Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Bencode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Bencode"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Bencode]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Bencode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Employer Name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Employer Name"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Employer Name]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Employer Name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Account Type Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Account Type Code"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Account Type Code]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Account Type Code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Plan ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan ID"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan ID]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[PY Start Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PY Start Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[PY Start Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[PY Start Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Plan End Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan End Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan End Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan End Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Grace_Roll]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Grace_Roll"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Grace_Roll]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Grace_Roll]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Runout Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Runout Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Runout Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Term Runout Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Term Runout Date"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Term Runout Date]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Term Runout Date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Plan Min]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Min"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Min]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Min]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].Columns[Plan Max]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Plan Max"
+                      externalMetadataColumnId="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR.Inputs[OLE DB Destination Input].ExternalColumns[Plan Max]"
+                      lineageId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output].Columns[Plan Max]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3971,8 +3798,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               name="Data Conversion Output"
               startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\GetRowNumber.Inputs[Input 0]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import.Outputs[Flat File Source Output]" />
             <path
@@ -4057,15 +3889,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
           Language="CSharp"
           ReadOnlyVariables="GlobalStartPackageLogId,Parameter"
           ReadWriteVariables="ChildParameter,ParentTaskGuid">
-          <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -4185,6 +4008,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
+    "ings")]
+
+namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -4408,35 +4260,6 @@ namespace ST_68cf7524642e4a1892bdf261139c9df1
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
           <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_68cf7524642e4a1892bdf261139c9df1.Properties.Settings.get_Default():ST_68cf7524642e4a1892bdf261139c9df1.Properties.Sett" +
-    "ings")]
-
-namespace ST_68cf7524642e4a1892bdf261139c9df1.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-          <ProjectItem
             Name="Properties\AssemblyInfo.cs"
             Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -4466,6 +4289,15 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4945,17 +4777,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="783,13" />
+        <NodeLayout
+          Size="295,42"
+          Id="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import"
+          TopLeft="171,30" />
+        <NodeLayout
           Size="170,42"
           Id="Package\Data Flow Task\Get Column Name"
           TopLeft="710,145" />
         <NodeLayout
-          Size="307,42"
-          Id="Package\Data Flow Task\Read Csv 2_BENEFL_Integrated_Prior_Import"
-          TopLeft="171,30" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Total Row Count"
-          TopLeft="374,104" />
+          Size="158,42"
+          Id="Package\Data Flow Task\GetRowNumber"
+          TopLeft="571,75" />
         <NodeLayout
           Size="349,42"
           Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR"
@@ -4969,115 +4805,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Data Flow Task\TBL_STAGING_EDI_5_PLAN_DOC_REPORT_PRIOR_ERROR"
           TopLeft="652,300" />
         <NodeLayout
+          Size="133,42"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="667,227" />
+        <NodeLayout
           Size="161,42"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="425,177" />
         <NodeLayout
-          Size="133,42"
-          Id="Package\Data Flow Task\Row Count"
-          TopLeft="667,227" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Row Count Output 11]"
-          TopLeft="315,261">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-38.5,31"
-              Start="0,0"
-              End="-38.5,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="-4,15.5" />
-                  <mssgle:LineSegment
-                    End="-34.5,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.5,15.5"
-                    Point2="-38.5,15.5"
-                    Point3="-38.5,19.5" />
-                  <mssgle:LineSegment
-                    End="-38.5,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
-          TopLeft="454.5,146">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51,31"
-              Start="0,0"
-              End="51,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
-                  <mssgle:LineSegment
-                    End="47,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47,15.5"
-                    Point2="51,15.5"
-                    Point3="51,19.5" />
-                  <mssgle:LineSegment
-                    End="51,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="795,187">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-61.5,40"
-              Start="0,0"
-              End="-61.5,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
-                  <mssgle:LineSegment
-                    End="-57.5,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-57.5,20"
-                    Point2="-61.5,20"
-                    Point3="-61.5,24" />
-                  <mssgle:LineSegment
-                    End="-61.5,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="161,42"
+          Id="Package\Data Flow Task\Total Row Count"
+          TopLeft="374,104" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
           TopLeft="425,196.5">
@@ -5176,36 +4914,66 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\GetRowNumber"
-          TopLeft="572,59" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="478,51">
+          Id="Package\Data Flow Task.Paths[Row Count Output 11]"
+          TopLeft="315,261">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94,23.3333333333333"
+              EndConnector="-38.5,31"
               Start="0,0"
-              End="86.5,23.3333333333333">
+              End="-38.5,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.3302752293578,0" />
+                    End="0,11.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.3302752293578,0"
-                    Point2="54.3302752293578,0"
-                    Point3="54.3302752293578,4" />
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="-4,15.5" />
                   <mssgle:LineSegment
-                    End="54.3302752293578,19.3333333333333" />
+                    End="-34.5,15.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="54.3302752293578,19.3333333333333"
-                    Point2="54.3302752293578,23.3333333333333"
-                    Point3="58.3302752293578,23.3333333333333" />
+                    Point1="-34.5,15.5"
+                    Point2="-38.5,15.5"
+                    Point3="-38.5,19.5" />
                   <mssgle:LineSegment
-                    End="86.5,23.3333333333333" />
+                    End="-38.5,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Count Output 1]"
+          TopLeft="454.5,146">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51,31"
+              Start="0,0"
+              End="51,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="47,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47,15.5"
+                    Point2="51,15.5"
+                    Point3="51,19.5" />
+                  <mssgle:LineSegment
+                    End="51,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5216,30 +4984,132 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 01]"
-          TopLeft="572,85.6666666666667">
+          TopLeft="571,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37,39.3333333333333"
+              EndConnector="-36,29"
               Start="0,0"
-              End="-29.5,39.3333333333333">
+              End="-28.5,29">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-11.6146788990826,0" />
+                    End="-14,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-11.6146788990826,0"
-                    Point2="-15.6146788990826,0"
-                    Point3="-15.6146788990826,4" />
+                    Point1="-14,0"
+                    Point2="-18,0"
+                    Point3="-18,4" />
                   <mssgle:LineSegment
-                    End="-15.6146788990826,35.3333333333333" />
+                    End="-18,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="-15.6146788990826,35.3333333333333"
-                    Point2="-15.6146788990826,39.3333333333333"
-                    Point3="-19.6146788990826,39.3333333333333" />
+                    Point1="-18,25"
+                    Point2="-18,29"
+                    Point3="-22,29" />
                   <mssgle:LineSegment
-                    End="-29.5,39.3333333333333" />
+                    End="-28.5,29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="795,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-61.5,40"
+              Start="0,0"
+              End="-61.5,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-57.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-57.5,20"
+                    Point2="-61.5,20"
+                    Point3="-61.5,24" />
+                  <mssgle:LineSegment
+                    End="-61.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="466,51">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="317,-22.6666666666667"
+              Start="0,0"
+              End="309.5,-22.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="179.220183486239,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="179.220183486239,0"
+                    Point2="183.220183486239,0"
+                    Point3="183.220183486239,-4" />
+                  <mssgle:LineSegment
+                    End="183.220183486239,-18.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.220183486239,-18.6666666666667"
+                    Point2="183.220183486239,-22.6666666666667"
+                    Point3="187.220183486239,-22.6666666666667" />
+                  <mssgle:LineSegment
+                    End="309.5,-22.6666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="783,39.6666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-54,56.3333333333333"
+              Start="0,0"
+              End="-46.5,56.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.7889908256881,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.7889908256881,0"
+                    Point2="-22.7889908256881,0"
+                    Point3="-22.7889908256881,4" />
+                  <mssgle:LineSegment
+                    End="-22.7889908256881,52.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.7889908256881,52.3333333333333"
+                    Point2="-22.7889908256881,56.3333333333333"
+                    Point3="-26.7889908256881,56.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-46.5,56.3333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
